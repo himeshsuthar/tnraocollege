@@ -1,12 +1,8 @@
 {
   "name": "client",
   "authors": [
-
-    "Mohit Shah <shahmohitm@gmail.com>"
-
     "Himesh Suthar <himesh5983@gmail.com>"
-
-
+  ],
   "description": "",
   "main": "",
   "license": "MIT",
@@ -17,13 +13,12 @@
     "bower_components",
     "test",
     "tests"
-
-
+  ],
   "dependencies": {
     "angular": "angularjs#^1.5.6",
     "angular-animate": "~1.5.6",
     "angular-ui-router": "^0.3.0",
     "bootstrap": "^3.3.6",
-    "components-font-awesome": "^4.6.3",
-    "ngstorage": "^0.3.10"
+    "components-font-awesome": "^4.6.3"
   }
+}
