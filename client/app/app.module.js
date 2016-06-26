@@ -1,0 +1,1 @@
+angular.module("college",['user','ui.router'])

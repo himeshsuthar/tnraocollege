@@ -2,31 +2,122 @@
 
 <head>
 
+	<title>T.N.Rao College</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="assets/style/w3.css">
 	<link rel="stylesheet" href="assets/style/style.css">
 	<link rel="stylesheet" href="assets/style/theme.css">
 	<link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css">
-
-	<title>T.N.Rao College</title>
+	<style>
+	#slider{
+		height: 100%;
+		width: 100%;
+		float: center;
+		top:0;
+		background-size: cover;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		transition: background-image 1s;
+		-webkit-transition: background-image 1s; /* Safari */
+	}
+	.wrapper{
+		background-color: rgba(100,100,100,0.8);
+	}
+	</style>	
 </head>
 
-<body>
 
-	<div class="w3-row">
-		<div class="w3-container upper_container w3-light-grey">
-			
+
+
+<body >
+	<div class="w3-row" id="slider">
+		<div class="w3-col l12 w3-white" data-spy="affix">
+				<div class="margin-top-5"></div>
+				<div class="header w3-col l6 s3">
+					<h2>T.N.Rao College</h2>
+				</div>
+
+				<div class="w3-col l6 s9">
+					<ul class="nav nav-pills nav-justified">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Gallery</a></li>
+						<li><a href="#">Campus</a></li>
+						<li><a href="#">Contact us</a></li>
+					</ul>	
+				</div>
+		</div>
+	</div> 
+
+
+	<!-- <footer class="myFooter w3-light-grey">
+		<p>Copyright © 2014 - All Rights Reserved - Rao Infotech</p>
+	</footer>
+-->
+
+<div class="margin-top-20"></div>
+
+<div class="w3-row">
+
+	<div class="w3-col wrapper_content l12 s12">
+
+		<div class="w3-card-12 container margin-left-right w3-center">
+			<i class="fa fa-list-alt fa-5x" aria-hidden="true"></i>
+			<h2>Courses</h2>
+			<p>Phasellus cursus consectetur dui, sit amet placerat quam pharetra eget</p>
+		</div>
+		
+		<div class="w3-card-12 container margin-left-right w3-center">
+			<i class="fa fa-university fa-5x" aria-hidden="true"></i>
+			<h2>Infrastructure</h2>
+			<p>Phasellus cursus consectetur dui, sit amet placerat quam pharetra eget</p>
 		</div>
 
-		<div class="w3-container lower_container w3-theme">
-		
-		</div> 
+		<div class="w3-card-12 container margin-left-right w3-center">
+			<i class="fa fa-camera fa-5x" aria-hidden="true"></i>
+			<h2>Gallery</h2>
+			<p>Nulla ut lacus orci. Aliquam pharetra lectus ut vestibulum tincidunt.</p>
+		</div>
+
+		<div class="w3-card-12 container margin-left-right w3-center">
+			<i class="fa fa-trophy fa-5x" aria-hidden="true"></i>
+			<h2>Achievements</h2>
+			<p>Donec mauris turpis, dictum eget auctor a, commodo a nisl. Vestibulum facilisis</p>
+		</div>
 
 	</div>
-
+</div>		
 </body>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/ngstorage/ngStorage.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+
+<script>
+
+$(window).load(function()
+{
+	$('#myModal').modal('show');
+});
+
+var images = ["1.jpg","2.jpg","3.jpg"]
+var x = 0;
+function change(){
+	$("#slider").css({"background-image":"url('assets/images/"+images[x]+"')"});
+	x++;
+	if(x>images.length-1) x=0
+		console.log("Called")
+}
+setInterval(change, 3000);
+
+
+
+</script>
+
+
 
 </html>
