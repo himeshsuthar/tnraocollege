@@ -8,3 +8,8 @@ angular.module("college")
 			controller:
 		})
 	}])
+	.run(['$rootScope',function($rootScope){
+		$rootScope.serverUrl = 'http://localhost/attendance/server/guest/';
+		$rootScope.serverUrl1 = 'http://localhost/attendance/server/admin/';
+		
+	}]);

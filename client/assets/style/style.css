@@ -1,46 +1,25 @@
 .margin-top-5{
 	margin-top: 5px;
 }
+.main-container{
+	margin-bottom: 50px;
+}
 
 .myFooter{
-	height:30px;
+	height:50px;
+
 	position: relative;
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
-	color: black;
 	width: 100%;
 }
-
-.notice{
-	background-color: rgba(100,100,100,0.2);
-	width:300px;
-	height:200px;
+#changeBg{
+  background: rgba(53, 145, 204, 1);
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
-
-.border-round{
-	border-radius: 10px;
-}
-
-#myModal{
-	height: 500px;
-	width: 1000px;
-	
-}
-
-.div1{
-	height: 100vh;
-}
-
-.myMenu{
-	width:250px;
-	height: auto;
-	margin-left: 3px;
-	color: white;
-	text-align: center;
-	float: left;
-}
-
 .background{
 	background-color: blue;
 }
@@ -49,26 +28,143 @@
 	font-weight: bold;
 
 }
-.container{
-	height:200px;
-	width:300px;
-	float: left;
-
+.container_back{
+	border: 1px solid black;
+	height: 200px;
 }
 
+.height-icons{
+	height:50px;
+	width:50px;
+}
+.myBlockQuote
+{  
+	display: block;
+	font: 17px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+h3{
+margin-top:10px;
+}
 .margin-top-20{
 	margin-top: 20px;
 }
 
-.wrapper_content{
-
-}
-
-.margin-left-right{
-	margin-left: 15px;
-	margin-right: 15px;
-}
 
 i{
 	margin-top: 5px;
+}
+
+#slider{
+	height: 100%;
+	width: 100%;
+	float: center;
+	top:0;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	transition: background-image 1s;
+	-webkit-transition: background-image 1s;
+}
+.wrapper{
+	background-color: rgba(100,100,100,0.8);
+	}
+	
+#menu>li{
+	padding-bottom: 7px;
+	margin-right: 10px;
+	padding-top: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	transition: border-bottom-color 0.s;
+	text-align: center;
+}
+
+#menu>li:hover{
+	border-bottom-color: white;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#menu>li>a:hover{
+	text-decoration: none;
+	color: white;
+}
+
+.banner{
+	margin-left: 20px;
+}
+
+.news_container{
+	height: auto%;
+	display: inline-block;
+	background-color: grey;
+	overflow: hidden;
+	margin-top:10px;
+
+
+}
+
+.margin-top-10{
+	margin-top: 10px;
+}
+
+.padding-top-10{
+	padding-top:20%;
+}
+.square-200{
+	height:300px;
+	width:300px;
+	display: inline-block;
+	margin:10px;
+	border-radius:10px;
+	overflow: hidden;
+	padding:10px;
+	vertical-align: middle;
+	text-align: center;
+	transition:box-shadow 0.5s;
+}
+.square-200:hover{
+	box-shadow: 0 0 50px grey;
+}
+
+.gradient{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f6f8+0,d8e1e7+27,b5c6d0+68,e0eff9+100 */
+background: #f2f6f8; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #f2f6f8 0%, #d8e1e7 27%, #b5c6d0 68%, #e0eff9 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #f2f6f8 0%,#d8e1e7 27%,#b5c6d0 68%,#e0eff9 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #f2f6f8 0%,#d8e1e7 27%,#b5c6d0 68%,#e0eff9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.margin-10{
+margin:10px;
+}
+.wrapper_content{
+ height:100%;
+}
+
+.w3-light-grey-transparent{
+	background-color:rgba(255,255,255,0.8);
+}
+
+.padding-20{
+	padding: 20px;
+}
+#visionMission{
+	display:block; 
+	opacity: 0.4;
+	position:absolute;
+	left:0;
+	height:40px;
+	overflow: hidden;
+	width:30%;
+	margin-top: 0px;
+	transition:all 2s;
+}
+#visionMission:hover{
+	opacity: 1;
+	height:100%;
+
 }
