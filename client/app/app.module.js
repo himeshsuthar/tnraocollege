@@ -1,1 +1,1 @@
-angular.module("college",['user','ui.router'])
+angular.module('college',['ui.router']);

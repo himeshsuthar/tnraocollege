@@ -1,15 +1,18 @@
-angular.module("college")
+angular.module('college')
 	.config(['$urlRouterProvider','$urlStateProvider',function($urlRouterProvider,$urlStateProvider){
 
 		$stateProvider
-		.state(''{
-			url:'';
-			templateUrl:'';
-			controller:
+		
+		.state('course',{
+			url:'/course',
+			templateUrl:'guest/view/courseMenu.html',
+			controller:'',
 		})
+		$urlRouteProvider.otherwise('/');
+
 	}])
 	.run(['$rootScope',function($rootScope){
-		$rootScope.serverUrl = 'http://localhost/attendance/server/guest/';
-		$rootScope.serverUrl1 = 'http://localhost/attendance/server/admin/';
+		$rootScope.serverUrl = 'http://localhost/tnraocollege/server/guest/';
+		$rootScope.serverUrl1 = 'http://localhost/tnraocollege/server/admin/';
 		
 	}]);

@@ -2,14 +2,25 @@
 	margin-top: 5px;
 }
 .main-container{
-	margin-bottom: 50px;
+	margin-bottom: 30px;
+	
+
 }
+.course-container{
+	
+	margin-top: 50px;
+	
 
+}
+#myMenu{
+	transition : display 1000;
+	float: center;
+	z-index: 10001;
+}
 .myFooter{
-	height:50px;
-
-	position: relative;
-	bottom: 0px;
+	height:30px;
+	position: fixed;
+	bottom: 0;
 	left: 0px;
 	right: 0px;
 	width: 100%;
@@ -57,8 +68,8 @@ i{
 #slider{
 	height: 100%;
 	width: 100%;
-	float: center;
 	top:0;
+	background-image: url('../images/4.jpg');
 	background-size: cover;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
@@ -85,7 +96,7 @@ i{
 	border-bottom-color: white;
 	color: white;
 	text-decoration: none;
-	font-weight: bold;
+
 }
 
 #menu>li>a:hover{
@@ -103,6 +114,8 @@ i{
 	background-color: grey;
 	overflow: hidden;
 	margin-top:10px;
+	border-radius:10px;
+	font-size: 17	px;
 
 
 }
@@ -142,7 +155,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', end
 margin:10px;
 }
 .wrapper_content{
- height:100%;
+ /*height:100%;*/
 }
 
 .w3-light-grey-transparent{
@@ -168,3 +181,81 @@ margin:10px;
 	height:100%;
 
 }
+
+.message-wrapper{
+	border-left: 3px solid #ccc;
+	padding-left: 30px;
+	text-align: justify;
+	margin: 10px;
+	font-family:Times New Roman;
+
+
+}
+
+
+.w3-row-eq-height{
+	display: flex;
+}
+
+#marqueInside{
+	margin-top:-100%;
+}
+
+
+.msg-header{
+	font-style: italic;
+	font-size: 26px;
+	font-family:Verdana;
+}
+#navMenu{
+	top:0;
+	left:0;
+	bottom:0;
+	height:50px;
+}
+.no-padding{
+	padding: 0;
+}
+.no-margin{
+	margin:0;
+}
+.course_main{
+	margin-top: 15px;
+	margin-left: 10px;
+	border-radius: 15px;
+	height: 225px;
+	max-width: 225px;
+	vertical-align: middle;
+	transition : all 1s;
+	display: table;
+	background-color: #518399;
+	color: white;
+	}
+
+.custom_row{
+	height: 100%;
+}
+
+.w3-offset-1{
+	margin-left: 6.33333333333%;
+}
+.course_main:hover{
+
+background-color: rgba(91, 135, 158,0.5);
+color:black;
+box-shadow: 0 8px #ab3c3c;
+	top: 6px;
+}
+
+
+.width-100{
+	width: 100%;
+}
+
+.faculty_photo{
+	max-width: 200px;
+	max-height: 200px;
+}
+
+
+

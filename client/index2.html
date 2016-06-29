@@ -21,25 +21,15 @@
 	<script src="app/app.module.js"></script>
 </head>
 
-<body ng-app="college" >
-		<script>
-	$(document).ready(function(){
-		var status = 0;
-		$("#openMenu").click(function(){
-			$("#myMenu").animate({
-				height: [ "toggle", "swing" ],
-			});
-		});
-	});
-	</script>
-
-		<div id="navMenu" class="hidden-xs w3-col l12 s12 w3-teal" style="z-index:1000" data-spy="affix">
+<body >
+	<div ng-app="college" class="main-container">
+		<div id="navMenu" class="col-md-12 col-xs-12 w3-dark-grey" style="z-index:1000" data-spy="affix">
 			
-			<div class="w3-col l4 s3 ">
+			<div class="col-md-4 ">
 				<h2 class="banner">T.N.Rao College</h2>
 			</div>
 
-			<div class="w3-col l8 s9">
+			<div class="col-md-8 ">
 				<ul id="menu" class="list-inline pull-right">
 					<li><a href="#">Home</a></li>
 					<li><a href="#">Gallery</a></li>
@@ -50,35 +40,11 @@
 
 		</div>
 
-		<div class="container-fluid visible-xs">
-			<div class="row w3-red">
-
-
-
-				<div class="col-xs-10">
-					<h2>T.N.Rao College</h2>
-				</div>
-				<button class="col-xs-1 navbar-toggle" id="openMenu" style="">
-					<i class="fa fa-bars"></i>
-				</button>
-
-			</div>
-			<div class="row w3-dark-grey" id="myMenu" style="z-index:100001; position:absolute; width:100%; display:none; oveflow:auto;">
-				<ul class="w3-ul w3-center list-group w3-border w3-blue">
-					<li class="list-group-item w3-blue"><a href="#">Home</a></li>
-					<li class="list-group-item w3-blue"><a href="#">Gallery</a></li>
-					<li class="list-group-item w3-blue"><a href="#">Contact Us</a></li>
-					<li class="list-group-item w3-blue"><a href="#">About</a></li>
-				</ul>
-			</div>
-		</div>
-<div class="main-container">
-	
-	<div ui-view>
+<div ui-view>
 
 		<div class="w3-row" id="slider">
 			
-			<div class="w3-col l12">
+			<div class="col-md-12">
 				<div id="visionMission">
 					<div>
 						<h3 class="w3-container no-margin-top row w3-deep-orange" style="margin:0px; padding:5px;"><i class="fa fa-eye"></i> Vision</h3>
@@ -96,10 +62,10 @@
 
 			<div class="margin-top-20"></div>
 
-			<div class="w3-row container-fluid wrapper_content w3-row-eq-height custom_row">
-				<div class="w3-col l9" style="display:block; height:100%">
+			<div class="w3-row container-fluid wrapper_content w3-row-eq-height">
+				<div class="col-md-9" style="display:block; height:100%">
 				<a ui-sref="course">
-					<div class="w3-blue-grey square-200">
+					<div class="w3-blue-grey square-200 col">
 					
 						<div>
 							<i class="fa fa-list fa-5x padding-top-10" aria-hidden="true"></i>
@@ -150,7 +116,7 @@
 					</div>
 				</div>
 
-				<div class="w3-col l3 news_container" style="margin-bottom:20px;">
+				<div class="col-md-3 news_container" style="margin-bottom:20px;">
 
 					<h3 class="w3-center w3-text-white"> News and Updates</h3>
 
@@ -174,7 +140,7 @@
 		
 	
 
-	<div class=" w3-container  w3-row-eq-height w3-padding w3-margin gradient" style="border-radius:10px;">
+	<div class="row w3-row-eq-height w3-padding w3-margin gradient" style="border-radius:10px;">
 
 		<div class="w3-col l3 s12 w3-center">
 			<div class="w3-card-2 img-thumbnail">
@@ -198,7 +164,7 @@
 
 
 <div class="margin-top-10"></div>
-<footer class="myFooter w3-teal w3-center">
+<footer class="myFooter w3-dark-grey w3-center">
 	<span>Copyright © 2016 - All Rights Reserved - Rao Infotech</span>
 </footer>
 </body>
@@ -208,7 +174,7 @@
 <script>
 
 var images = ["8.jpg","9.jpg","10.jpg","4.jpg","5.jpg","6.jpg","7.jpg"]
-
+var course=["c1.png","c2.png","c3.png","c4.png","c5.png"]
 var x = 0;
 function change(){
 	$("#slider").css({"background-image":"url('assets/images/"+images[x]+"')"});
@@ -225,14 +191,11 @@ $(document).ready(function(){
 	if($(window).width() < 600){
 		$("#visionMission").css({"width":"80%"});
 	}
-	
+
 	setInterval(change, 3000);
 
-
 });
+
 </script>
-
-
-
 
 </html>
