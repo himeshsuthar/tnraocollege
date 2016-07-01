@@ -7,232 +7,125 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<!-- <script src="assets/scripts/map.js?key=AIzaSyBDBN6kcB3eaEObe-LbEtQei5FfXTwYAzQ"></script>
+-->
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" href="assets/style/w3.css">
+<link rel="stylesheet" href="assets/style/style.css">
+<link rel="stylesheet" href="assets/style/theme.css">
+<link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css">
 
-	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-	<link rel="stylesheet" href="assets/style/w3.css">
-	<link rel="stylesheet" href="assets/style/style.css">
-	<link rel="stylesheet" href="assets/style/theme.css">
-	<link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css">
+<script src="bower_components/angular/angular.js"></script>
+<script src="app/app.module.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="app/app.config.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="guest/model/guest.factory.js"></script>
 
-	<script src="bower_components/angular/angular.min.js"></script>
-	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-	<script src="bower_components/angular-animate/angular-animate.js"></script>
-	<script src="app/app.config.js"></script>
-	<script src="app/app.module.js"></script>
 </head>
 
-<body ng-app="college" >
-		<script>
-	$(document).ready(function(){
-		var status = 0;
-		$("#openMenu").click(function(){
-			$("#myMenu").animate({
-				height: [ "toggle", "swing" ],
+<body ng-app="collegeApp">
+	<script>
+		$(document).ready(function(){
+			var status = 0;
+			$("#openMenu").click(function(){
+				$("#myMenu").animate({
+					height: [ "toggle", "swing" ],
+				});
 			});
 		});
-	});
+
+
 	</script>
 
-		<div id="navMenu" class="hidden-xs w3-col l12 s12 w3-teal" style="z-index:1000" data-spy="affix">
+	<div class="row">
+		<div id="navMenu" class="hidden-xs col-md-12 w3-teal" style="z-index:1000" data-spy="affix">
 			
-			<div class="w3-col l4 s3 ">
+			<div class="col-md-3">
 				<h2 class="banner">T.N.Rao College</h2>
 			</div>
 
-			<div class="w3-col l8 s9">
+			<div class="col-md-9">
 				<ul id="menu" class="list-inline pull-right">
-					<li><a href="#">Home</a></li>
+					<li><a ui-sref="home">Home</a></li>
 					<li><a href="#">Gallery</a></li>
 					<li><a href="#">Campus</a></li>
-					<li><a href="#">Contact us</a></li>
+					<li><a ui-sref="contactUs">Contact us</a></li>
 				</ul>	
 			</div>
 
 		</div>
 
-		<div class="container-fluid visible-xs">
-			<div class="row w3-red">
+	</div>
 
 
+	<div class="container visible-xs">
+		<div class="row w3-red">
 
-				<div class="col-xs-10">
-					<h2>T.N.Rao College</h2>
-				</div>
-				<button class="col-xs-1 navbar-toggle" id="openMenu" style="">
-					<i class="fa fa-bars"></i>
-				</button>
-
+			<div class="col-xs-10">
+				<h2>T.N.Rao College</h2>
 			</div>
-			<div class="row w3-dark-grey" id="myMenu" style="z-index:100001; position:absolute; width:100%; display:none; oveflow:auto;">
-				<ul class="w3-ul w3-center list-group w3-border w3-blue">
-					<li class="list-group-item w3-blue"><a href="#">Home</a></li>
-					<li class="list-group-item w3-blue"><a href="#">Gallery</a></li>
-					<li class="list-group-item w3-blue"><a href="#">Contact Us</a></li>
-					<li class="list-group-item w3-blue"><a href="#">About</a></li>
-				</ul>
-			</div>
+
+			<button class="col-xs-2 navbar-toggle no-margin" id="openMenu" style="">
+				<i class="fa fa-bars"></i>
+			</button>
+
 		</div>
-<div class="index-container">
-	
-	<div ui-view>
 
-		<div class="w3-row" id="slider">
-			
-			<div class="w3-col l12">
-				<div id="visionMission">
-					<div>
-						<h3 class="w3-container no-margin-top row w3-deep-orange" style="margin:0px; padding:5px;"><i class="fa fa-eye"></i> Vision</h3>
-						<div class="w3-light-grey-transparent myBlockQuote padding-20">Humanize human beings in form of progressive, responsible and character built teacher trainees to fulfill the demand of the society for value based education and for national building.</div>
-					</div>
+		<div class="row w3-dark-grey" id="myMenu" style="z-index:100001; position:absolute; width:100%; display:none; oveflow:auto;">
 
-					<div>
-						<h3 class="w3-container no-margin-top row w3-deep-orange" style="margin-bottom:0px; padding:5px;">
-							<i class="fa fa-flag"></i> Mission</h3>
-							<div class="w3-light-grey-transparent myBlockQuote padding-20">Our mission is to inculcate IQ, EQ and SQ among the trainees, to equip them for the talk and to modify their behavior in a desirable manner. To create teaching-learning environment, we integrate an idea inclusiveness, shared responsibility, openness, adaptive governance, open acknowledgement and quality of global life through dignity, dedication and devotion.</div>
-						</div>
-					</div>
-				</div>
-			</div> 
-
-			<div class="margin-top-20"></div>
-
-			<div class="w3-row container-fluid wrapper_content w3-row-eq-height custom_row">
-				<div class="w3-col l9" style="display:block; height:100%">
-				<a ui-sref="course">
-					<div class="w3-blue-grey square-200">
-					
-						<div>
-							<i class="fa fa-list fa-5x padding-top-10" aria-hidden="true"></i>
-						</div>
-
-						<h2>Courses</h2>
-						<p>Phasellus cursus consectetur dui, sit amet placerat quam pharetra eget</p>
-					
-					</div>
-					</a>
-
-					<div class="w3-blue-grey square-200">					
-						<div class="w3-container w3-center">
-							<i class="fa fa-image fa-5x padding-top-10"></i>
-						</div>
-						<h2>Gallery</h2>
-						<p>Nulla ut lacus orci. Aliquam pharetra lectus ut vestibulum tincidunt.</p>
-					</div>
-
-					<div class="w3-blue-grey square-200">
-						<div class="w3-container w3-center">
-							<i class="fa fa-trophy fa-5x padding-top-10"></i>
-						</div>
-						<h2>Achievements</h2>
-						<p>Donec mauris turpis, dictum eget auctor a, commodo a nisl. Vestibulum facilisis</p>
-					</div>
-
-					<div class="w3-blue-grey square-200">
-						<div class="w3-container w3-center">
-							<i class="fa fa-university fa-5x padding-top-10"></i>
-						</div>
-						<h2>Infrastructure</h2>
-						<p>Phasellus cursus consectetur dui, sit amet placerat quam pharetra eget</p>
-					</div>
-					<div class="w3-blue-grey square-200">
-						<div class="w3-container w3-center">
-							<i class="fa fa-university fa-5x padding-top-10"></i>
-						</div>
-						<h2>Infrastructure</h2>
-						<p>Phasellus cursus consectetur dui, sit amet placerat quam pharetra eget</p>
-					</div>
-					<div class="w3-blue-grey square-200">
-						<div class="w3-container w3-center">
-							<i class="fa fa-university fa-5x padding-top-10"></i>
-						</div>
-						<h2>Infrastructure</h2>
-						<p>Phasellus cursus consectetur dui, sit amet placerat quam pharetra eget</p>
-					</div>
-				</div>
-
-				<div class="w3-col l3 news_container" style="margin-bottom:20px;">
-
-					<h3 class="w3-center w3-text-white"> News and Updates</h3>
-
-					<marquee height="100%"
-					onmouseover="stop();"
-					onmouseout="start();"
-					behavior="scroll"
-					loop = "infinite" 
-					class="gradient" 
-					direction="up">
-						<div class="well-lg" id="marqueInside">
-							Go on... hover overjkjkjkjkjContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-							The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their jkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk me!
-						</div>
-					</marquee>
-				</div>
-
-			</div>	
-
-		
-	
-
-	<div class=" w3-container  w3-row-eq-height w3-padding w3-margin gradient" style="border-radius:10px;">
-
-		<div class="w3-col l3 s12 w3-center">
-			<div class="w3-card-2 img-thumbnail">
-				<img src="assets/images/nidattbarot.jpg" class="w3-img img-responsive" style="margin:auto;">
-				<div class="w3-container w3-center w3-dark-grey">
-					<b>Principal, Dr.Nidatt Barot</b>
-				</div>
-			</div>
-		</div>
-		<div class="w3-col l8 s9 message-wrapper ">
-			<div> <h3 class="msg-header"><i class="fa fa-envelope" aria-hidden="true"></i> Message from Principal</h3>
-				Stack Overflow is a privately held website, the flagship site of the Stack Exchange Network,[4][5][6] created in 2008 by Jeff Atwood and Joel Spolsky.[7][8] It was created to be a more open alternative to earlier Q&A sites such as Experts-Exchange. The name for the website was chosen by voting in April 2008 by readers of Coding Horror, Atwood's popular programming blog.[9]
-				It features questions and answers on a wide range of topics in computer programming.[10][11][12]
-				The website serves as a platform for users to ask and answer questions, and, through membership and active participation, to vote questions and answers up or down and edit questions and answers in a fashion similar to a wiki or Digg.[13] Users of Stack Overflow can earn reputation points and "badges"; for example, a person is awarded 10 reputation points for receiving an "up" vote on an answer given to a question, and can receive badges for their valued contributions,[14] which represents a kind of gamification of the traditional Q&A site or forum. All user-generated content is licensed under a Creative Commons Attribute-ShareAlike license.[15]
-
-			</div>
+			<ul class="w3-ul w3-center list-group w3-border w3-blue col-xs-12">
+				<li class="list-group-item w3-blue"><a href="#">Home</a></li>
+				<li class="list-group-item w3-blue"><a href="#">Gallery</a></li>
+				<li class="list-group-item w3-blue"><a href="#">Contact Us</a></li>
+				<li class="list-group-item w3-blue"><a href="#">About</a></li>
+			</ul>
 		</div>
 	</div>
-</div>
-</div>
-
-
-<div class="margin-top-10"></div>
-<footer class="myFooter w3-teal w3-center">
-	<span>Copyright © 2016 - All Rights Reserved - Rao Infotech</span>
-</footer>
-</body>
-
-
-
-<script>
-
-var images = ["8.jpg","9.jpg","10.jpg","4.jpg","5.jpg","6.jpg","7.jpg"]
-
-var x = 0;
-function change(){
-	$("#slider").css({"background-image":"url('assets/images/"+images[x]+"')"});
-	x++;
-	if(x>images.length-1) x=0
-		console.log("Called")
-}
-
-
-
-$(document).ready(function(){
-	$("#visionMission").css({"margin-top" : $("#navMenu").height()});
-
-	if($(window).width() < 600){
-		$("#visionMission").css({"width":"80%"});
-	}
 	
-	setInterval(change, 3000);
+	<div class="main-container">
+
+		<div ui-view>
+
+			
+		</div>
+		<div class="margin-top-10">
+			<footer class="myFooter w3-teal w3-center">
+				<span>Copyright © 2016 - All Rights Reserved - Rao Infotech</span>
+			</footer>
+		</div>
+	</body>
 
 
-});
-</script>
+
+	<script>
+
+		var images = ["8.jpg","9.jpg","10.jpg","4.jpg","5.jpg","6.jpg","7.jpg"]
+
+		var x = 0;
+		function change(){
+			$("#slider").css({"background-image":"url('assets/images/"+images[x]+"')"});
+			x++;
+			if(x>images.length-1) x=0
+				/*console.log("Called")*/
+		}
+
+
+
+		$(document).ready(function(){
+			$("#visionMission").css({"margin-top" : $("#navMenu").height()});
+
+			if($(window).width() < 600){
+				$("#visionMission").css({"width":"80%"});
+			}
+
+			setInterval(change, 3000);
+
+
+		});
+	</script>
 
 
 
 
-</html>
+	</html>

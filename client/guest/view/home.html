@@ -1,88 +1,4 @@
-<html>
-
-<head>
-
-	<title>T.N.Rao College</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="bower_components/jquery/dist/jquery.min.js"></script>
-	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-
-	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-	<link rel="stylesheet" href="assets/style/w3.css">
-	<link rel="stylesheet" href="assets/style/style.css">
-	<link rel="stylesheet" href="assets/style/theme.css">
-	<link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css">
-
-	<script src="bower_components/angular/angular.min.js"></script>
-	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-	<script src="bower_components/angular-animate/angular-animate.js"></script>
-	<script src="app/app.config.js"></script>
-	<script src="app/app.module.js"></script>
-</head>
-
-<body ng-app="college" >
-	<script>
-	$(document).ready(function(){
-		var status = 0;
-		$("#openMenu").click(function(){
-			$("#myMenu").animate({
-				height: [ "toggle", "swing" ],
-			});
-		});
-	});
-	</script>
-
-	<div class="row">
-		<div id="navMenu" class="hidden-xs col-md-12 w3-teal" style="z-index:1000" data-spy="affix">
-			
-			<div class="col-md-3">
-				<h2 class="banner">T.N.Rao College</h2>
-			</div>
-
-			<div class="col-md-9">
-				<ul id="menu" class="list-inline pull-right">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Gallery</a></li>
-					<li><a href="#">Campus</a></li>
-					<li><a href="#">Contact us</a></li>
-				</ul>	
-			</div>
-
-		</div>
-
-	</div>
-
-
-	<div class="container visible-xs">
-		<div class="row w3-red">
-
-			<div class="col-xs-10">
-				<h2>T.N.Rao College</h2>
-			</div>
-
-			<button class="col-xs-2 navbar-toggle no-margin" id="openMenu" style="">
-				<i class="fa fa-bars"></i>
-			</button>
-
-		</div>
-
-		<div class="row w3-dark-grey" id="myMenu" style="z-index:100001; position:absolute; width:100%; display:none; oveflow:auto;">
-
-			<ul class="w3-ul w3-center list-group w3-border w3-blue col-xs-12">
-				<li class="list-group-item w3-blue"><a href="#">Home</a></li>
-				<li class="list-group-item w3-blue"><a href="#">Gallery</a></li>
-				<li class="list-group-item w3-blue"><a href="#">Contact Us</a></li>
-				<li class="list-group-item w3-blue"><a href="#">About</a></li>
-			</ul>
-		</div>
-	</div>
-	
-	<div class="main-container">
-
-		<div ui-view>
-
-			<div class="w3-row" id="slider">
+<div class="w3-row" id="slider">
 
 				<div class="w3-col l12">
 					<div id="visionMission">
@@ -216,45 +132,27 @@
 					</div>
 				</div>
 			</div>
+			<script>
+		$(document).ready(function(){
+			var status = 0;
+			$("#openMenu").click(function(){
+				$("#myMenu").animate({
+					height: [ "toggle", "swing" ],
+				});
+			});
+		});
+
+		$(document).ready(function(){
+			$("#visionMission").css({"margin-top" : $("#navMenu").height()});
+
+			if($(window).width() < 600){
+				$("#visionMission").css({"width":"80%"});
+			}
+
+			setInterval(change, 3000);
 
 
-		<div class="margin-top-10">
-		<footer class="myFooter w3-teal w3-center">
-			<span>Copyright © 2016 - All Rights Reserved - Rao Infotech</span>
-		</footer>
-		</div>
-	</body>
+		});
 
 
-
-	<script>
-
-	var images = ["8.jpg","9.jpg","10.jpg","4.jpg","5.jpg","6.jpg","7.jpg"]
-
-	var x = 0;
-	function change(){
-		$("#slider").css({"background-image":"url('assets/images/"+images[x]+"')"});
-		x++;
-		if(x>images.length-1) x=0
-			console.log("Called")
-	}
-
-
-
-	$(document).ready(function(){
-		$("#visionMission").css({"margin-top" : $("#navMenu").height()});
-
-		if($(window).width() < 600){
-			$("#visionMission").css({"width":"80%"});
-		}
-
-		setInterval(change, 3000);
-
-
-	});
 	</script>
-
-
-
-
-	</html>

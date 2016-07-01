@@ -1,4 +1,4 @@
-angular.module('college')
+angular.module('collegeApp')
 	.factory('guestFactory',['$q','$http','rootScope',function($q,$http,$rootScope){
 		
 			var obj = {};
