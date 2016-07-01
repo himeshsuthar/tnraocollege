@@ -28,10 +28,10 @@
 	width: 100%;
 }
 #changeBg{
-  background: rgba(53, 145, 204, 1);
-  position: fixed;
-  top: 0;
-  width: 100%;
+	background: rgba(53, 145, 204, 1);
+	position: fixed;
+	top: 0;
+	width: 100%;
 }
 .background{
 	background-color: blue;
@@ -57,7 +57,7 @@
 }
 
 h3{
-margin-top:10px;
+	margin-top:10px;
 }
 
 .margin-top-20{
@@ -82,8 +82,8 @@ i{
 }
 .wrapper{
 	background-color: rgba(100,100,100,0.8);
-	}
-	
+}
+
 #menu>li{
 	padding-bottom: 7px;
 	margin-right: 10px;
@@ -147,15 +147,15 @@ i{
 }
 
 .gradient{
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f6f8+0,d8e1e7+27,b5c6d0+68,e0eff9+100 */
-background: #f2f6f8; /* Old browsers */
-background: -moz-linear-gradient(-45deg, #f2f6f8 0%, #d8e1e7 27%, #b5c6d0 68%, #e0eff9 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(-45deg, #f2f6f8 0%,#d8e1e7 27%,#b5c6d0 68%,#e0eff9 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(135deg, #f2f6f8 0%,#d8e1e7 27%,#b5c6d0 68%,#e0eff9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f6f8+0,d8e1e7+27,b5c6d0+68,e0eff9+100 */
+	background: #f2f6f8; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #f2f6f8 0%, #d8e1e7 27%, #b5c6d0 68%, #e0eff9 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #f2f6f8 0%,#d8e1e7 27%,#b5c6d0 68%,#e0eff9 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, #f2f6f8 0%,#d8e1e7 27%,#b5c6d0 68%,#e0eff9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 .margin-10{
-margin:10px;
+	margin:10px;
 }
 
 
@@ -228,10 +228,10 @@ margin:10px;
 
 .course_main:hover{
 
-background-color: rgba(91, 135, 158,0.5);
-color:black;
-box-shadow: 0 8px #ab3c3c;
-top: 6px;
+	background-color: rgba(91, 135, 158,0.5);
+	color:black;
+	box-shadow: 0 8px #ab3c3c;
+	top: 6px;
 }
 
 
@@ -266,7 +266,22 @@ top: 6px;
 	margin-left: 20px;
 }
 
-.div{
-	box-sizing : border-box;
+.head_photo{
+	border-radius: 0 20px 0 20px;
+	display: inline-block;
+	max-width: 100%;
+	max-height: auto;
+	padding: 11px;
+	line-height: 1.42857143;
+	background-color: #fff;
+	border: 1px solid black;
+	
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-ou
 }
 
+.margin-top-5{
+	
+	margin-top: 5px;
+}
