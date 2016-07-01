@@ -1,0 +1,97 @@
+<div class="row">
+	<div class="my_container">
+		<div class="container visible-xs " style:"bottom:0;right:0">
+			<div class="row w3-teal ">
+
+				<div class="col-xs-10">
+					<h2>T.N.Rao College</h2>
+				</div>
+				<button class="col-xs-1 navbar-toggle" id="openMenu" style="">
+					<i class="fa fa-bars"></i>
+				</button>
+
+			</div>
+
+
+
+			<div class="row w3-dark-grey" id="myMenu" style="z-index:100001; position:absolute; width:100%; display:none; oveflow:auto;">
+				<ul class="w3-ul w3-center list-group w3-border w3-blue">
+					<li class="list-group-item w3-blue"><a href="#">Home</a></li>
+					<li class="list-group-item w3-blue"><a href="#">Gallery</a></li>
+					<li class="list-group-item w3-blue"><a href="#">Contact Us</a></li>
+					<li class="list-group-item w3-blue"><a href="#">About</a></li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="col-md-12 col-xs-12 well well-lg no-padding no-margin">			
+
+			<h1 class="w3-center"><i>Contact Us</i></h1>
+
+		</div>
+		<div class="col-md-12 col-xs-12  margin-bottom-20 no-padding no-margin ">
+			<div class="col-md-8 col-xs-12 well well-lg">
+				<form>
+					<fieldset>
+						<legend><i class="fa fa-wpforms"></i>   Inquiry Form</legend>
+						<input type="text" class="form-control margin-top-10" required placeholder="Enter your name">
+						<input type="number" class="form-control margin-top-10" required placeholder="Phone Number">
+						<input type="email" required class="form-control margin-top-10" placeholder="Email Address">
+						<input type="text" class="form-control margin-top-10" required placeholder="city">
+
+						<select class="form-control margin-top-10 " required>
+							<option selected disabled>Interested Course</option>
+							<option value="bed">B.Ed</option>
+							<option value="bca">B.C.A</option>
+							<option value="bba">B.B.A</option>
+							<option value="bsc">B.Sc</option>
+							<option value="bcom">B.Com</option>
+							<option value="llb">L.L.B</option>
+							<option value="med">M.Ed</option>
+							<option value="mscit">M.Sc(IT)</option>
+
+						</select>
+						<textarea rows="4" class="form-control margin-top-10" required placeholder="your query?"></textarea>
+						<div class="w3-center">
+							<button class="btn btn-info margin-top-10 "><i class="fa fa-envelope-o"></i>  Submit</button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<div class="col-md-4 col-xs-12">
+				<h3><i class="fa fa-road">  <b>Direction:</b></i></h3>
+				<address class="margin-left-20 "><b>T.N.Rao College</b> <br>
+					<i>B/h. MCA Department <br>
+						Near Saurashtra University Campus<br>
+						Rajkot<br>
+						360005<br>
+						<br>
+						<a href="tel:+02812970471">Tel: 0281-2970471</a><br>
+						<a href="tel:+02812970472">Tel: 0281-2970472</a> <br>
+						<a href="mailto:tnraocollege@ymail.com" target="_top">Email: tnraocollege@ymail.com</a></i>
+					</address>
+					<div class="margin-left-20" style=" border-style:solid;width:300px;height:250px;overflow:hidden" id="googleMap" ></div>
+				</div>
+
+
+
+
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+			function initialize() {
+			var mapProp = {
+				center:new google.maps.LatLng(22.2939629,70.7435525),
+				zoom:16,
+				mapTypeId:google.maps.MapTypeId.ROADMAP
+			};
+			var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+
+	</script>
+
+
+

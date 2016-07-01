@@ -1,4 +1,4 @@
-angular.module('college')
+angular.module('collegeApp')
 	.controller('courseCtrl',['$scope','$state','guestFactory',function($scope,$state,guestFactory){
 		var course = $stateParams.course;
 

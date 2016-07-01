@@ -1,14 +1,30 @@
-angular.module('college')
-	.config(['$urlRouterProvider','$urlStateProvider',function($urlRouterProvider,$urlStateProvider){
-
-		$stateProvider
-		
+angular.module('collegeApp')
+	.config(['$urlRouterProvider','$stateProvider','$animateProvider',function($urlRouterProvider,$stateProvider,$animateProvider){
+	
+	$stateProvider
+		.state('home',{
+			url:'/',
+			templateUrl:'guest/view/home.html',
+			controller:'',
+		})
 		.state('course',{
 			url:'/course',
 			templateUrl:'guest/view/courseMenu.html',
 			controller:'',
 		})
-		$urlRouteProvider.otherwise('/');
+		.state('courseDetails',{
+			url:'/course/detail',
+			templateUrl:'guest/view/courseDetails.html',
+			controller:'',
+		})
+		.state('contactUs',{
+			url:'/contactUs',
+			templateUrl:'guest/view/contactUs.html',
+			controller:'',
+		})
+				
+
+		$urlRouterProvider.otherwise('/');
 
 	}])
 	.run(['$rootScope',function($rootScope){
