@@ -13,7 +13,7 @@ angular.module('collegeApp')
 			controller:'courseCtrl',
 		})
 		.state('courseDetails',{
-			url:'/course/:course',
+			url:'/course/detail',
 			templateUrl:'guest/view/courseDetails.html',
 			controller:'courseCtrl',
 		})
