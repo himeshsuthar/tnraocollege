@@ -1,0 +1,156 @@
+<html>
+
+<head>
+
+	<title>T.N.Rao College</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="assets/scripts/map.js?key=AIzaSyBDBN6kcB3eaEObe-LbEtQei5FfXTwYAzQ"></script>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/style/w3.css">
+	<link rel="stylesheet" href="assets/style/style.css">
+	<link rel="stylesheet" href="assets/style/theme.css">
+	<link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css">
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	
+	<script src="bower_components/angular-animate/angular-animate.js"></script>
+
+</head>
+
+<body>
+	<script>
+	$(document).ready(function(){
+		var status = 0;
+		$("#openMenu").click(function(){
+			$("#myMenu").animate({
+				height: [ "toggle", "swing" ],
+			});
+		});
+	});
+
+	function initialize() {
+		var mapProp = {
+			center:new google.maps.LatLng(22.2939629,70.7435525),
+			zoom:16,
+			mapTypeId:google.maps.MapTypeId.ROADMAP
+		};
+		var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+	}
+	google.maps.event.addDomListener(window, 'load', initialize);
+
+	</script>
+
+	<div id="navMenu" class="hidden-xs col-xs-12 col-md-12 w3-teal" style="z-index:1000" data-spy="affix">
+
+		<div class="col-md-4 ">
+			<h2 class="banner">T.N.Rao College</h2>
+		</div>
+
+		<div class="col-md-8">
+			<ul id="menu" class="list-inline pull-right">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Gallery</a></li>
+				<li><a href="#">Campus</a></li>
+				<li><a href="#">Contact us</a></li>
+			</ul>	
+		</div>
+
+	</div>
+
+	
+	<div ui-view class="">
+		<div class="row">
+			<div class="my_container">
+				<div class="container visible-xs " style:"bottom:0;right:0">
+		<div class="row w3-teal ">
+
+			<div class="col-xs-10">
+				<h2>T.N.Rao College</h2>
+			</div>
+			<button class="col-xs-1 navbar-toggle" id="openMenu" style="">
+				<i class="fa fa-bars"></i>
+			</button>
+
+		</div>
+
+
+
+		<div class="row w3-dark-grey" id="myMenu" style="z-index:100001; position:absolute; width:100%; display:none; oveflow:auto;">
+			<ul class="w3-ul w3-center list-group w3-border w3-blue">
+				<li class="list-group-item w3-blue"><a href="#">Home</a></li>
+				<li class="list-group-item w3-blue"><a href="#">Gallery</a></li>
+				<li class="list-group-item w3-blue"><a href="#">Contact Us</a></li>
+				<li class="list-group-item w3-blue"><a href="#">About</a></li>
+			</ul>
+		</div>
+	</div>
+	
+				
+				<div class="col-md-12 col-xs-12 well well-lg no-padding no-margin">			
+					
+					<h1 class="w3-center"><i>Contact Us</i></h1>
+					
+				</div>
+				<div class="col-md-12 col-xs-12  margin-bottom-20 no-padding no-margin ">
+					<div class="col-md-8 col-xs-12 well well-lg">
+						<form>
+							<fieldset>
+								<legend><i class="fa fa-wpforms"></i>   Inquiry Form</legend>
+								<input type="text" class="form-control margin-top-10" required placeholder="Enter your name">
+								<input type="number" class="form-control margin-top-10" required placeholder="Phone Number">
+								<input type="email" required class="form-control margin-top-10" placeholder="Email Address">
+								<input type="text" class="form-control margin-top-10" required placeholder="city">
+
+								<select class="form-control margin-top-10 " required>
+									<option selected disabled>Interested Course</option>
+									<option value="bed">B.Ed</option>
+									<option value="bca">B.C.A</option>
+									<option value="bba">B.B.A</option>
+									<option value="bsc">B.Sc</option>
+									<option value="bcom">B.Com</option>
+									<option value="llb">L.L.B</option>
+									<option value="med">M.Ed</option>
+									<option value="mscit">M.Sc(IT)</option>
+									
+								</select>
+								<textarea rows="4" class="form-control margin-top-10" required placeholder="your query?"></textarea>
+								<div class="w3-center">
+									<button class="btn btn-info margin-top-10 "><i class="fa fa-envelope-o"></i>  Submit</button>
+									<div>
+									</fieldset>
+								</form>
+							</div>
+							<div class="col-md-4 col-xs-12 ">
+								<h3><i class="fa fa-road">  <b>Direction:</b></h3></i>
+								<address class="margin-left-20 "><b>T.N.Rao College</b> <br>
+									<i>B/h. MCA Department <br>
+										Near Saurashtra University Campus<br>
+										Rajkot<br>
+										360005<br>
+										<br>
+										<a href="tel:+02812970471">Tel: 0281-2970471</a><br>
+										<a href="tel:+02812970472">Tel: 0281-2970472</a> <br>
+										<a href="mailto:tnraocollege@ymail.com" target="_top">Email: tnraocollege@ymail.com</a></i>
+									</address>
+									<div class="margin-left-20" style=" border-style:solid;width:300px;height:250px;overflow:hidden" id="googleMap" ></div>
+								</div>
+
+
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="margin-top-10 col-xs-8 col-md-12 no-padding no-margin " style:"width:auto">
+					<footer class="myFooter w3-teal w3-center">
+						<span>Copyright © 2016 - All Rights Reserved - Rao Infotech</span>
+					</footer>
+				</div>
+			</body>
+
+
+			</html>

@@ -6,12 +6,14 @@
 	
 
 }
-.course-container{
-	
-	margin-top: 50px;
-	
-
+.margin-bottom-20{
+	margin-bottom: 20px;
 }
+.my_container{
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
 #myMenu{
 	transition : display 1000;
 	float: center;
@@ -53,9 +55,11 @@
 	display: block;
 	font: 17px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
+
 h3{
 margin-top:10px;
 }
+
 .margin-top-20{
 	margin-top: 20px;
 }
@@ -109,11 +113,11 @@ i{
 }
 
 .news_container{
-	height: auto%;
+	height: auto;
 	display: inline-block;
 	background-color: grey;
 	overflow: hidden;
-	margin-top:10px;
+	margin-top:20px;
 	border-radius:10px;
 	font-size: 17	px;
 
@@ -128,10 +132,9 @@ i{
 	padding-top:20%;
 }
 .square-200{
-	height:300px;
-	width:300px;
+	
 	display: inline-block;
-	margin:10px;
+	margin-top: 20px;
 	border-radius:10px;
 	overflow: hidden;
 	padding:10px;
@@ -154,9 +157,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', end
 .margin-10{
 margin:10px;
 }
-.wrapper_content{
- /*height:100%;*/
-}
+
 
 .w3-light-grey-transparent{
 	background-color:rgba(255,255,255,0.8);
@@ -184,18 +185,10 @@ margin:10px;
 
 .message-wrapper{
 	border-left: 3px solid #ccc;
-	padding-left: 30px;
 	text-align: justify;
-	margin: 10px;
 	font-family:Times New Roman;
-
-
 }
 
-
-.w3-row-eq-height{
-	display: flex;
-}
 
 #marqueInside{
 	margin-top:-100%;
@@ -219,32 +212,26 @@ margin:10px;
 .no-margin{
 	margin:0;
 }
+
 .course_main{
 	margin-top: 15px;
 	margin-left: 10px;
 	border-radius: 15px;
 	height: 225px;
 	max-width: 225px;
-	vertical-align: middle;
+	vertical-align: middle
 	transition : all 1s;
 	display: table;
 	background-color: #518399;
 	color: white;
-	}
-
-.custom_row{
-	height: 100%;
 }
 
-.w3-offset-1{
-	margin-left: 6.33333333333%;
-}
 .course_main:hover{
 
 background-color: rgba(91, 135, 158,0.5);
 color:black;
 box-shadow: 0 8px #ab3c3c;
-	top: 6px;
+top: 6px;
 }
 
 
@@ -257,5 +244,29 @@ box-shadow: 0 8px #ab3c3c;
 	max-height: 200px;
 }
 
+.news_container{
+	width: 100%;
+	margin: 10px;
+	padding: 10px;
+	
+}
 
+.principal_message{
+	padding: 10px;
+
+}
+.course-container{
+	padding: 0;
+	margin: 0;
+	margin-top: 50px;
+
+	
+}
+.margin-left-20{
+	margin-left: 20px;
+}
+
+.div{
+	box-sizing : border-box;
+}
 
