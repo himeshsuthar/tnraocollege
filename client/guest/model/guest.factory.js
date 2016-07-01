@@ -1,5 +1,5 @@
 angular.module('collegeApp')
-	.factory('guestFactory',['$q','$http','rootScope',function($q,$http,$rootScope){
+	.factory('guestFactory',['$q','$http','$rootScope',function($q,$http,$rootScope){
 		
 			var obj = {};
 
@@ -13,4 +13,15 @@ angular.module('collegeApp')
 				});
 				return defer.promise;
 			}
+			obj.getAllCourses = function(){
+				var defer = $q.defer();
+				$http.get($rootScope.serverUrl+"getAllCourses.php")
+				.then(function(response){
+					defer.resolve(response);
+				},function(error){
+					defer.reject(error);
+				});
+				return defer.promise;
+			}
+			return obj;
 	}])

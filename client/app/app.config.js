@@ -10,12 +10,12 @@ angular.module('collegeApp')
 		.state('course',{
 			url:'/course',
 			templateUrl:'guest/view/courseMenu.html',
-			controller:'',
+			controller:'courseCtrl',
 		})
 		.state('courseDetails',{
 			url:'/course/:course',
 			templateUrl:'guest/view/courseDetails.html',
-			controller:'',
+			controller:'courseCtrl',
 		})
 		.state('contactUs',{
 			url:'/contactUs',
