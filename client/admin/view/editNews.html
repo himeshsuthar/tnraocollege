@@ -1,0 +1,43 @@
+<div class="container-fluid margin-bottom-35">
+	<div class="col-md-12 well" >
+<div class="col-md-2">
+<a ui-sref="admin.news"><button type="button" class="btn btn-large btn-success"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+ back</button></a>
+</div>
+<div class="col-md-8">
+	
+	<h2 class="text-center no-margin no-padding" >Add News</h2>
+</div>
+
+</div>
+
+
+	<form id="addNews"  ng-submit="updateNews(x)">
+		<div class="col-md-8 col-md-offset-2 col-xs-12">
+			<div class="well well-lg">
+				
+					<input class="form-control custom-form margin-top-10" ng-model ="x.name" required type="text" placeholder="Enter Heading of news"> 
+				
+				
+					<textarea class="form-control custom-form margin-top-10" required ng-model ="x.description" type="text" placeholder="Enter description of news"> </textarea>
+				
+				
+					<input class="form-control custom-form margin-top-10" required ng-model ="x.fdate" type="date" placeholder="select date"> 
+				
+
+			</div>
+		</div>
+
+
+
+
+			<div class="col-md-12 text-center margin-bottom-35">
+				<button class="btn btn-success btn-md" type="submit"><i class="fa fa-wrench" aria-hidden="true"></i> Update News</button>
+				<button class="btn btn-danger btn-md" ng-click="deleteNews(x)"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete News</button>
+				
+				
+			</div>
+		</form>
+	</div>
+	
+</div>

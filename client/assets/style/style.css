@@ -13,6 +13,14 @@
 	margin-top: 50px;
 	margin-bottom: 30px;
 }
+.headerElement{
+	margin-top: 2px;
+}
+.custom-form{
+	margin:10px;
+	font-family: monospace;
+}
+
 
 #myMenu{
 	transition : display 1000;
@@ -297,7 +305,6 @@ i{
         transition: none !important; /* disable transitions */
         animation: none 0s !important; /* disable keyframe animations */
 }
-
 /* ANIMATIONS (FROM ANIMATE.CSS) ======================== */
 /* flip in */
 @keyframes flipInX {
@@ -360,4 +367,3 @@ i{
     opacity: 0;
   }
 }
-

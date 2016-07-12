@@ -1,0 +1,50 @@
+<div class="row">
+	<div class="col-md-12 well" >
+		<div class="col-md-2">
+			<a ui-sref="admin.home"><button type="button" class="btn btn-large btn-success"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+				back</button></a>
+			</div>
+			<div class="col-md-8">
+
+				<h2 class="text-center no-margin no-padding" >Add Event</h2>
+			</div>
+
+		</div>
+
+		<div class = "col-md-2"></div>
+		<div class = "col-md-8 col-xs-12 well well-lg">
+
+			<form ng-submit = "addEvent(x)" ng-init = "x = {}">
+				<input type = "text" class = " form-control custom-form" ng-model = "x['eventName']" placeholder="Event Name" data-toggle="tooltip" data-placement="right" title="Name of Event">
+				<textarea class = "form-control custom-form" placeholder="Event Description" ng-model = "x['eventDescription']" data-toggle="tooltip" data-placement="right" title="Description"></textarea>
+				<input type="date" ng-model="x['eventDate']" class="form-control custom-form" data-toggle="tooltip" data-placement="right" title="Date of Event">
+				<input type="place" ng-model="x['eventPlace']" class="form-control custom-form" data-toggle="tooltip" data-placement="right" placeholder="Place of Event" title="Place of event">
+
+				<h2 class = "page-header text-danger">Upload Photos{{x.eventName
+				}}</h2>
+				<div class = "row">
+					<div class = "col-md-3">
+					</div>
+					<div id = 'myDiv' class = "col-md-6">
+						<div  
+						class="dropzone" 
+						drop-zone 
+						call-back="myCallBackMethod(response)" 
+						data-max="5"
+						action="{{action}}" 
+						auto-process="false" 
+						message="Drop file here or click to select" 
+						mimetypes="mimeTypes" 
+						id="fileDropzone">
+
+					</div>
+				</div>
+				<div class = "col-md-3">
+				</div>
+			</div>
+			<button class = "btn btn-success">Create Event</button>
+		</form>
+
+		
+	</div>
+</div>

@@ -2,7 +2,7 @@
 include("config.php");
 
 $ara = array();
-$result = mysqli_query($con,"SELECT * FROM `course_details`") or die(mysqli_error($con));
+$result = mysqli_query($con,"SELECT * FROM `course`") or die(mysqli_error($con));
 
 while($x = mysqli_fetch_assoc($result)){
 		array_push($ara,$x);

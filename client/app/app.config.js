@@ -4,25 +4,69 @@ angular.module('collegeApp')
 	$stateProvider
 		.state('home',{
 			url:'/',
-			templateUrl:'guest/view/home.html',
-			controller:'',
+			views:{
+					'top':{
+							templateUrl:'guest/view/menu.html',
+					},
+					'bottom':{
+							templateUrl:'guest/view/home.html',
+							controller:'homeCtrl',
+						
+					}
+			}
 		})
 		.state('course',{
 			url:'/course',
-			templateUrl:'guest/view/courseMenu.html',
-			controller:'courseCtrl',
+			views :{
+				'top':{
+							templateUrl:'guest/view/menu.html',
+					},
+				'bottom':{
+						templateUrl:'guest/view/courseMenu.html',
+						controller:'courseCtrl',
+				}
+			}
 		})
 		.state('courseDetails',{
 			url:'/course/detail',
-			templateUrl:'guest/view/courseDetails.html',
-			controller:'courseCtrl',
+			views :{
+				'top':{
+							templateUrl:'guest/view/menu.html',
+					},
+				'bottom' :{
+				templateUrl:'guest/view/courseDetails.html',
+				controller:'courseCtrl',
+					
+				}
+			}
 		})
 		.state('contactUs',{
 			url:'/contactUs',
-			templateUrl:'guest/view/contactUs.html',
-			controller:'',
+			views :{
+				'top':{
+							templateUrl:'guest/view/menu.html',
+					},
+				'bottom' :{
+							templateUrl:'guest/view/contactUs.html',
+							controller:'',
+					
+				}
+			}
 		})
-				
+		.state('admin',{
+			url:'/admin',
+			views :{
+				'top':{
+					templateUrl :"admin/view/header.html",
+
+				},
+				'bottom' :{
+					template:"<div ui-view></div>"
+					
+				}
+			}
+
+		})	
 
 		$urlRouterProvider.otherwise('/');
 

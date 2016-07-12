@@ -23,5 +23,15 @@ angular.module('collegeApp')
 				});
 				return defer.promise;
 			}
+			obj.getNotification = function(){
+				var defer = $q.defer();
+				$http.get($rootScope.serverUrl+"getAllNotifications.php")
+				.then(function(response){
+					defer.resolve(response);
+				},function(error){
+					defer.reject(error);
+				});
+				return defer.promise;
+			}
 			return obj;
 	}])
