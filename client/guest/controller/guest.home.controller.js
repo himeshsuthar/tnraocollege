@@ -6,8 +6,8 @@ function activate(){
 
 	guestFactory.getNotification()
 	.then(function(response){
-		$scope.notifications = response.data;
-		console.log($scope.notifications);
+		$scope.feeds = response.data;
+		console.log($scope.feeds);
 	},function(error){
 		console.error(error);
 	});

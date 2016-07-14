@@ -3,9 +3,9 @@ angular.module('collegeApp')
 		
 			var obj = {};
 
-			obj.getCourseDetails = function(x){
+			obj.getCourseDetails = function(course){
 				var defer = $q.defer();
-				$http.get($rootScope.serverUrl+"getCourseDetails.php?course="+x)
+				$http.get($rootScope.serverUrl+"getCourseDetails.php?course="+course)
 				.then(function(response){
 					defer.resolve(response);
 				},function(error){
@@ -15,7 +15,7 @@ angular.module('collegeApp')
 			}
 			obj.getAllCourses = function(){
 				var defer = $q.defer();
-				$http.get($rootScope.serverUrl+"getAllCourses.php")
+				$http.get($rootScope.serverUrl+"getCourses.php")
 				.then(function(response){
 					defer.resolve(response);
 				},function(error){
@@ -26,6 +26,26 @@ angular.module('collegeApp')
 			obj.getNotification = function(){
 				var defer = $q.defer();
 				$http.get($rootScope.serverUrl+"getAllNotifications.php")
+				.then(function(response){
+					defer.resolve(response);
+				},function(error){
+					defer.reject(error);
+				});
+				return defer.promise;
+			}
+			obj.getTeachersByCourse = function(course){
+				var defer = $q.defer();
+				$http.get($rootScope.serverUrl+"getTeachersByCourse.php?course="+course)
+				.then(function(response){
+					defer.resolve(response);
+				},function(error){
+					defer.reject(error);
+				});
+				return defer.promise;
+			}
+			obj.getHodByCourse = function(course){
+				var defer = $q.defer();
+				$http.get($rootScope.serverUrl+"getHodByCourse.php?course="+course)
 				.then(function(response){
 					defer.resolve(response);
 				},function(error){

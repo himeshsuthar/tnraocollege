@@ -13,19 +13,21 @@
 							
 							<th ng-click="olfy = 'name'">Name </th>
 							<th>description</th>
+							<th>Edit/delete</th>
 						</tr>
 					
 					<tbody>
 						<tr>
-							<td colspan="4" class="bg-primary" ng-hide="feeds">
+							<td colspan="4" class="bg-primary" ng-hide="news">
 								<h1 class="text-center"><i class="fa fa-refresh fa-spin"></i></h1>
 							</td>
 						</tr>
-						<tr ng-repeat='x in feeds | orderBy : olfy' ng-show="feeds" ng-click="stateChange(x)">
+						<tr ng-repeat='x in news | orderBy : olfy' ng-show="news" ng-click="stateChange(x)">
 							<td>{{$index+1}} </td>
 							
 							<td>{{x.name}} </td>
 							<td>{{x.description}} </td>
+							<td><i class="fa fa-wrench fa-2x" aria-hidden="true" ng-click="editNews(x.id)"></i></td>
 						</tr>
 					</tbody>
 				</table>

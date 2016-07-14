@@ -31,9 +31,9 @@ angular.module('collegeApp')
 		});
 		return defer.promise;
 	}
-	obj.getSingleNews =function(name){
+	obj.getSingleNews =function(id){
 		var defer = $q.defer();
-		$http.post($rootScope.serverUrl1+"getSingleNews.php?name="+name)
+		$http.post($rootScope.serverUrl1+"getSingleNews.php?id="+id)
 		.then(function(response){
 			defer.resolve(response);
 		},function(error){
@@ -223,6 +223,7 @@ angular.module('collegeApp')
 		},function(error){
 			defer.reject(error);
 		});
+	
 		return defer.promise;
 	}			
 	

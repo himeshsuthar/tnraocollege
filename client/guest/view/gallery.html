@@ -1,0 +1,52 @@
+
+
+<div class="wrapper_gallery">
+      <div class="grid">
+        <div class="grid-item grid-item--width2 grid-item--height2"></div>
+        <div class="grid-item grid-item--height3"></div>
+        <div class="grid-item grid-item--height2"></div>
+        <div class="grid-item grid-item--width3"></div>
+        <div class="grid-item w3-red">
+            <div class="img_background"></div>
+        </div>
+        <div class="grid-item grid-item--height2"></div>
+        <div class="grid-item grid-item--width2 grid-item--height3"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item grid-item--height2"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item grid-item--width2 grid-item--height2"></div>
+        <div class="grid-item grid-item--width2"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item grid-item--height2"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item grid-item--height3"></div>
+        <div class="grid-item grid-item--height2"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item grid-item--height2"></div>
+
+    </div>
+</div>
+</div>
+ <script>
+
+ $(document).ready(function() {
+
+     var $gutter;
+
+     if (window.matchMedia("(min-width: 480px)").matches) {
+         $gutter = 15;
+     } else if (window.matchMedia("(min-width: 768px)").matches) {
+         $gutter = 35
+     } else { 
+      and so on
+ }
+
+ $('.grid').masonry({
+     itemSelector: '.grid-item',
+     gutter: $gutter
+ });
+
+ });
+ </script>

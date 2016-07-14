@@ -12,11 +12,12 @@ angular.module('collegeApp')
 	}
 	$scope.doAddTeacher=function(x){	
 		x['name'] = x['fname']+' '+x['mname']+' '+x['lname'];
-		var p=x['fname']+x['lname']+'.jpg';
+		var p="images/teachers/"+x['fname']+x['lname']+'.jpg';
 		x['photo']=p.toLowerCase();
 		console.log(x);
 		x['courseid']=x.course['course'];
-		console.log(x['courseid']);
+		
+		console.log(x);
 		adminFactory.addTeacher(x)
 		.then(function(response){
 			alert("teacher had been added");

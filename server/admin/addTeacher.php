@@ -7,16 +7,21 @@ $data = json_decode($data,true);
 print_r($data);
 $name = $data['name'];
 $qualification = $data['qualification'];
-$post = $data['$post'];
-$photo = $data['$photo']
+$post = $data['post'];
+$photo = $data['photo']
+$courseid = $data['courseid']
 
 
-	mysqli_query($con,"INSERT INTO feeds(
+	mysqli_query($con,"INSERT INTO teachers(
 		`name`,
-		`description`,
-		`date`) VALUES 
+		`qualification`,
+		`post`,
+		`photo`,
+		`courseid`) VALUES 
 		('".$name."',
-		'".$description."',
-		'".$date."')")
+		'".$qualification."',
+		'".$post."',
+		'".$photo."',
+		'".$courseid."')")
 		or die(mysql_error($con));
 	

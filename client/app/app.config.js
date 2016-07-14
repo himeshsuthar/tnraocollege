@@ -23,12 +23,24 @@ angular.module('collegeApp')
 					},
 				'bottom':{
 						templateUrl:'guest/view/courseMenu.html',
-						controller:'courseCtrl',
+						controller:'courseMenuCtrl',
+				}
+			}
+		})
+		.state('gallery',{
+			url:'/gallery',
+			views :{
+				'top':{
+							templateUrl:'guest/view/menu.html',
+					},
+				'bottom':{
+						templateUrl:'guest/view/gallery.html',
+						/*controller:'courseMenuCtrl',*/
 				}
 			}
 		})
 		.state('courseDetails',{
-			url:'/course/detail',
+			url:'/course/:course',
 			views :{
 				'top':{
 							templateUrl:'guest/view/menu.html',
@@ -36,6 +48,19 @@ angular.module('collegeApp')
 				'bottom' :{
 				templateUrl:'guest/view/courseDetails.html',
 				controller:'courseCtrl',
+					
+				}
+			}
+		})
+		.state('infrastructure',{
+			url:'/infrastructure',
+			views :{
+				'top':{
+							templateUrl:'guest/view/menu.html',
+					},
+				'bottom' :{
+				templateUrl:'guest/view/infrastructure.html',
+				/*controller:'courseCtrl',*/
 					
 				}
 			}

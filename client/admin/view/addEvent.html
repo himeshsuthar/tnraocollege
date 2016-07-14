@@ -6,7 +6,7 @@
 			</div>
 			<div class="col-md-8">
 
-				<h2 class="text-center no-margin no-padding" >Add Event</h2>
+				<h2 class="text-center no-margin no-padding" >Create Event</h2>
 			</div>
 
 		</div>
@@ -15,11 +15,11 @@
 		<div class = "col-md-8 col-xs-12 well well-lg">
 
 			<form ng-submit = "addEvent(x)" ng-init = "x = {}">
-				<input type = "text" class = " form-control custom-form" ng-model = "x['eventName']" placeholder="Event Name" data-toggle="tooltip" data-placement="right" title="Name of Event">
-				<textarea class = "form-control custom-form" placeholder="Event Description" ng-model = "x['eventDescription']" data-toggle="tooltip" data-placement="right" title="Description"></textarea>
+				<input type = "text" class = " form-control custom-form" ng-model = "x['name']" placeholder="Event Name" data-toggle="tooltip" data-placement="right" title="Name of Event">
+				<textarea class = "form-control custom-form" placeholder="Event Description" ng-model = "x['description']" data-toggle="tooltip" data-placement="right" title="Description"></textarea>
 				<input type="date" ng-model="x['eventDate']" class="form-control custom-form" data-toggle="tooltip" data-placement="right" title="Date of Event">
-				<input type="place" ng-model="x['eventPlace']" class="form-control custom-form" data-toggle="tooltip" data-placement="right" placeholder="Place of Event" title="Place of event">
-
+				<input type="place" ng-model="x['place']" class="form-control custom-form" data-toggle="tooltip" data-placement="right" placeholder="Place of Event" title="Place of event">
+<!-- 
 				<h2 class = "page-header text-danger">Upload Photos{{x.eventName
 				}}</h2>
 				<div class = "row">
@@ -41,8 +41,8 @@
 				</div>
 				<div class = "col-md-3">
 				</div>
-			</div>
-			<button class = "btn btn-success">Create Event</button>
+			</div> -->
+			<button class = "btn btn-success" type="submit" >Create Event</button>
 		</form>
 
 		

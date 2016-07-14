@@ -6,11 +6,16 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/masonry/dist/masonry.pkgd.js"></script>
 	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="assets/scripts/map.js?key=AIzaSyDyfdX3cNj1brpQ7-EtcxDyjtZxOUk_Rx0"></script>
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="assets/style/w3.css">
 	<link rel="stylesheet" href="assets/style/style.css">
 	<link rel="stylesheet" href="assets/style/theme.css">
+
+	<link rel="stylesheet" href="assets/scripts/ninja-slider.css">	
+	<script src="assets/scripts/ninja-slider.js"></script>
 	<link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css">
 	<script src="bower_components/angular/angular.js"></script>
 	<script src="bower_components/angular-animate/angular-animate.js"></script>
@@ -22,6 +27,7 @@
 	<script src="admin/model/admin.factory.js"></script>
 	<script src="assets/scripts/dropzone.js"></script>
 	<link rel="stylesheet" href="assets/scripts/dropzone.css">
+	<script src="guest/controller/guest.courseMenu.controller.js"></script>
 	<script src="guest/controller/guest.course.controller.js"></script>
 	<script src="guest/controller/guest.home.controller.js"></script>
 	<script src="admin/controller/admin.login.controller.js"></script>
@@ -34,9 +40,12 @@
 	<script src="admin/controller/admin.teachers.controller.js"></script>
 	<script src="admin/controller/admin.news.controller.js"></script>
 	<script src="admin/controller/admin.editEvent.controller.js"></script>
+	<script src="admin/controller/admin.editNews.controller.js"></script>
+	<script src="admin/controller/admin.editCourse.controller.js"></script>
 	<script src="admin/controller/admin.editTeacher.controller.js"></script>
 	<script src="admin/controller/admin.addCourse.controller.js"></script>
 	<script src="admin/controller/admin.addNews.controller.js"></script>
+
 </head>
 <body ng-app="collegeApp">
 	<script>
@@ -56,10 +65,24 @@
 		<div ui-view="bottom">
 
 		</div>
-		<div class="margin-top-10 w3-card-12">
-			<footer class="myFooter w3-teal w3-center">
+		<div class="margin-top-10 myFooter w3-teal w3-card-6 col-md-12 col-xs-12" style="z-index:1000">
+
+			<div  class=" w3-center col-md-8 col-md-offset-2">
 				<span>Copyright © 2016 - All Rights Reserved - Rao Infotech</span>
-			</footer>
+			</div>
+			<div class="col-md-2 " id="google_translate_element" >
+
+			</div>
+
 		</div>
-	</body>
-	</html>
+		<div class="margin-top-20">
+		</div>
+	</div>
+</body>
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+	new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,gu,hi', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</html>

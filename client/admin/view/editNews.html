@@ -6,13 +6,13 @@
 </div>
 <div class="col-md-8">
 	
-	<h2 class="text-center no-margin no-padding" >Add News</h2>
+	<h2 class="text-center no-margin no-padding" >update News</h2>
 </div>
 
 </div>
 
 
-	<form id="addNews"  ng-submit="updateNews(x)">
+	<form id="addNews"  ng-submit="doUpdate(x)">
 		<div class="col-md-8 col-md-offset-2 col-xs-12">
 			<div class="well well-lg">
 				
@@ -22,7 +22,7 @@
 					<textarea class="form-control custom-form margin-top-10" required ng-model ="x.description" type="text" placeholder="Enter description of news"> </textarea>
 				
 				
-					<input class="form-control custom-form margin-top-10" required ng-model ="x.fdate" type="date" placeholder="select date"> 
+					 
 				
 
 			</div>
@@ -33,7 +33,7 @@
 
 			<div class="col-md-12 text-center margin-bottom-35">
 				<button class="btn btn-success btn-md" type="submit"><i class="fa fa-wrench" aria-hidden="true"></i> Update News</button>
-				<button class="btn btn-danger btn-md" ng-click="deleteNews(x)"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete News</button>
+				
 				
 				
 			</div>

@@ -53,7 +53,9 @@
 	border: 1px solid black;
 	height: 200px;
 }
-
+.img-border{
+border: 1px solid black;
+}
 .height-icons{
 	height:50px;
 	width:50px;
@@ -145,7 +147,7 @@ i{
 	margin-top: 20px;
 	border-radius:10px;
 	overflow: hidden;
-	padding:10px;
+	
 	vertical-align: middle;
 	text-align: center;
 	transition:box-shadow 0.5s;
@@ -254,6 +256,7 @@ i{
 
 .news_container{
 	width: 100%;
+	height:85%;
 	margin: 10px;
 	padding: 10px;
 	
@@ -292,6 +295,93 @@ i{
 	
 	margin-top: 5px;
 }
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.margin-top-15{
+	margin-top:15px;
+}
+.header-margin{
+	padding-top: 15px;
+}
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+
+/* Add Animation */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+        body {font: normal 0.9em Arial;margin:0;}
+        a {color:#1155CC;}
+        h2 {margin-top: 60px;}
+        header {display:block;padding:40px 0 30px;text-align:center;background:#000;}
+        header a {
+            font-family: sans-serif;
+            font-size: 24px;
+            line-height: 24px;
+            padding: 8px 13px 7px;
+            color: #4d5256;
+            text-decoration:none;
+            transition: color 0.7s;
+        }
+        header a.active {
+            font-weight:bold;
+            width: 24px;
+            height: 24px;
+            padding: 4px;
+            text-align: center;
+            display:inline-block;
+            border-radius: 50%;
+            background: #4d5256;
+            color: #191919;
+        }
+   
+
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 500px;
+    }
+}
+
 /*animate class*/
 .ng-hide-add         { animation:1s lightSpeedOut ease; }
 .ng-enter         { animation:1s flipInX ease; }

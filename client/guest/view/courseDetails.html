@@ -1,6 +1,8 @@
 <div class="row course-container no-margin no-padding">
-			<div class="col-md-12 col-xs-12">
-				<div><h1 class="w3-center w3-light-grey w3-padding">Bachelors of Computer Application
+			<div class="col-md-12 col-xs-12" >
+				<div><h1 class="w3-center w3-light-grey w3-padding">{{course.name}}
+				
+
 				</h1>
 			</div>
 
@@ -14,20 +16,12 @@
 					<div>
 						<div class="well well-lg">
 							<ul class="content" type="">
-								<li>The BBA course is aimed at providing a management degree to students who are aspiring for a career as managers and who wish to become an MBA subsequently. </li>
+								
 
-								<li>The BBA program develops capable problem-solvers and decision-makers.</li> 
-
-								<li>It provides a fundamental grounding in administration and offers an opportunity to pursue a wide range of 	interests. 
-									Successful completion of BBA would make a student eligible for admission to MBA program.</li> 
-
-									<li>A wide exposure and linkage with industry.</li>
-
-									<li>The program provides a wide range of choices to the student entering into an attractive employment.</li>
-
-									<li>Incorporates various professional skills and value focused decision making along with the regular teaching.</li> 
-									<li>A broad professional and technical knowledge.</li> 
-									<li>After the course you are eligible for MBA, MCA.</li> 
+								<li class="margin-top-5"><div  ng-bind-html="contenthtml()"></div></li>
+								<li class="margin-top-5"><b>Eligibility:</b>  {{course.eligibility}}</li>
+								<li class="margin-top-5"><b>Duration:</b>   {{course.duration}} </li>
+								<li class="margin-top-5"><b>Fees:</b>  {{course.fees}}</li>
 								</ul>
 							</div>
 						</div>
@@ -38,9 +32,9 @@
 					<div class="margin-top-20">
 						<p><b>HEAD OF DEPARTMENT</b></p>
 						<div class="head_photo">
-							<img src="assets/images/prashantdave.jpg" style="">
+							<img src="{{hod.photo}}" style="">
 						</div>
-						<div class="w3-light-grey margin-top-5 w3-padding img-thumbnail"><b>Prashant Dave</b><br>B.Com., M.C.A.
+						<div class="w3-light-grey margin-top-5 w3-padding img-thumbnail"><b>{{hod.name}}</b><br>{{hod.qualification}}
 						</div>
 					</div>
 				</div>	
@@ -53,34 +47,34 @@
 					<div>
 						<div class="well well-lg col-md-12 col-xs-12 hidden-xs">
 
-							<table class="table table-responsive table-bordered">
+							<table class="table table-responsive table-bordered" ng-repeat="x in teachers">
 								
 								<tr>								
 									<td style="width:250px;" class="w3-center" rowspan="5">
-										<img class="faculty_photo img-thumbnail" src="assets/images/nidattbarot.jpg">
+										<img class="faculty_photo img-thumbnail" src="{{x.photo}}" alt="{{x.name}}" >
 									</td>
 									<td><b>Name </b></td>
-									<td>Dr. Nidatt Barot</td>
+									<td><b>{{x.name}}</b></td>
 								</tr>
 
 								<tr>
 									<td><b>Qualification</b></td>
-									<td>P.hD.</td>
+									<td>{{x.qualification}}</td>
 								</tr>
 
 								<tr>
 									<td><b>Designation</b></td>
-									<td>Principal</td>
+									<td>{{x.post}}</td>
 								</tr>
 
 								<tr>
 									<td><b>Contact no. </b></td>
-									<td>1654848152</td>
+									<td>{{x.phone}}</td>
 								</tr>
 
 								<tr>
 									<td><b>E-mail</b></td>
-									<td>hello@hi.com</td>
+									<td>{{x.email}}</td>
 								</tr>
 
 							</table>
@@ -114,3 +108,4 @@
 			</div>
 
 		</div>
+
