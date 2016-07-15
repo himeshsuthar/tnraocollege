@@ -20,9 +20,13 @@
     "angular-ui-router": "^0.3.0",
     "bootstrap": "^3.3.6",
     "components-font-awesome": "^4.6.3",
+<<<<<<< HEAD
+    "masonry": "^4.1.0",
+=======
 
     "masonry": "^4.1.0",
     "imagesloaded": "^4.1.0",
+>>>>>>> a1cfee5a5c10d45b10660705aa5f686ff7f35610
     "angular-material": "^1.0.9"
   }
 }
