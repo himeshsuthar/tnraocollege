@@ -1,0 +1,212 @@
+<style>
+.grid-item
+{
+    padding: 3px;
+    background-color:#222;
+    border-radius: 10px;
+    margin: 3px;
+    min-width: 300px;
+}
+.modalOpenImg
+{
+    width: 300px;
+    height:auto;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #333;
+    margin: auto;
+}
+#modalFoto{
+    max-width: 100%;
+    max-height: 100%;
+}
+.modal-body
+{
+    text-align: center;
+}
+.modal-dialog 
+{
+  width: 80%;
+  height: auto;
+  margin: auto;
+  padding: 5;
+}
+.modal-header{
+    background-color: rgba(255,255,255,0.8)
+}
+.modal-content {
+  background-color: transparent;
+  height: auto;
+  min-height: 100%;
+  border-radius: 10px;
+}
+
+#modalFoto{
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 50vh;
+    min-height: 50vh;
+}
+</style>
+
+<div class="my_container">
+
+    <div class="wrapper-gallery" style="width:100%;">
+
+        <div class="grid" style="margin-left:3px;float:left;width:95%;">
+
+            <div class="grid-item">
+                <img src="assets/images/32.jpg" class="modalOpenImg img-responsive" >
+            </div>
+
+            <div class="grid-item">
+                <img src="assets/images/36.jpg" class="modalOpenImg img-responsive">
+            </div>
+
+            <div class="grid-item">
+                <img src="assets/images/33.jpg" class="modalOpenImg img-responsive">
+            </div>
+
+            <div class="grid-item">
+                <img src="assets/images/32.jpg" class="modalOpenImg img-responsive">
+            </div>
+
+            <div class="grid-item">
+                <img src="assets/images/35.jpg" class="modalOpenImg img-responsive">
+            </div>
+
+            <div class="grid-item">
+                <img src="assets/images/32.jpg" class="modalOpenImg img-responsive">
+            </div>
+
+            <div class="grid-item">
+                <img src="assets/images/31.jpg" class="modalOpenImg img-responsive">
+            </div>
+
+            <div class="grid-item">
+                <img src="assets/images/35.jpg" class="modalOpenImg img-responsive">
+            </div>
+
+            <div class="grid-item">
+                <img src="assets/images/33.jpg" class="modalOpenImg img-responsive">
+            </div>
+
+            <div class="grid-item">
+                <img src="assets/images/34.jpg" class="modalOpenImg img-responsive">
+            </div>
+
+            <div class="grid-item">
+                <img src="assets/images/35.jpg" class="modalOpenImg img-responsive">
+            </div>
+
+            <div class="grid-item">
+                <img src="assets/images/32.jpg" class="modalOpenImg img-responsive">
+            </div>
+
+            <div class="grid-item">
+                <img src="assets/images/31.jpg" class="modalOpenImg img-responsive">
+            </div>
+
+            <div class="grid-item">
+                <img src="assets/images/33.jpg" class="modalOpenImg img-responsive">
+            </div>
+
+            <div class="grid-item">
+                <img src="assets/images/32.jpg" class="modalOpenImg img-responsive">
+            </div>
+
+            <div class="grid-item">
+                <img src="assets/images/31.jpg" class="modalOpenImg img-responsive">
+            </div>
+
+            <div class="grid-item">
+                <img src="assets/images/33.jpg" class="modalOpenImg img-responsive">
+            </div>
+
+            <div class="grid-item">
+                <img src="assets/images/34.jpg" class="modalOpenImg img-responsive">
+            </div>
+
+            <div class="grid-item">
+                <img src="assets/images/35.jpg" class="modalOpenImg img-responsive">
+            </div>
+
+            <div class="grid-item">
+                <img src="assets/images/32.jpg" class="modalOpenImg img-responsive">
+            </div>
+
+            <div class="grid-item">
+                <img src="assets/images/31.jpg" class="modalOpenImg img-responsive">
+            </div>
+
+        </div>
+
+        <div id="modalPicture" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalPictureLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" style="display:block; padding:4px; background-color:rgb(200,10,10); opacity:1; color:white" data-dismiss="modal" aria-label="Close">
+                            <span class="fa fa-times" aria-hidden="true"></span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        <img class="js-modal-image w3-image" id='modalFoto' src="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="btn btn-default w3-padding w3-teal" style="margin-top:40vh;right:0%;position:fixed;padding:0;" ng-click="openLeftMenu()">
+        <i class="fa fa-angle-double-left fa-3x" aria-hidden="true" ></i>
+    </div>
+     <md-sidenav md-component-id="right" class="md-sidenav-right">
+        Left Nav!
+    </md-sidenav>
+
+
+</div>
+
+
+<script>
+
+$(document).ready(function() {
+
+    var $gutter;
+
+    if (window.matchMedia("(min-width: 480px)").matches) {
+        $gutter = 5;
+    } else if (window.matchMedia("(min-width: 768px)").matches) {
+        $gutter = 40;
+    } else {}
+
+    activateMas($gutter);
+
+    setInterval(function(){activateMas($gutter)},100);
+
+    $(".modalOpenImg").click(function(){
+        if($(window).width() > 768)
+        {
+            $("#modalFoto").attr('src',$(this).attr('src'));
+            $("#modalPicture").modal();
+        }
+        else{
+            console.log($(window).width())
+        }
+    });
+
+});
+
+function activateMas(x){
+    console.log("activateMas()");
+    $('.grid').masonry({
+        itemSelector: '.grid-item',
+        gutter: x,
+        columnWidth: 1
+    });
+}
+</script>
+
+
+
+

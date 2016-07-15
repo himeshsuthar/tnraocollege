@@ -1,6 +1,6 @@
 angular.module('collegeApp')
-	.controller('galleryCtrl',['$scope','$state','guestFactory',function($scope,$state,guestFactory){
-		
+.controller('galleryCtrl',['$scope','$state','$stateParams','$mdSidenav','$log','guestFactory',function($scope,$state,$stateParams,$mdSidenav,$log,guestFactory)
+{
 activate();
 function activate(){
 
@@ -12,5 +12,10 @@ function activate(){
 		console.error(error);
 	});
 }
+   $scope.openLeftMenu = function() {
+   	console.log("openLeftMenu");
+    $mdSidenav('right').toggle();
+  };
+}]);
 		
-	}])
+		
