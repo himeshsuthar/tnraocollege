@@ -5,34 +5,58 @@
 	<title>T.N.Rao College</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="assets/scripts/masonry.pkgd.min.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<!-- <script src="assets/scripts/map.js?key=AIzaSyBDBN6kcB3eaEObe-LbEtQei5FfXTwYAzQ"></script>
- -->
-<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-<link rel="stylesheet" href"assets/style/masonary.css"></script>
-<link rel="stylesheet" href="assets/style/w3.css">
-<link rel="stylesheet" href="assets/style/style.css">
-<link rel="stylesheet" href="assets/style/theme.css">
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/masonry/dist/masonry.pkgd.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css">
 
 <script src="bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
-<script src="bower_components/angular/angular.js"></script>
+	<script src="assets/scripts/map.js?key=AIzaSyDyfdX3cNj1brpQ7-EtcxDyjtZxOUk_Rx0"></script>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/style/w3.css">
 <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css"></link>
+	<script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-material/angular-material.min.js"></script>
 <script src="bower_components/angular-messages/angular-messages.min.js"></script>
 <script src="bower_components/angular-aria/angular-aria.min.js"></script>
-<script src="app/app.module.js"></script>
-<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-<script src="app/app.config.js"></script>
-<script src="bower_components/angular-animate/angular-animate.js"></script>
-<script src="guest/model/guest.factory.js"></script>
-<script src="guest/controller/guest.course.controller.js"></script>
-<script src="guest/controller/guest.gallery.controller.js"></script>
+	<link rel="stylesheet" href="assets/style/style.css">
+	<link rel="stylesheet" href="assets/style/theme.css">
+
+	<link rel="stylesheet" href="assets/scripts/ninja-slider.css">	
+	<script src="assets/scripts/ninja-slider.js"></script>
+	<link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css">
+	<script src="bower_components/angular-animate/angular-animate.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="app/app.module.js"></script>
+	<script src="app/app.config.js"></script>
+	<script src="admin/admin.route.js"></script>
+	<script src="guest/model/guest.factory.js"></script>
+	<script src="admin/model/admin.factory.js"></script>
+	<script src="assets/scripts/dropzone.js"></script>
+	<link rel="stylesheet" href="assets/scripts/dropzone.css">
+	<script src="admin/admin.directive.js"></script>
+	<script src="guest/controller/guest.courseMenu.controller.js"></script>
+	<script src="guest/controller/guest.course.controller.js"></script>
+	<script src="guest/controller/guest.home.controller.js"></script>
+	<script src="guest/controller/guest.gallery.controller.js"></script>
+	<script src="admin/controller/admin.login.controller.js"></script>
+	<script src="admin/controller/admin.addNews.controller.js"></script>
+	<script src="admin/controller/admin.addTeacher.controller.js"></script>
+	<script src="admin/controller/admin.addEvent.controller.js"></script>
+	<script src="admin/controller/admin.addCourse.controller.js"></script>
+	<script src="admin/controller/admin.events.controller.js"></script>
+	<script src="admin/controller/admin.courses.controller.js"></script>
+	<script src="admin/controller/admin.teachers.controller.js"></script>
+	<script src="admin/controller/admin.news.controller.js"></script>
+	<script src="admin/controller/admin.editEvent.controller.js"></script>
+	<script src="admin/controller/admin.editNews.controller.js"></script>
+	<script src="admin/controller/admin.editCourse.controller.js"></script>
+	<script src="admin/controller/admin.editTeacher.controller.js"></script>
+	<script src="admin/controller/admin.addCourse.controller.js"></script>
+	<script src="admin/controller/admin.addNews.controller.js"></script>
+
 
 </head>
-
 <body ng-app="collegeApp">
 	<script>
 		$(document).ready(function(){
@@ -44,68 +68,30 @@
 			});
 		});
 
-
 	</script>
-
-	<div class="row">
-		<div id="navMenu" class="hidden-xs col-md-12 w3-teal" style="z-index:1000" data-spy="affix">
-			
-			<div class="col-md-3">
-				<h2 class="banner">T.N.Rao College</h2>
-			</div>
-
-			<div class="col-md-9">
-				<ul id="menu" class="list-inline pull-right">
-					<li><a ui-sref="home">Home</a></li>
-					<li><a ui-sref="gallery">Gallery</a></li>
-					<li><a href="#">Campus</a></li>
-					<li><a ui-sref="contactUs">Contact us</a></li>
-				</ul>	
-			</div>
-
-		</div>
+	<div ui-view="top">
 
 	</div>
-
-
-	<div class="container visible-xs">
-		<div class="row w3-red">
-
-			<div class="col-xs-10">
-				<h2>T.N.Rao College</h2>
-			</div>
-
-			<button class="col-xs-2 navbar-toggle no-margin" id="openMenu" style="">
-				<i class="fa fa-bars"></i>
-			</button>
-
-		</div>
-
-		<div class="row w3-dark-grey" id="myMenu" style="z-index:100001; position:absolute; width:100%; display:none; oveflow:auto;">
-
-			<ul class="w3-ul w3-center list-group w3-border w3-blue col-xs-12">
-				<li class="list-group-item w3-blue"><a href="#">Home</a></li>
-				<li class="list-group-item w3-blue"><a href="#">Gallery</a></li>
-				<li class="list-group-item w3-blue"><a href="#">Contact Us</a></li>
-				<li class="list-group-item w3-blue"><a href="#">About</a></li>
-			</ul>
-		</div>
-	</div>
-	
 	<div class="main-container">
+		<div ui-view="bottom">
 
-		<div ui-view>
-			
-			
+		</div>
+		<div  class="margin-top-10 myFooter w3-teal w3-card-6 col-md-12 col-xs-12" style="z-index:1000; height:6%">
 
-			
+			<div  class=" w3-center col-md-8 col-md-offset-2">
+				<spa class="custom-form"n>Copyright © 2016 - All Rights Reserved - Rao Infotech</span>
+			</div>
+			<div class="col-md-2 " id="google_translate_element" >
+
+			</div>
+
 		</div>
-		<div class="margin-top-10">
-			<footer class="myFooter w3-teal w3-center">
-				<span>Copyright © 2016 - All Rights Reserved - Rao Infotech</span>
-			</footer>
+		<div class="margin-top-20">
 		</div>
-	</body>
+	</div>
+
+	
+	
 
 
 
@@ -140,4 +126,13 @@
 
 
 
-	</html>
+	
+</body>
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+	new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,gu,hi', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</html>
+

@@ -1,14 +1,43 @@
 angular.module('collegeApp')
-	.controller('courseCtrl',['$scope','$state','guestFactory',function($scope,$state,guestFactory){
-		alert("hello");
-		/*var course = $stateParams.course;
+	.controller('courseCtrl',['$scope','$sce','$state','$stateParams','guestFactory',function($scope,$sce,$state,$stateParams,guestFactory){
 
-		guestFactory.getCourseDetails(course)
-		.then(function(response){
-			$scope.record = response.data[0];
-			console.log($scope.record);
+		var course = $stateParams.course;
+		console.log(course);
+		activate();
+	function activate(){
 
-		},function(error){
-			console.error(error);
-		});*/
-	}])
+	guestFactory.getCourseDetails(course)
+	.then(function(response){
+		$scope.course = response.data;
+
+		console.log($scope.course);
+	},function(error){
+		console.error(error);
+	});
+
+	$scope.contenthtml=function(){
+		return $sce.trustAsHtml($scope.course.content);
+	};
+
+	guestFactory.getTeachersByCourse(course)
+	.then(function(response){
+		$scope.teachers = response.data;
+		console.log($scope.teachers);
+	},function(error){
+		console.error(error);
+	});
+
+	guestFactory.getHodByCourse(course)
+	.then(function(response){
+		$scope.hod=response.data;
+		console.log($scope.hod);
+	},function(error){
+		console.error(error);
+	});
+}
+
+
+
+
+}]);
+

@@ -14,6 +14,14 @@
 	margin-top: 50px;
 	margin-bottom: 30px;
 }
+.headerElement{
+	margin-top: 2px;
+}
+.custom-form{
+	margin:10px;
+	font-family: monospace;
+}
+
 
 #myMenu{
 	transition : display 1000;
@@ -44,6 +52,18 @@
 .container_back{
 	border: 1px solid black;
 	height: 200px;
+}
+.img-border{
+border: 1px solid black;
+}
+.height-icons{
+	height:50px;
+	width:50px;
+}
+.myBlockQuote
+{  
+	display: block;
+	font: 17px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 
@@ -127,7 +147,7 @@ i{
 	margin-top: 20px;
 	border-radius:10px;
 	overflow: hidden;
-	padding:10px;
+	
 	vertical-align: middle;
 	text-align: center;
 	transition:box-shadow 0.5s;
@@ -224,6 +244,7 @@ i{
 
 .news_container{
 	width: 100%;
+	height:85%;
 	margin: 10px;
 	padding: 10px;
 	
@@ -257,6 +278,7 @@ i{
 	-webkit-transition: all .2s ease-in-out;
 	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-ou;
+
 
 	.margin-top-5{
 
@@ -384,4 +406,171 @@ i{
 	margin-bottom: 55%;*/
 }
 
+
+.margin-top-5{
+	
+	margin-top: 5px;
+}
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.margin-top-15{
+	margin-top:15px;
+}
+.header-margin{
+	p
+}
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+
+/* Add Animation */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+        body {font: normal 0.9em Arial;margin:0;}
+        a {color:#1155CC;}
+        h2 {margin-top: 60px;}
+        header {display:block;padding:40px 0 30px;text-align:center;background:#000;}
+        header a {
+            font-family: sans-serif;
+            font-size: 24px;
+            line-height: 24px;
+            padding: 8px 13px 7px;
+            color: #4d5256;
+            text-decoration:none;
+            transition: color 0.7s;
+        }
+        header a.active {
+            font-weight:bold;
+            width: 24px;
+            height: 24px;
+            padding: 4px;
+            text-align: center;
+            display:inline-block;
+            border-radius: 50%;
+            background: #4d5256;
+            color: #191919;
+        }
+   
+
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 500px;
+    }
+}
+
+/*animate class*/
+.ng-hide-add         { animation:1s lightSpeedOut ease; }
+.ng-enter         { animation:1s flipInX ease; }
+
+/* when showing the picture */
+.ng-hide-remove      { animation:0.5s flipInX ease; }
+
+.no-animate.ng-enter,
+.no-animate.ng-leave,
+.no-animate.ng-animate {
+        transition: none !important; /* disable transitions */
+        animation: none 0s !important; /* disable keyframe animations */
+}
+/* ANIMATIONS (FROM ANIMATE.CSS) ======================== */
+/* flip in */
+@keyframes flipInX {
+  0% {
+    transform: perspective(3000px) rotate3d(1, 0, 0, 90deg);
+    transition-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(3000px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(3000px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(3000px) rotate3d(1, 0, 0, -20deg);
+    transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(3000px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(3000px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(3000px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(3000px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(3000px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(3000px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  100% {
+    transform: perspective(3000px);
+    transform: perspective(3000px);
+    transform: perspective(3000px);
+  }
+}
+
+/* light speed out */
+@keyframes lightSpeedOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    opacity: 0;
+  }
+}
+
+@keyframes lightSpeedOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    opacity: 0;
+  }
+}
 
