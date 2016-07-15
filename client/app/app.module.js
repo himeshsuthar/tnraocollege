@@ -1,1 +1,1 @@
-angular.module('collegeApp',['ui.router','ngAnimate','ngMaterial']);
+angular.module('collegeApp',['ui.router','ngAnimate']);

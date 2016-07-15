@@ -1,14 +1,15 @@
 .margin-top-5{
 	margin-top: 5px;
 }
+
 .main-container{
 	margin-bottom: 30px;
-	
-
 }
+
 .margin-bottom-20{
 	margin-bottom: 20px;
 }
+
 .my_container{
 	margin-top: 50px;
 	margin-bottom: 30px;
@@ -27,28 +28,27 @@
 	float: center;
 	z-index: 10001;
 }
+
 .myFooter{
 	height:30px;
-	position: fixed;
+	position:relative;
 	bottom: 0;
 	left: 0px;
 	right: 0px;
 	width: 100%;
 }
+
 #changeBg{
 	background: rgba(53, 145, 204, 1);
 	position: fixed;
 	top: 0;
 	width: 100%;
 }
-.background{
-	background-color: blue;
-}
 
 .menu_head{
 	font-weight: bold;
-
 }
+
 .container_back{
 	border: 1px solid black;
 	height: 200px;
@@ -65,6 +65,7 @@ border: 1px solid black;
 	display: block;
 	font: 17px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
+
 
 h3{
 	margin-top:10px;
@@ -90,6 +91,7 @@ i{
 	transition: background-image 1s;
 	-webkit-transition: background-image 1s;
 }
+
 .wrapper{
 	background-color: rgba(100,100,100,0.8);
 }
@@ -129,9 +131,7 @@ i{
 	overflow: hidden;
 	margin-top:20px;
 	border-radius:10px;
-	font-size: 17	px;
-
-
+	font-size: 17px;
 }
 
 .margin-top-10{
@@ -141,8 +141,8 @@ i{
 .padding-top-10{
 	padding-top:20%;
 }
+
 .square-200{
-	
 	display: inline-block;
 	margin-top: 20px;
 	border-radius:10px;
@@ -152,22 +152,14 @@ i{
 	text-align: center;
 	transition:box-shadow 0.5s;
 }
+
 .square-200:hover{
 	box-shadow: 0 0 50px grey;
 }
 
-.gradient{
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f6f8+0,d8e1e7+27,b5c6d0+68,e0eff9+100 */
-	background: #f2f6f8; /* Old browsers */
-	background: -moz-linear-gradient(-45deg, #f2f6f8 0%, #d8e1e7 27%, #b5c6d0 68%, #e0eff9 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(-45deg, #f2f6f8 0%,#d8e1e7 27%,#b5c6d0 68%,#e0eff9 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(135deg, #f2f6f8 0%,#d8e1e7 27%,#b5c6d0 68%,#e0eff9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
 .margin-10{
 	margin:10px;
 }
-
 
 .w3-light-grey-transparent{
 	background-color:rgba(255,255,255,0.8);
@@ -199,49 +191,45 @@ i{
 	font-family:Times New Roman;
 }
 
-
 #marqueInside{
 	margin-top:-100%;
 }
-
 
 .msg-header{
 	font-style: italic;
 	font-size: 26px;
 	font-family:Verdana;
 }
+
 #navMenu{
 	top:0;
 	left:0;
 	bottom:0;
 	height:50px;
 }
+
 .no-padding{
 	padding: 0;
 }
+
 .no-margin{
 	margin:0;
 }
 
 .course_main{
 	margin-top: 15px;
-	margin-left: 10px;
+	
+
 	border-radius: 15px;
-	height: 225px;
-	max-width: 225px;
-	vertical-align: middle
 	transition : all 1s;
-	display: table;
+	display:inline-block;
 	background-color: #518399;
 	color: white;
 }
 
 .course_main:hover{
-
 	background-color: rgba(91, 135, 158,0.5);
 	color:black;
-	box-shadow: 0 8px #ab3c3c;
-	top: 6px;
 }
 
 
@@ -290,6 +278,134 @@ i{
 	-webkit-transition: all .2s ease-in-out;
 	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-ou;
+
+
+	.margin-top-5{
+
+		margin-top: 5px;
+	}
+
+	.grid-item,.grid-sizer { 
+		width: 40%; 
+
+	}
+
+	.grid-item--width2 { 
+		width: 60%; 
+
+	}
+	/*animate class*/
+	.ng-hide-add         { animation:1s lightSpeedOut ease; }
+	.ng-enter         { animation:1s flipInX ease; }
+
+	/* when showing the picture */
+	.ng-hide-remove      { animation:0.5s flipInX ease; }
+
+	.no-animate.ng-enter,
+	.no-animate.ng-leave,
+	.no-animate.ng-animate {
+		transition: none !important; /* disable transitions */
+		animation: none 0s !important; /* disable keyframe animations */
+	}
+
+	/* ANIMATIONS (FROM ANIMATE.CSS) ======================== */
+	/* flip in */
+	@keyframes flipInX {
+		0% {
+			transform: perspective(3000px) rotate3d(1, 0, 0, 90deg);
+			transition-timing-function: ease-in;
+			opacity: 0;
+		}
+
+		40% {
+			transform: perspective(3000px) rotate3d(1, 0, 0, -20deg);
+			transform: perspective(3000px) rotate3d(1, 0, 0, -20deg);
+			transform: perspective(3000px) rotate3d(1, 0, 0, -20deg);
+			transition-timing-function: ease-in;
+			transition-timing-function: ease-in;
+		}
+
+		60% {
+			transform: perspective(3000px) rotate3d(1, 0, 0, 10deg);
+			transform: perspective(3000px) rotate3d(1, 0, 0, 10deg);
+			transform: perspective(3000px) rotate3d(1, 0, 0, 10deg);
+			opacity: 1;
+		}
+
+		80% {
+			transform: perspective(3000px) rotate3d(1, 0, 0, -5deg);
+			transform: perspective(3000px) rotate3d(1, 0, 0, -5deg);
+			transform: perspective(3000px) rotate3d(1, 0, 0, -5deg);
+		}
+
+		100% {
+			transform: perspective(3000px);
+			transform: perspective(3000px);
+			transform: perspective(3000px);
+		}
+	}
+
+	/* light speed out */
+	@keyframes lightSpeedOut {
+		0% {
+			opacity: 1;
+		}
+
+		100% {
+			transform: translate3d(100%, 0, 0) skewX(30deg);
+			transform: translate3d(100%, 0, 0) skewX(30deg);
+			opacity: 0;
+		}
+	}
+
+	@keyframes lightSpeedOut {
+		0% {
+			opacity: 1;
+		}
+
+		100% {
+			transform: translate3d(100%, 0, 0) skewX(30deg);
+			transform: translate3d(100%, 0, 0) skewX(30deg);
+			transform: translate3d(100%, 0, 0) skewX(30deg);
+			opacity: 0;
+		}
+	}
+* { box-sizing: border-box; }
+
+
+.grid {
+  background: #EEE;
+  width: 100%;
+}
+
+
+.grid:after {
+  content: '';
+  display:inline-block;
+  clear: both;
+}
+
+
+.grid-item {
+  float: left;
+  width: 100%;
+  height: auto;
+  background: #D26;
+  overflow: hidden;  
+  position: absolute; 
+}
+
+.side-nav{
+	width:5%;
+	display:inline-block; 
+	vertical-align:middle;
+	padding: 0;
+	margin-top: 45%;
+	margin-right: 0px;
+	/*margin-top: 45%;
+	margin-bottom: 55%;*/
+}
+
 
 .margin-top-5{
 	
@@ -457,3 +573,4 @@ i{
     opacity: 0;
   }
 }
+
