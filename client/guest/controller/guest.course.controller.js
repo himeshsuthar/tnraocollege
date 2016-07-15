@@ -1,6 +1,7 @@
 angular.module('collegeApp')
 	.controller('courseCtrl',['$scope','$state','guestFactory',function($scope,$state,guestFactory){
-		var course = $stateParams.course;
+		alert("hello");
+		/*var course = $stateParams.course;
 
 		guestFactory.getCourseDetails(course)
 		.then(function(response){
@@ -9,5 +10,5 @@ angular.module('collegeApp')
 
 		},function(error){
 			console.error(error);
-		});
+		});*/
 	}])

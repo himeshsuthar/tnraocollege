@@ -22,6 +22,12 @@ angular.module('collegeApp')
 			templateUrl:'guest/view/contactUs.html',
 			controller:'',
 		})
+		.state('gallery',{
+			url:'/gallery',
+			templateUrl:'guest/view/gallery.html',
+			controller:'galleryCtrl',
+		})
+		
 				
 
 		$urlRouterProvider.otherwise('/');
