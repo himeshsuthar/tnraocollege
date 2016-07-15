@@ -95,10 +95,10 @@
 					class="gradient" 
 					direction="up">
 
-					<div class="row" id="marqueInside" ng-repeat="x in feeds" style="margin-left:10px ">
-						<ul class="list-group">
+					<div class="row" id="marqueInside"  style="margin-left:10px ">
+						<ul class="list-group" ng-repeat="x in feeds">
 							<li><b>{{x.name}}</b></li>
-							{{x.description}}
+							<li><div ng-bind-html="contenthtml(x.description)"></div></li>
 						</ul>				
 					</div>
 				</marquee>
@@ -110,7 +110,7 @@
 
 
 
-<div class="container-fluid" style="border-radius:10px;">
+<div class="" style="border-radius:10px;">
 	<div class="row ">
 		<div class="col-md-12 col-xs-12 w3-grey principal_message">
 			<div class="col-md-3 col-xs-12 w3-center ">
