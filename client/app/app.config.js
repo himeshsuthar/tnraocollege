@@ -35,7 +35,7 @@ angular.module('collegeApp')
 					},
 				'bottom':{
 						templateUrl:'guest/view/gallery.html',
-						/*controller:'courseMenuCtrl',*/
+						controller:'galleryCtrl',
 				}
 			}
 		})

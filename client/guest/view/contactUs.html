@@ -5,14 +5,14 @@
 		</div>
 		<div class="col-md-12 col-xs-12  margin-bottom-20 no-padding no-margin ">
 			<div class="col-md-8 col-xs-12 well well-lg">
-				<form>
+				<form ng-submit = "addCourse(x)" ng-init = "x = {}">
 					<fieldset>
 						<legend><i class="fa fa-wpforms"></i>   Inquiry Form</legend>
-						<input type="text" class="form-control margin-top-10" required placeholder="Enter your name">
-						<input type="number" class="form-control margin-top-10" required placeholder="Phone Number">
-						<input type="email" required class="form-control margin-top-10" placeholder="Email Address">
+						<input type="text" ng-model="x['name']" class="form-control margin-top-10" required placeholder="Enter your name">
+						<input type="number" ng-model="x['phone']" class="form-control margin-top-10" required placeholder="Phone Number">
+						<input type="email" ng-model="x['email']" required class="form-control margin-top-10" placeholder="Email Address">
 						<input type="text" class="form-control margin-top-10" required placeholder="city">
-						<select class="form-control margin-top-10 " required>
+						<select class="form-control margin-top-10 " ng-model="x['course']"required>
 							<option selected disabled>Interested Course</option>
 							<option value="bed">B.Ed</option>
 							<option value="bca">B.C.A</option>
@@ -24,9 +24,9 @@
 							<option value="mscit">M.Sc(IT)</option>
 
 						</select>
-						<textarea rows="4" class="form-control margin-top-10" required placeholder="your query?"></textarea>
+						<textarea rows="4" ng-model="x['query']" class="form-control margin-top-10" required placeholder="your query?"></textarea>
 						<div class="w3-center">
-							<button class="btn btn-info margin-top-10 "><i class="fa fa-envelope-o"></i>  Submit</button>
+							<button class="btn btn-info margin-top-10 " type="submit"><i class="fa fa-envelope-o"></i>  Submit</button>
 						</div>
 					</fieldset>
 				</form>

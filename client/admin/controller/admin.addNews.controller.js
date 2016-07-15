@@ -18,4 +18,10 @@ angular.module('collegeApp')
 				alert("Sorry, news couldn't be added.");
 			});	
 		}
+		$scope.action = $rootScope.serverUrl+'/server/admin/events/singleUpload.php?id='+$scope.eventId;
+	$scope.mimeTypes = '.jpeg,.jpg';
+	$scope.myCallBackMethod = function(reponse) {
+		alert(response);
+	}
+
 	}]);		
