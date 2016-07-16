@@ -47,13 +47,68 @@
     min-width: 50vh;
     min-height: 50vh;
 }
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.closebtn {
+    position: absolute;
+    top: 10%;
+    right: 25px;
+    font-size: 36px !important;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 </style>
+
+<div id="mySidenav" class="sidenav w3-card-4 w3-blue-grey">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i id="closebtn" class="fa fa-close "></i></a>
+  <!-- <ui class="list-group" ng-repeat="x in events">
+  <li>{{x.name}
+  </li>
+<li>{{x.description}}</li>
+<li>{{x.place}}</li>
+  </ui> -->
+
+  
+</div>
 
 <div class="my_container">
 
-    <div class="wrapper-gallery" style="width:100%;">
+    <div class="wrapper-gallery" style="">
 
-        <div class="grid" style="margin-left:3px;float:left;width:95%;">
+        <div class="grid" id="main" style="margin-left:3px;float:left;width:95%;">
 
             <div class="grid-item">
                 <img src="assets/images/32.jpg" class="modalOpenImg img-responsive" >
@@ -157,12 +212,14 @@
 
     </div>
     
-    <div class="btn btn-default w3-padding w3-teal" style="margin-top:40vh;right:0%;position:fixed;padding:0;" ng-click="openLeftMenu()">
+    <!-- <div class="btn btn-default w3-padding w3-teal" style="margin-top:40vh;right:0%;position:fixed;padding:0;" ng-click="openLeftMenu()">
         <i class="fa fa-angle-double-left fa-3x" aria-hidden="true" ></i>
-    </div>
-     <md-sidenav md-component-id="right" class="md-sidenav-right">
+    </div> -->
+   <!--   <md-sidenav md-component-id="right" class="md-sidenav-right">
         Left Nav!
     </md-sidenav>
+    -->   <span id="openbtn" style="font-size:25px;cursor:pointer;" onclick="openNav()"><i class="fa fa-toggle-left fa-2x"></i></span>
+
 
 
 </div>
@@ -198,12 +255,25 @@ $(document).ready(function() {
 });
 
 function activateMas(x){
-    console.log("activateMas()");
+
     $('.grid').masonry({
         itemSelector: '.grid-item',
         gutter: x,
         columnWidth: 1
     });
+}
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "25%";
+    document.getElementById("main").style.width = "75%";
+    document.getElementById("openbtn").style.display="none"; 
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.width= "95%";
+    document.getElementById("openbtn").style.display="block";
+
 }
 </script>
 

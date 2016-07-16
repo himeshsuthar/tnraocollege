@@ -1,5 +1,5 @@
 angular.module('collegeApp')
-.controller('galleryCtrl',['$scope','$state','$stateParams','$mdSidenav','$log','guestFactory',function($scope,$state,$stateParams,$mdSidenav,$log,guestFactory)
+.controller('galleryCtrl',['$scope','$state','$stateParams','$log','guestFactory',function($scope,$state,$stateParams,$log,guestFactory)
 {
 activate();
 function activate(){
