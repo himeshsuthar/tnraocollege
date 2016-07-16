@@ -221,13 +221,12 @@ i{
 
 .course_main{
 	margin-top: 15px;
-
-
 	border-radius: 15px;
 	transition : all 1s;
 	display:inline-block;
-	background-color:#2e5cb8;
+	background-color:#476b6b;
 	color: white;
+	margin-left:6.24%; margin-top:2%; height:15%
 }
 
 .course_main:hover{
