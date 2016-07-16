@@ -21,7 +21,9 @@
 	margin:10px;
 	font-family: monospace;
 }
-
+.full-width{
+	height:100%;
+}
 
 #myMenu{
 	transition : display 1000;
@@ -61,7 +63,7 @@ border: 1px solid black;
 	width:50px;
 }
 .myBlockQuote
-{  
+{
 	display: block;
 	font: 17px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
@@ -147,7 +149,7 @@ i{
 	margin-top: 20px;
 	border-radius:10px;
 	overflow: hidden;
-	
+
 	vertical-align: middle;
 	text-align: center;
 	transition:box-shadow 0.5s;
@@ -169,7 +171,7 @@ i{
 	padding: 20px;
 }
 #visionMission{
-	display:block; 
+	display:block;
 	opacity: 0.4;
 	position:absolute;
 	left:0;
@@ -218,7 +220,7 @@ i{
 
 .course_main{
 	margin-top: 15px;
-	
+
 
 	border-radius: 15px;
 	transition : all 1s;
@@ -247,7 +249,7 @@ i{
 	height:85%;
 	margin: 10px;
 	padding: 10px;
-	
+
 }
 
 .principal_message{
@@ -259,7 +261,7 @@ i{
 	margin: 0;
 	margin-top: 50px;
 
-	
+
 }
 .margin-left-20{
 	margin-left: 20px;
@@ -274,7 +276,7 @@ i{
 	line-height: 1.42857143;
 	background-color: #fff;
 	border: 1px solid black;
-	
+
 	-webkit-transition: all .2s ease-in-out;
 	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-ou;
@@ -285,13 +287,13 @@ i{
 		margin-top: 5px;
 	}
 
-	.grid-item,.grid-sizer { 
-		width: 40%; 
+	.grid-item,.grid-sizer {
+		width: 40%;
 
 	}
 
-	.grid-item--width2 { 
-		width: 60%; 
+	.grid-item--width2 {
+		width: 60%;
 
 	}
 	/*animate class*/
@@ -391,13 +393,13 @@ i{
   width: 100%;
   height: auto;
   background: #D26;
-  overflow: hidden;  
-  position: absolute; 
+  overflow: hidden;
+  position: absolute;
 }
 
 .side-nav{
 	width:5%;
-	display:inline-block; 
+	display:inline-block;
 	vertical-align:middle;
 	padding: 0;
 	margin-top: 45%;
@@ -408,7 +410,7 @@ i{
 
 
 .margin-top-5{
-	
+
 	margin-top: 5px;
 }
 
@@ -488,7 +490,7 @@ i{
             background: #4d5256;
             color: #191919;
         }
-   
+
 
 
 /* 100% Image Width on Smaller Screens */
@@ -573,4 +575,3 @@ i{
     opacity: 0;
   }
 }
-
