@@ -4,26 +4,26 @@ angular.module('collegeApp')
 		$scope.addEvent = function(x){
 		x['date'] =x['eventDate'].getFullYear() + "/"+
 						(x['eventDate'].getMonth()+1) + "/"+
-						x['eventDate'].getDate();			
-			
+						x['eventDate'].getDate();
+
 		adminFactory.addEvent(x)
 		.then(function(response){
 
 			alert("event has added");
 			$scope.x=null;
 			$state.go('admin.home');
-			
+
 		},function(error){
 			console.error(error);
 		})
 	}
 
-/*	$scope.action = $rootScope.serverUrl+'/server/admin/singleUpload.php?id='+$scope.eventId;
+	$scope.action = $rootScope.serverUrl1+'/singleUpload.php?id=1';
 	$scope.mimeTypes = '.jpeg,.jpg';
 
 	$scope.myCallBackMethod = function(reponse) {
 		alert(response);
 	}
-*/
+
 
 }])

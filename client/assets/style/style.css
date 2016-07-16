@@ -22,7 +22,7 @@
 	font-family: monospace;
 }
 .full-height{
-	min-height:100%;
+	min-height:100vh;
 }
 .vertical-middle{
 	padding:3% 3.5%;
