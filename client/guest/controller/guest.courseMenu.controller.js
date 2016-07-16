@@ -17,6 +17,15 @@ function activate(){
 	},function(error){
 		console.error(error);
 	});
+
+	guestFactory.getHods()
+	.then(function(response){
+		$scope.hods=response.data;
+		console.log($scope.hod);
+	},function(error){
+		console.error(error);
+	});
+
 }
 		/*var course = $stateParams.course;
 

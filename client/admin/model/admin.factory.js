@@ -92,9 +92,9 @@ angular.module('collegeApp')
 		});
 		return defer.promise;
 	}
-	obj.getEvent =function(name){
+	obj.getEvent =function(id){
 		var defer = $q.defer();
-		$http.post($rootScope.serverUrl1+"getEvent.php?name="+name)
+		$http.post($rootScope.serverUrl1+"getEvent.php?id="+id)
 		.then(function(response){
 			defer.resolve(response);
 		},function(error){

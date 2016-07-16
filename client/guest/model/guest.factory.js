@@ -53,6 +53,17 @@ angular.module('collegeApp')
 				});
 				return defer.promise;
 			}
+			obj.getHods = function(course){
+				var defer = $q.defer();
+				$http.get($rootScope.serverUrl+"getHods.php")
+				.then(function(response){
+					defer.resolve(response);
+				},function(error){
+					defer.reject(error);
+				});
+				return defer.promise;
+			}
+			
 			obj.getEvents = function(){
 				var defer = $q.defer();
 				$http.get($rootScope.serverUrl+"getEvents.php")

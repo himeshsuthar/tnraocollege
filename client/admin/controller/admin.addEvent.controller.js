@@ -1,5 +1,5 @@
 angular.module('collegeApp')
-	.controller('addEventCtrl',['$scope','$state','adminFactory','$rootScope',function($scope,$state,adminFactory,$rootScope){
+	.controller('addEventCtrl',['$scope','$state','$stateParams','adminFactory','$rootScope',function($scope,$state,$stateParams,adminFactory,$rootScope){
 
 		$scope.addEvent = function(x){
 		x['date'] =x['eventDate'].getFullYear() + "/"+
@@ -10,20 +10,16 @@ angular.module('collegeApp')
 		.then(function(response){
 
 			alert("event has added");
-			$scope.x=null;
-			$state.go('admin.home');
+			$scope.event=response.data;
+			console.log($scope.event);
+			 $state.go('admin.addEventPhotos',{ 'id' :  $scope.event.id});
+		
 
 		},function(error){
 			console.error(error);
 		})
 	}
 
-	$scope.action = $rootScope.serverUrl1+'/singleUpload.php?id=1';
-	$scope.mimeTypes = '.jpeg,.jpg';
-
-	$scope.myCallBackMethod = function(reponse) {
-		alert(response);
-	}
-
+	$
 
 }])

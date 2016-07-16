@@ -38,6 +38,13 @@ angular.module('collegeApp')
 				controller : 'addEventCtrl'
 			
 			})
+		.state('admin.addEventPhotos',{
+				url : '/addEvent/:id',
+				templateUrl : 'admin/view/addEventPhotos.html',
+				controller : 'addEventPhotosCtrl'
+			
+			})
+		
 		.state('admin.addCourse',{
 				url : '/addCourse',
 				templateUrl : 'admin/view/addCourse.html',

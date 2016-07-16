@@ -101,6 +101,6 @@ angular.module('collegeApp')
 	}])
 	.run(['$rootScope',function($rootScope){
 		$rootScope.serverUrl = 'http://132.140.160.112/tnraocollege/server/guest/';
-		$rootScope.serverUrl1 = 'http://132.140.160.119/myCollege/tnraocollege/server/admin/';
+		$rootScope.serverUrl1 = 'http://132.140.160.112/tnraocollege/server/admin/';
 
 	}]);
