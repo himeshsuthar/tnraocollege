@@ -185,7 +185,8 @@ i{
 	margin-top: 0px;
 	transition:all 2s;
 }
-#visionMission:hover{
+#visionMission:hover
+{
 	opacity: 1;
 	height:100%;
 
