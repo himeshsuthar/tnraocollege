@@ -1,6 +1,6 @@
 angular.module('collegeApp')
-	.config(['$urlRouterProvider','$stateProvider','$animateProvider',function($urlRouterProvider,$stateProvider,$animateProvider){
-	
+	.config(['$urlRouterProvider','$stateProvider','$httpProvider','$animateProvider',function($urlRouterProvider,$stateProvider,$httpProvider,$animateProvider){
+	$httpProvider.defaults.headers.post["Content-Type"] = 'text/plain';
 	$stateProvider
 		.state('home',{
 			url:'/',
