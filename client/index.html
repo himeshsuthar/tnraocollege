@@ -9,9 +9,6 @@
 	<script src="bower_components/masonry/dist/masonry.pkgd.js"></script>
 	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css">
-
-<!-- <script src="bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script> -->
-	<script src="assets/scripts/map.js?key=AIzaSyDyfdX3cNj1brpQ7-EtcxDyjtZxOUk_Rx0"></script>
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="assets/style/w3.css">
 <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css"></link>
@@ -22,11 +19,12 @@
 	<link rel="stylesheet" href="assets/style/style.css">
 	<link rel="stylesheet" href="assets/style/theme.css">
 
-	<link rel="stylesheet" href="assets/scripts/ninja-slider.css">	
+	<link rel="stylesheet" href="assets/scripts/ninja-slider.css">
 	<script src="assets/scripts/ninja-slider.js"></script>
 	<link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css">
 
-		
+	<script src="bower_components/angular/angular.js"></script>
+
 	<script src="bower_components/angular-animate/angular-animate.js"></script>
 	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 	<script src="app/app.module.js"></script>
@@ -56,77 +54,29 @@
 	<script src="admin/controller/admin.editTeacher.controller.js"></script>
 	<script src="admin/controller/admin.addCourse.controller.js"></script>
 	<script src="admin/controller/admin.addNews.controller.js"></script>
-
-
-</head>
-<body ng-app="collegeApp">
 	<script>
-		$(document).ready(function(){
-			var status = 0;
-			$("#openMenu").click(function(){
-				$("#myMenu").animate({
-					height: [ "toggle", "swing" ],
-				});
+	$(document).ready(function(){
+		var status = 0;
+		$("#openMenu").click(function(){
+			$("#myMenu").animate({
+				height: [ "toggle", "swing" ],
 			});
 		});
+	});
 
 	</script>
-	<div ui-view="top">
-
-	</div>
+</head>
+<body ng-app="collegeApp">
+	<div ui-view="top"></div>
 	<div class="main-container">
 		<div ui-view="bottom">
 
 		</div>
 		<div  class="margin-top-10 myFooter w3-theme w3-card-6 col-md-12 col-xs-12" style="z-index:1000; height:6%">
-
 			<div  class=" w3-center col-md-8 col-md-offset-2 col-xs-8">
 				<span class="custom-form"n>Copyright © 2016 - All Rights Reserved - Rao Infotech</span>
 			</div>
-			
-
 		</div>
-	
 	</div>
-
-	
-	
-
-
-
-	<script>
-
-		var images = ["8.jpg","9.jpg","10.jpg","4.JPG","5.JPG","6.JPG","7.JPG"]
-
-		var x = 0;
-		function change(){
-			$("#slider").css({"background-image":"url('assets/images/"+images[x]+"')"});
-			x++;
-			if(x>images.length-1) x=0
-				/*console.log("Called")*/
-		}
-
-
-
-		$(document).ready(function(){
-			$("#visionMission").css({"margin-top" : $("#navMenu").height()});
-
-			if($(window).width() < 600){
-				$("#visionMission").css({"width":"80%"});
-			}
-
-			setInterval(change, 3000);
-
-
-		});
-	</script>
-	
-
-
-
-
-	
 </body>
-
 </html>
-
