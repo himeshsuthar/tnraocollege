@@ -2,15 +2,14 @@
 		<div class="row course-container">
 			<div class="col-md-12 col-xs-12">
 				<table>
-					<tr  ng-click="stateChange(x)" ng-repeat="x in courses" >
-						<td style="width:10%">
-							<img src = "{{getHODPhoto(x.course)}}" class="img-responsive">
-							<h4 id="course">{{ getHOD(x.course) }}</h4>
+					<tr  ng-click="stateChange(x.id)" ng-repeat="x in courses" >
+						<td style="width:20%">
+							<img src = "{{x.hod.photo}}" class="img-responsive">
+							<h4 id="course">{{ x.hod.name }}</h4>
 						</td>
 						<td>
 							<h3 class="page-header">{{x.coursename}}</h3>
-							<div class="md-content">
-								{{x.content}}
+							<div class="md-content" ng-bind-html="contenthtml(x.content)">
 							</div>
 						</td>
 					</tr>
