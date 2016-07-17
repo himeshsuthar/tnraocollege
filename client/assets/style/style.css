@@ -112,7 +112,7 @@ i{
 	padding-right: 5px;
 	border-bottom-style: solid;
 	border-bottom-color: black;
-	transition: border-bottom-color 0.s;
+	transition: border-bottom-color 0.5s;
 	text-align: center;
 }
 
@@ -179,7 +179,7 @@ i{
 #visionMission{
 	display:block;
 	opacity: 0.4;
-	left:0;
+
 	height:40px;
 	overflow: hidden;
 	width:30%;
