@@ -27,18 +27,6 @@ angular.module('collegeApp')
 				}
 			}
 		})
-		.state('gallery',{
-			url:'/gallery',
-			views :{
-				'top':{
-							templateUrl:'guest/view/menu.html',
-					},
-				'bottom':{
-						templateUrl:'guest/view/gallery.html',
-						controller:'galleryCtrl',
-				}
-			}
-		})
 		.state('courseDetails',{
 			url:'/course/:course',
 			views :{
@@ -49,6 +37,30 @@ angular.module('collegeApp')
 				templateUrl:'guest/view/courseDetails.html',
 				controller:'courseCtrl',
 
+				}
+			}
+		})
+		.state('events',{
+			url:'/events',
+			views :{
+				'top':{
+							templateUrl:'guest/view/menu.html',
+					},
+				'bottom':{
+						templateUrl:'guest/view/events.html',
+						controller:'guestEventsCtrl',
+				}
+			}
+		})
+		.state('eventDetails',{
+			url:'/events/:id',
+			views :{
+				'top':{
+							templateUrl:'guest/view/menu.html',
+					},
+				'bottom':{
+						templateUrl:'guest/view/gallery.html',
+						controller:'guestEventDetailsCtrl',
 				}
 			}
 		})

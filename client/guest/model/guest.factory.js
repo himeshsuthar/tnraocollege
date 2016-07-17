@@ -1,6 +1,6 @@
 angular.module('collegeApp')
 	.factory('guestFactory',['$q','$http','$rootScope',function($q,$http,$rootScope){
-		
+
 			var obj = {};
 
 			obj.getCourseDetails = function(course){
@@ -63,10 +63,30 @@ angular.module('collegeApp')
 				});
 				return defer.promise;
 			}
-			
+
 			obj.getEvents = function(){
 				var defer = $q.defer();
 				$http.get($rootScope.serverUrl+"getEvents.php")
+				.then(function(response){
+					defer.resolve(response);
+				},function(error){
+					defer.reject(error);
+				});
+				return defer.promise;
+			}
+			obj.getEvent = function(id){
+				var defer = $q.defer();
+				$http.get($rootScope.serverUrl+"getEvent.php?id="+id)
+				.then(function(response){
+					defer.resolve(response);
+				},function(error){
+					defer.reject(error);
+				});
+				return defer.promise;
+			}
+			obj.getEventPhotos = function(id){
+				var defer = $q.defer();
+				$http.get($rootScope.serverUrl+"getEventPhotos.php?id="+id)
 				.then(function(response){
 					defer.resolve(response);
 				},function(error){

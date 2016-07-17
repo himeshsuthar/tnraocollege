@@ -15,12 +15,13 @@ if(isset($name)&&isset($place)&&isset($date)&&isset($description)){
 		`name`,
 		`description`,
 		`date`,
-		`place`) VALUES 
+		`place`) VALUES
 		('".$name."',
 		'".$description."',
 		'".$date."',
 		'".$place."')")
-	or die(mysql_error($con));
+	or die(mysqli_error($con));
+
 	$last_id = mysqli_insert_id($con);
 	$ara = array();
 	$ara['name'] = $name;
@@ -34,4 +35,3 @@ if(isset($name)&&isset($place)&&isset($date)&&isset($description)){
 else{
 	echo "some error.try again";
 }
-	

@@ -192,11 +192,19 @@ i{
 	height:100%;
 
 }
+.event-message{
+	border-left: 3px solid #ccc;
+	text-align: justify;
+	
 
+}
 .message-wrapper{
 	border-left: 3px solid #ccc;
 	text-align: justify;
 	font-family:Times New Roman;
+}
+.tahoma{
+	font-family: Tahoma, Geneva, sans-serif;
 }
 
 #marqueInside{
@@ -229,7 +237,7 @@ i{
 	border-radius: 15px;
 	transition : all 1s;
 	display:inline-block;
-	background-color:#476b6b;
+	background-color:#184a6d;
 	color: white;
 	margin-left:6.24%; margin-top:2%; height:15%
 }
