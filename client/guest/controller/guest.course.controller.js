@@ -1,43 +1,41 @@
 angular.module('collegeApp')
-	.controller('courseCtrl',['$scope','$sce','$state','$stateParams','guestFactory',function($scope,$sce,$state,$stateParams,guestFactory){
+.controller('courseCtrl',['$scope','$sce','$state','$stateParams','guestFactory',function($scope,$sce,$state,$stateParams,guestFactory){
 
-		var course = $stateParams.course;
-		console.log(course);
-		activate();
+	var course = $stateParams.course;
+	console.log(course);
+	activate();
 	function activate(){
+		guestFactory.getCourseDetails(course)
+		.then(function(response){
+			$scope.course = response.data;
+		},function(error){
+			console.error(error);
+		});
 
-	guestFactory.getCourseDetails(course)
-	.then(function(response){
-		$scope.course = response.data;
+		$scope.contenthtml=function(){
+			return $sce.trustAsHtml($scope.course.content);
+		};
 
-		console.log($scope.course);
-	},function(error){
-		console.error(error);
-	});
+		guestFactory.getTeachersByCourse(course)
+		.then(function(response){
+			$scope.teachers = response.data;
+			$scope.hod = getHod();
 
-	$scope.contenthtml=function(){
-		return $sce.trustAsHtml($scope.course.content);
-	};
+		},function(error){
+			console.error(error);
+		});
+	}
 
-	guestFactory.getTeachersByCourse(course)
-	.then(function(response){
-		$scope.teachers = response.data;
-		console.log($scope.teachers);
-	},function(error){
-		console.error(error);
-	});
+	function getHod(){
 
-	guestFactory.getHodByCourse(course)
-	.then(function(response){
-		$scope.hod=response.data;
-		console.log($scope.hod);
-	},function(error){
-		console.error(error);
-	});
-}
-
-
+		for (var x=0;x<$scope.teachers.length;x++) {
+		if ($scope.teachers[x].post == 'H.O.D.') {
+				var hod = $scope.teachers[x];
+				$scope.teachers.splice(x,1);
+				return hod;
+			}
+		}
+	}
 
 
 }]);
-

@@ -1,7 +1,8 @@
 .margin-top-5{
 	margin-top: 5px;
 }
-
+.row-eq-height{display: flex;}
+.margin-auto{margin:auto;}
 .main-container{
 	margin-bottom: 30px;
 }
@@ -220,7 +221,7 @@ i{
 	top:0;
 	left:0;
 	bottom:0;
-	height:50px;
+	/*height:50px;*/
 }
 
 .no-padding{

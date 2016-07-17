@@ -1,40 +1,17 @@
 angular.module('collegeApp')
-	.controller('courseMenuCtrl',['$scope','$state','$stateParams','guestFactory',function($scope,$state,$stateParams,guestFactory){
-		
+	.controller('courseMenuCtrl',['$scope','$state','$stateParams','guestFactory','$sce',function($scope,$state,$stateParams,guestFactory,$sce){
 	$scope.stateChange = function(x){
-		$state.go('courseDetails',{ 'course' : x.course});
+		$state.go('courseDetails',{ 'course' : x});
 		console.log(x);
 	}
-
-
-activate();
-function activate(){
-
-	guestFactory.getAllCourses()
-	.then(function(response){
-		$scope.courses = response.data;
-		/*console.log($scope.courses);*/
-	},function(error){
-		console.error(error);
-	});
-
-	guestFactory.getHods()
-	.then(function(response){
-		$scope.hods=response.data;
-		console.log($scope.hod);
-	},function(error){
-		console.error(error);
-	});
-
-}
-		/*var course = $stateParams.course;
-
-		guestFactory.getCourseDetails(course)
-		.then(function(response){
-			$scope.record = response.data[0];
-			console.log($scope.record);
-
-		},function(error){
-			console.error(error);
-		});*/
-	}])
+	activate();
+	function activate(){
+			guestFactory.getAllCourses()
+			.then(function(response){
+				$scope.courses = response.data;
+				$scope.contenthtml=function(x) { return $sce.trustAsHtml(x);}
+			},function(error){
+				console.error(error);
+			});
+		}
+}]);

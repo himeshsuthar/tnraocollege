@@ -1,15 +1,20 @@
 <div class="main-container" style="height:100%" >
 		<div class="row course-container">
 			<div class="col-md-12 col-xs-12">
-				<a ng-click="stateChange(x)" ng-repeat="x in courses">
-				<div class="col-md-3 col-xs-4 w3-border w3-card-4 course_main  w3-center " >	
-					<div>
-						<!-- <i class="fa fa-graduation-cap fa-5x" aria-hidden="true"></i> -->
-						<h1 id="course">{{x.coursename}}</h1>
-					</div>
-				</div>
-				</a>
-				
+				<table>
+					<tr  ng-click="stateChange(x.id)" ng-repeat="x in courses" >
+						<td style="width:20%">
+							<img src = "{{x.hod.photo}}" class="img-responsive">
+							<h4 id="course">{{ x.hod.name }}</h4>
+						</td>
+						<td>
+							<h3 class="page-header">{{x.coursename}}</h3>
+							<div class="md-content" ng-bind-html="contenthtml(x.content)">
+							</div>
+						</td>
+					</tr>
+				</table>
+
 			</div>
 		</div>
 	</div>
