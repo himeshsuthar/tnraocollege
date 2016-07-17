@@ -9,11 +9,11 @@ angular.module('collegeApp')
 		adminFactory.addEvent(x)
 		.then(function(response){
 
-			alert("event has added");
+
 			$scope.event=response.data;
 			console.log($scope.event);
 			 $state.go('admin.addEventPhotos',{ 'id' :  $scope.event.id});
-		
+
 
 		},function(error){
 			console.error(error);

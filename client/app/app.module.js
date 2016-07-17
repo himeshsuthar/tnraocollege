@@ -1,1 +1,1 @@
-angular.module('collegeApp',['ui.router','ngAnimate']);
+angular.module('collegeApp',['ui.router','ngAnimate','wu.masonry']);

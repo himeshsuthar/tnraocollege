@@ -1,23 +1,22 @@
 <h2 class = "page-header text-danger">Upload Photos   {{event.name
 				}}</h2>
 				<div class = "row">
-					<div class = "col-md-3">
-					</div>
-					<div id = 'myDiv' class = "col-md-6">
-						<div  
-						class="dropzone" 
-						drop-zone 
-						call-back="myCallBackMethod(response)" 
+
+					<div id = 'myDiv' class = "col-md-6 col-md-offset-3" style="background-image:url('assets/images/drop_here.png'); background-size:absolute; background-repeat:no-repeat;background-size:100%">
+						<div
+						class="dropzone"
+						drop-zone
+						call-back="myCallBackMethod(response)"
 						data-max="5"
-						action="{{action}}" 
-						auto-process="false" 
-						message="Drop file here or click to select" 
-						mimetypes="mimeTypes" 
+						action="{{action}}"
+						auto-process="false"
+						message="Drop file here or click to select"
+						mimetypes="mimeTypes"
 						id="fileDropzone">
 
 					</div>
 				</div>
-				<div class = "col-md-3">
-				<button class = "btn btn-success" ng-click="goTo('admin.home')">Done</button>
+				<div class = "col-md-12 w3-center">
+				<button class = "btn btn-success" ng-click="goTo('admin.home')">Create Event</button>
 				</div>
 			</div>
