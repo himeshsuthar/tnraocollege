@@ -1,0 +1,24 @@
+<div class="main-container" style="height:100%" >
+		<div class="row course-container">
+			<div class="col-md-12 col-xs-12">
+				<h1 class="page-header"><i class="fa fa-circle text-primary"></i> Courses</h1>
+				<table class="table table-hover">
+					<tr  ng-click="stateChange(x.id)" ng-repeat="x in courses" >
+						<td class="w3-center col-md-3 col-xs-6">
+							<div class="w3-container w3-light-grey  no-padding">
+								<img src = "{{x.hod.photo}}" class="img-responsive margin-auto" style="height:200px;" >
+								<h4 class="w3-container w3-dark-grey no-margin w3-padding">{{ x.hod.name }}  <span style="font-family:monospace">(H.O.D.)</span></h4>
+							</div>
+						</td>
+						<td>
+							<h3 class="page-header">{{x.name}}</h3>
+							<div class="md-content" ng-bind-html="contenthtml(x.content)">
+							</div>
+						</td>
+
+					</tr>
+				</table>
+
+			</div>
+		</div>
+	</div>
