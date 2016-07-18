@@ -77,7 +77,7 @@
 
 .closebtn {
     position: absolute;
-    top: 8%;
+    top: 14%;
     right: 18px;
     font-size: 36px !important;
     margin-left: 50px;
@@ -95,14 +95,15 @@
 </style>
 
 <div id="mySidenav" class=" sidenav w3-card-4 w3-light-grey">
+<div style="margin-top:55px">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i id="closebtn" class="fa fa-close "></i></a>
 
-  <h2 class=" w3-center text-primary"><b>{{event.name | uppercase}}</b></h2>
+  <h2 class=" w3-center text-primary" ><b>{{event.name | uppercase}}</b></h2>
 
 <p class="text-capitalize" style=" padding: 15px"> <i class="fa fa-hand-o-right fa-2x" aria-hidden="true"></i>        {{event.description}}</p>
 <h4 class="text-danger" style="padding-left:10px"><i class="fa fa-globe" aria-hidden="true"></i> Place:  {{event.place}}</h4>
 <h4 class="text-danger" style="padding-left:10px"><i class="fa fa-calendar-o" aria-hidden="true"></i> Date : {{event.date}}
-
+</div>
 
 </div>
 
@@ -117,7 +118,6 @@
         <div masonry  class="grid" id="main" style="margin-left:3px;float:left;width:95%;">
           <div class="masonry-brick " ng-repeat="x in eventPhotos" style="padding:10px">
             <div class="grid-item " >
-
                 <img src="../server/{{x.path}}"  class="modalOpenImg img-responsive" >
             </div>
           </div>
@@ -157,7 +157,6 @@
 <script>
 
 $(document).ready(function() {
-
     var $gutter;
 
     if (window.matchMedia("(min-width: 480px)").matches) {
@@ -170,7 +169,7 @@ $(document).ready(function() {
 
     setInterval(function(){activateMas($gutter)},100);
 
-    $(".modalOpenImg").click(function(){
+    $("body").on('click','.modalOpenImg',function(){
         if($(window).width() > 768)
         {
             $("#modalFoto").attr('src',$(this).attr('src'));
