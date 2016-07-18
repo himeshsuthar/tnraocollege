@@ -32,6 +32,13 @@ angular.module('collegeApp')
 				controller : 'addTeacherCtrl'
 
 			})
+			.state('admin.editTeacher',{
+					url : '/editTeacher/:id',
+					templateUrl : 'admin/view/editTeacher.html',
+					controller : 'editTeacherCtrl'
+
+				})
+
 		.state('admin.addEvent',{
 				url : '/addEvent',
 				templateUrl : 'admin/view/addEvent.html',
@@ -79,12 +86,6 @@ angular.module('collegeApp')
 				url : '/editCourse/:course',
 				templateUrl : 'admin/view/editCourse.html',
 				controller : 'editCourseCtrl'
-
-			})
-		.state('admin.editTeacher',{
-				url : '/editTeacher/:id',
-				templateUrl : 'admin/view/editTeacher.html',
-				controller : 'editTeacherCtrl'
 
 			})
 		.state('admin.editEvent',{

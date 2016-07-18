@@ -2,7 +2,8 @@ angular.module('collegeApp')
 .controller('teachersCtrl', ['$scope','$state','adminFactory',function($scope,$state,adminFactory){
 
 	$scope.editTeacher = function(x){
-		$state.go('admin.editCourse',{ 'id' : x });
+	
+		$state.go('admin.editTeacher',{ 'id' : x });
 		console.log(x);
 	}
 
@@ -19,6 +20,16 @@ angular.module('collegeApp')
 			console.error(error);
 		});
 	}
+	$scope.deleteTeacher = function(x){
+			adminFactory.deleteTeacher(x)
+			.then(function(response){
+				activate();
+			},function(error){
+				console.log(error);
+
+			})
+		}
 
 
-}]);		
+
+}]);

@@ -1,8 +1,12 @@
 <style>
+	legend{
+		width:auto;
+		padding:0 10px;
+		border-bottom:none;
+	}
 	.grid-item
 	{
 	    padding: 3px;
-	    background-color:#222;
 	    border-radius: 10px;
 	    margin: 3px;
 	    max-width: 300px;
@@ -17,23 +21,22 @@
 		</div>
 	</div>
 <div class="row">
-	<div class="col-md-10 col-md-offset-1 col-xs-12 margin-top-20" ng-repeat="x in events">
-		<h2 class="text-uppercase w3-center text-danger">{{x.name}}</h2>
-		<div class="row row-eq-height" style="padding-top:15px">
-		<div class="col-md-3 col-xs-8 hidden-xs">
-			<a ng-click="stateChange(x.id)"><h3 class="text-danger text-capitalize" ng-click="goTo(x.id)"></h3></a>
-			<div class="grid-item">
-				<img src="../server/{{x.image.path}}" style="display:inline-block" class="img-responsive">
-			</div>
+	<fieldset class="col-md-10 col-md-offset-1 col-xs-12 margin-top-20" ng-repeat="x in events track by $index">
+		<legend><a class = "btn btn-link" ng-click="stateChange(x.id)"><h2 class="text-uppercase text-danger">{{x.name}}</h2></a></legend>
+		<div class="row" style="padding-top:15px">
+		<div class="col-md-6 col-md-offset-1 col-xs-12 " >
+			<p style="text-indent:30px;" class='text-justify text-capitalize tahoma'>	{{x.description  | cut:true:350:'.....'}}</p>
+				<a class = "btn btn-link" ng-click="stateChange(x.id)">..See more</a>    <div class="text-info" style="font-size:18" > <i class="fa fa-globe" aria-hidden="true"></i>  place: {{x.place}}</div>
 
 		</div>
-		<div class="col-md-9 col-md-offset-0 col-xs-9 col-xs-offset-3 event-message" >
-			<p style="text-indent:30px;" class='text-justify text-capitalize tahoma'>	{{x.description  | cut:true:350:'.....'}}
-				<a class = "btn btn-link" ng-click="stateChange(x.id)" style="font-size:14">See more</a>   <a class = "btn btn-link" ng-click="stateChange(x.id)" style="font-size:18"> <div class="text-info" > <i class="fa fa-globe" aria-hidden="true"></i>  place: {{x.place}}</div></a>
-				</p>
+		<div class="col-md-4  col-xs-12 ">
+			<a ng-click="stateChange(x.id)"><h3 class="text-danger text-capitalize" ng-click="goTo(x.id)"></h3></a>
+			<div class="w3-white w3-center">
+				<img src="../server/{{x.image.path}}" style="display:inline-block; height:250px;" class="img-responsive margin-auto img-thumbnail">
+			</div>
 		</div>
 	</div>
-</div>
+</fieldset>
 </div>
 <!-- <div class="col-md-3 col-xs-8 visible-xs">
 <a ng-click="stateChange(x.id)"><h3 class="text-danger" ng-click="goTo(x.id)"><p>	{{x.name | uppercase}}    <i class="fa fa-thumb-tack"></i></p></h3></a>

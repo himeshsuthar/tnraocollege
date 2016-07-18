@@ -4,7 +4,7 @@
 .row-eq-height{display: flex;}
 .margin-auto{margin:auto;}
 .main-container{
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 
 .margin-bottom-20{
@@ -22,6 +22,9 @@
 	margin:10px;
 	font-family: monospace;
 }
+.monospace{
+	font-family: monospace;
+}
 .full-height{
 	min-height:100vh;
 }
@@ -36,7 +39,7 @@
 }
 
 .myFooter{
-	height:30px;
+	height:40px;
 
 	bottom: 0;
 	left: 0px;
@@ -195,7 +198,7 @@ i{
 .event-message{
 	border-left: 3px solid #ccc;
 	text-align: justify;
-	
+
 
 }
 .message-wrapper{

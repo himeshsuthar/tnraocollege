@@ -12,9 +12,9 @@ $id=$data['id'];
 
 if(isset($id)){
 
-	mysqli_query($con,"UPDATE `teachers` 
-		SET 
-		`name` 				=		'".$name."', 
+	mysqli_query($con,"UPDATE `teachers`
+		SET
+		`name` 				=		'".$name."',
 		`course` 				=		'".$course."',
 		`qualification` =  '".$qualification."',
 		`post` = '".$post."',
