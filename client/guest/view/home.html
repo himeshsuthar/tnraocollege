@@ -1,73 +1,74 @@
 
-	<script>
+<script>
 
-		var images = ["8.jpg","9.jpg","10.jpg","4.jpg","5.jpg","6.jpg","7.jpg"];
+var images = ["8.jpg","9.jpg","10.jpg","4.jpg","5.jpg","6.jpg","7.jpg"];
 
-		var x = 0;
-		setInterval(change, 3000);
-		function change(){
-			$("#slider").css({"background-image":"url('assets/images/"+images[x]+"')"});
-			x++;
-			if(x>images.length-1) x=0
-		}
+var x = 0;
+setInterval(change, 3000);
+function change(){
+	$("#slider").css({"background-image":"url('assets/images/"+images[x]+"')"});
+	x++;
+	if(x>images.length-1) x=0
+}
 
 
-		$(document).ready(function(){
-			$("#visionMission").css({"margin-left" : 0});
-			if($(window).width() < 600){
-				$("#visionMission").css({"width":"80%"});
-			}
-		});
-	</script>
+$(document).ready(function(){
+	$("#visionMission").css({"margin-left" : 0});
+	if($(window).width() < 600){
+		$("#visionMission").css({"width":"80%"});
+	}
+});
+</script>
 <div class="col-md-12 no-padding no-margin ">
-<div class="row full-height no-padding no-margin " id="slider">
+	<div class="row full-height no-padding no-margin " id="slider">
 
-	<div class="col-md-12">
-		<div id="visionMission">
-			<div>
-				<h3 class="w3-container no-margin-top row w3-blue" style="margin:0px; padding:5px;"><i class="fa fa-eye"></i> Vision</h3>
-				<div class="w3-light-grey-transparent myBlockQuote padding-20">Humanize human beings in form of progressive, responsible and character built teacher trainees to fulfill the demand of the society for value based education and for national building.</div>
-			</div>
+		<div class="col-md-12">
+			<div id="visionMission">
+				<div>
+					<h3 class="w3-container no-margin-top row w3-blue" style="margin:0px; padding:5px;"><i class="fa fa-eye"></i> Vision</h3>
+					<div class="w3-light-grey-transparent myBlockQuote padding-20">Humanize human beings in form of progressive, responsible and character built teacher trainees to fulfill the demand of the society for value based education and for national building.</div>
+				</div>
 
-			<div>
-				<h3 class="w3-container no-margin-top row w3-deep-orange" style="margin-bottom:0px; padding:5px;">
-					<i class="fa fa-flag"></i> Mission</h3>
+				<div>
+					<h3 class="w3-container no-margin-top row w3-deep-orange" style="margin-bottom:0px; padding:5px;">
+						<i class="fa fa-flag"></i> Mission</h3>
 
-					<div class="w3-light-grey-transparent myBlockQuote padding-20">Our mission is to inculcate IQ, EQ and SQ among the trainees, to equip them for the talk and to modify their behavior in a desirable manner. To create teaching-learning environment, we integrate an idea inclusiveness, shared responsibility, openness, adaptive governance, open acknowledgement and quality of global life through dignity, dedication and devotion.
+						<div class="w3-light-grey-transparent myBlockQuote padding-20">Our mission is to inculcate IQ, EQ and SQ among the trainees, to equip them for the talk and to modify their behavior in a desirable manner. To create teaching-learning environment, we integrate an idea inclusiveness, shared responsibility, openness, adaptive governance, open acknowledgement and quality of global life through dignity, dedication and devotion.
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
 
-	<div class="row hidden-xs hidden-sm full-height w3-white vertical-middle" style="height:120%">
-		<h3 class="page-header font-georgia ">
-			<i class="fa fa-envelope" aria-hidden="true"></i>
-			Message from Principal
-		</h3>
-		<div class=" col-md-12 w3-padding w3-light-grey w3-card-12" style="min-height:80%;height:auto;  display:block; border-radius:20px;">
-			<div style="padding-top:8vh"></div>
-			<div class="col-md-3 col-md-offset-1 col-xs-10 col-xs-offset-1 w3-center " style="">
+		<div class="row hidden-xs hidden-sm full-height w3-white vertical-middle" style="min-height:120%;position:relative">
+			<h3 class="page-header font-georgia ">
+				<i class="fa fa-envelope" aria-hidden="true"></i>
+				Message from Principal
+			</h3>
+			<div class=" col-md-12 w3-padding w3-light-grey w3-card-12" style="min-height:80%;height:auto;  display:block; border-radius:20px;">
+				<div style="padding-top:8vh"></div>
+				<div class="col-md-3 col-md-offset-1 col-xs-10 col-xs-offset-1 w3-center " style="">
 					<img src="assets/images/nidattbarot.jpg" class="img-responsive img-border" style="margin:auto; max-height:400px;">
 					<div class="w3-container w3-center w3-dark-grey">
 						<h5>Principal, Dr.Nidatt Barot</h5>
 					</div>
 				</div>
 
-			<div class="col-md-6 col-md-offset-1 col-xs-12 ">
-				<div class="row">
+				<div class="col-md-6 col-md-offset-1 col-xs-12 ">
+					<div class="row">
 
-					<p class="font-georgia text-justify col-md-12 col-xs-12" style="text-indent:50px;border-top-style:solid;padding-top:20px;">
-						Education is the most pious thing. To educate is not to teach, it is effort to inculcate the qualities in each and every individual that makes the life of a person who will live not only for him, but for the society. We, at T.N.Rao College managed by Savyasachi Education trust, work for the betterment of the society. Savyasachi is the name of Arjun. We wish our students to be as focused as Arjun in their studies. All who step and become a part of our family are lifelong members of our family. They come, learn, grow and enlighten themselves with great values. At the end of the academic journey they become the part of the society and work for the progress of nation at large. There are many students spread all over world with the name of T.N.Rao College in their mark sheets. The dedicated teaching staff of our college work hard to make the future of the student. The eco friendly environment and the lush green campus make the students fresh when they are with us. We have tried our best to provide best laboratory and library facility in the campus. The academic atmosphere is nurtured by co curricular, sports and cultural activities.
-					</p>
-					<div class="col-md-12 col-xs-12 w3-center" style="border-bottom-style:solid; margin-bottom:20px;">
-						<img src="assets/images/moto.png" class="margin-auto" style="">
+						<p class="font-georgia text-justify col-md-12 col-xs-12" style="text-indent:50px;border-top-style:solid;padding-top:20px;">
+							Education is the most pious thing. To educate is not to teach, it is effort to inculcate the qualities in each and every individual that makes the life of a person who will live not only for him, but for the society. We, at T.N.Rao College managed by Savyasachi Education trust, work for the betterment of the society. Savyasachi is the name of Arjun. We wish our students to be as focused as Arjun in their studies. All who step and become a part of our family are lifelong members of our family. They come, learn, grow and enlighten themselves with great values. At the end of the academic journey they become the part of the society and work for the progress of nation at large. There are many students spread all over world with the name of T.N.Rao College in their mark sheets. The dedicated teaching staff of our college work hard to make the future of the student. The eco friendly environment and the lush green campus make the students fresh when they are with us. We have tried our best to provide best laboratory and library facility in the campus. The academic atmosphere is nurtured by co curricular, sports and cultural activities.
+						</p>
 					</div>
+						<div class="col-md-12 col-xs-12 w3-center" style="border-bottom-style:solid; margin-bottom:20px;">
+							<img src="assets/images/moto.png" class="margin-auto" style="">
+						</div>
+
 				</div>
 			</div>
 		</div>
-</div>
 		<div class="row visible-xs visible-sm full-height w3-padding ">
 			<h3 class="page-header font-georgia ">
 				<i class="fa fa-envelope" aria-hidden="true"></i>
@@ -75,11 +76,11 @@
 			</h3>
 			<div class=" col-xs-12 w3-padding w3-light-grey w3-card-12">
 				<div class="col-xs-10 col-xs-offset-1 w3-center">
-						<img src="assets/images/nidattbarot.jpg" class="img-responsive img-border" style="margin:auto; max-height:300px;">
-						<div class="w3-container w3-center w3-dark-grey">
-							<h5>Principal, Dr.Nidatt Barot</h5>
-						</div>
+					<img src="assets/images/nidattbarot.jpg" class="img-responsive img-border" style="margin:auto; max-height:300px;">
+					<div class="w3-container w3-center w3-dark-grey">
+						<h5>Principal, Dr.Nidatt Barot</h5>
 					</div>
+				</div>
 
 				<div class="col-xs-12 ">
 					<div class="row">
@@ -100,100 +101,83 @@
 
 		<div class=" col-md-12 col-xs-12">
 			<div class="col-md-9 col-xs-12 course_container" style="display:block">
-
-				<a ui-sref="course">
-
-					<div class="w3-theme-l1 square-200  col-md-3 col-xs-12"  id="square">
-
-						<div class=" w3-center">
-							<i class="fa fa-list fa-5x padding-top-10"></i>
+					<a ui-sref="course">
+						<div class="w3-theme-l1 square-200 col-sm-3 col-md-3 col-xs-6"  id="square">
+							<div class=" w3-center">
+								<i class="fa fa-list fa-5x padding-top-10"></i>
+							</div>
+							<h2>Courses</h2>
 						</div>
-
-						<h2>Courses</h2>
-
-
-					</div>
-				</a>
-
-				<a ui-sref="events">
-				<div class="w3-theme-l1 square-200  col-md-3 col-xs-12" id="square">
-					<div class=" w3-center">
-						<i class="fa fa-image fa-5x padding-top-10"></i>
-					</div>
-					<h2>Events gallery</h2>
-
+					</a>
+					<a ui-sref="events">
+						<div class="w3-theme-l1 square-200 col-sm-3 col-md-3 col-xs-6" id="square">
+							<div class=" w3-center">
+								<i class="fa fa-image fa-5x padding-top-10"></i>
+							</div>
+							<h2>Events gallery</h2>
+						</div>
+					</a>
+					<a ui-sref="achievement">
+						<div class="w3-theme-l1 square-200 col-sm-3 col-md-3 col-xs-6" id="square">
+							<div class="w3-center">
+								<i class="fa fa-trophy fa-5x padding-top-10"></i>
+							</div>
+							<h2>Achievements</h2>
+						</div>
+					</a>
+					<a ui-sref="infrastructure">
+						<div class="w3-theme-l1 square-200 col-sm-3 col-md-3 col-xs-6" id="square">
+							<div class=" w3-center">
+								<i class="fa fa-building fa-5x padding-top-10"></i>
+							</div>
+							<h2>Infrastructure</h2>
+						</div>
+					</a>
+					<a ui-sref="about">
+						<div class="w3-theme-l1 square-200 col-sm-3 col-md-3 col-xs-6" id="square">
+							<div class=" w3-center">
+								<i class="fa fa-search fa-5x padding-top-10"></i>
+							</div>
+							<h2>About College</h2>
+						</div>
+					</a>
 				</div>
-				</a>
-				<a ui-sref="acheivement">
-					<div class="w3-theme-l1 col-md-3 col-xs-12 square-200" id="square">
-						<div class="w3-center">
-							<i class="fa fa-trophy fa-5x padding-top-10"></i>
+
+				<div class="col-md-3 col-xs-12 w3-center" >
+					<div class="news_container">
+						<h3 class="w3-center w3-text-white">News and Updates</h3>
+						<marquee height="100%;"
+						onmouseover="stop();"
+						onmouseout="start();"
+						behavior="scroll"
+						loop = "infinite"
+						direction="up">
+						<div class="row" id="marqueInside"  style="margin-left:10px ">
+							<div class="col-xs-12">
+							<ul class="list-group" ng-repeat="x in feeds track by $index">
+								<li><b>{{x.name}}</b></li>
+
+								<li><div ng-bind-html="contenthtml(x.description)"></div></li>
+							</ul>
+							</div>
+
 						</div>
-						<h2>Achievements</h2>
-
-					</div>
-				</a>
-				<a ui-sref="infrastructure">
-				<div class="w3-theme-l1  col-md-3 col-xs-12 square-200" id="square">
-					<div class=" w3-center">
-						<i class="fa fa-university fa-5x padding-top-10"></i>
-					</div>
-					<h2>Infrastructure</h2>
-
+					</marquee>
 				</div>
-				</a>
-				<a ui-sref="about">
-					<div class="w3-theme-l1  col-md-3 col-xs-12 square-200" id="square">
-						<div class=" w3-center">
-							<i class="fa fa-university fa-5x padding-top-10"></i>
-						</div>
-						<h2>About College</h2>
-
-					</div>
-				</a>
-
 			</div>
-
-			<div class="col-md-3 col-xs-12 w3-center"  >
-
-				<div class="news_container">
-
-					<h3 class="w3-center w3-text-white">News and Updates</h3>
-
-					<marquee height="100%;"
-					onmouseover="stop();"
-					onmouseout="start();"
-					behavior="scroll"
-					loop = "infinite"
-					direction="up">
-
-					<div class="row" id="marqueInside"  style="margin-left:10px ">
-						<div class="col-xs-12">
-						<ul class="list-group" ng-repeat="x in feeds track by $index">
-							<li><b>{{x.name}}</b></li>
-
-							<li><div ng-bind-html="contenthtml(x.description)"></div></li>
-						</ul>
-					</div>
-
-					</div>
-				</marquee>
-			</div>
-		</div>
 	</div>
-</div>
 
-<script>
+	<script>
 
 
-		function customResize(){
-			console.log('resize called');
-			$('.square-200').each(function(){
-				$(this).height($(this).width());
-			});
-		}
-		customResize();
+	function customResize(){
+		console.log('resize called');
+		$('.square-200').each(function(){
+			$(this).height($(this).width());
+		});
+	}
+	customResize();
 
 
 	$(window).resize(function(){customResize()});
-</script>
+	</script>
