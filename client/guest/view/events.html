@@ -23,18 +23,20 @@
 		<div class="col-md-3 col-xs-8 hidden-xs">
 			<a ng-click="stateChange(x.id)"><h3 class="text-danger text-capitalize" ng-click="goTo(x.id)"></h3></a>
 			<div class="grid-item">
-				<img src="../server/{{x.image.path}}" style="display:inline-block" class="img-responsive">
+				<img src="../server/{{x.image.path}}" style="display:inline-block; " class="img-responsive">
 			</div>
 
 		</div>
 		<div class="col-md-9 col-md-offset-0 col-xs-9 col-xs-offset-3 event-message" >
 			<p style="text-indent:30px;" class='text-justify text-capitalize tahoma'>	{{x.description  | cut:true:350:'.....'}}
-				<a class = "btn btn-link" ng-click="stateChange(x.id)" style="font-size:14">See more</a>   <a class = "btn btn-link" ng-click="stateChange(x.id)" style="font-size:18"> <div class="text-info" > <i class="fa fa-globe" aria-hidden="true"></i>  place: {{x.place}}</div></a>
+				<a class = "btn btn-link" ng-click="stateChange(x.id)" style="font-size:14">See more</a>
+				<a class = "btn btn-link" ng-click="stateChange(x.id)" style="font-size:18">
+					<div class="text-info" >
+					<i class="fa fa-globe" aria-hidden="true"></i>  place: {{x.place}}
+				</div>
+				</a>
 				</p>
 		</div>
 	</div>
 </div>
 </div>
-<!-- <div class="col-md-3 col-xs-8 visible-xs">
-<a ng-click="stateChange(x.id)"><h3 class="text-danger" ng-click="goTo(x.id)"><p>	{{x.name | uppercase}}    <i class="fa fa-thumb-tack"></i></p></h3></a>
-</div> -->

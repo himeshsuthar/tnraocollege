@@ -8,8 +8,8 @@ print_r($data);
 $name = $data['name'];
 $qualification = $data['qualification'];
 $post = $data['post'];
-$photo = $data['photo']
-$courseid = $data['courseid']
+$photo = $data['photo'];
+$course = $data['course'];
 
 
 	mysqli_query($con,"INSERT INTO teachers(
@@ -17,11 +17,10 @@ $courseid = $data['courseid']
 		`qualification`,
 		`post`,
 		`photo`,
-		`courseid`) VALUES 
+		`course`) VALUES
 		('".$name."',
 		'".$qualification."',
 		'".$post."',
 		'".$photo."',
-		'".$courseid."')")
+		'".$course."')")
 		or die(mysql_error($con));
-	

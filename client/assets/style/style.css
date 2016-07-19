@@ -8,7 +8,7 @@ html,body{
 .row-eq-height{display: flex;}
 .margin-auto{margin:auto;}
 .main-container{
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 .text-underline{text-decoration: underline}
 .text-bold{font-weight: bold}
@@ -30,6 +30,9 @@ html,body{
 
 .custom-form{
 	margin:10px;
+	font-family: monospace;
+}
+.monospace{
 	font-family: monospace;
 }
 .full-height{

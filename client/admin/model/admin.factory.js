@@ -153,7 +153,7 @@ angular.module('collegeApp')
 			defer.reject(error);
 		});
 		return defer.promise;
-	}		
+	}
 	obj.getCourseDetails = function(course){
 		var defer = $q.defer();
 		$http.post($rootScope.serverUrl1+"getCourseDetails.php?course="+course)
@@ -163,7 +163,7 @@ angular.module('collegeApp')
 			defer.reject(error);
 		});
 		return defer.promise;
-	}	
+	}
 
 	obj.updateCourseDetails = function(x){
 		var defer = $q.defer();
@@ -174,7 +174,7 @@ angular.module('collegeApp')
 			defer.reject(error);
 		});
 		return defer.promise;
-	}		
+	}
 	obj.deleteCourseDetails = function(course){
 		var defer = $q.defer();
 		$http.post($rootScope.serverUrl1+"deleteCourseDetails.php?course="+course)
@@ -185,9 +185,9 @@ angular.module('collegeApp')
 		});
 		return defer.promise;
 	}
-	obj.getTeacher =function(name){
+	obj.getTeacher =function(id){
 		var defer = $q.defer();
-		$http.post($rootScope.serverUrl1+"getTeacher.php?name="+name)
+		$http.post($rootScope.serverUrl1+"getTeacher.php?id="+id)
 		.then(function(response){
 			defer.resolve(response);
 		},function(error){
@@ -206,6 +206,7 @@ angular.module('collegeApp')
 		return defer.promise;
 	}
 	obj.updateTeacher =function(x){
+		
 		var defer = $q.defer();
 		$http.post($rootScope.serverUrl1+"updateTeacher.php",x)
 		.then(function(response){
@@ -223,9 +224,9 @@ angular.module('collegeApp')
 		},function(error){
 			defer.reject(error);
 		});
-	
+
 		return defer.promise;
-	}			
-	
+	}
+
 	return obj;
 }])

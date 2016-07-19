@@ -1,6 +1,6 @@
 angular.module('collegeApp')
 	.controller('editTeacherCtrl', ['$scope','$stateParams','$state','adminFactory',function($scope,$stateParams,$state,adminFactory){
-		
+
 		var id=$stateParams.id;
 		activate();
 		function activate(){
@@ -13,15 +13,15 @@ angular.module('collegeApp')
 				console.log(error);
 			});
 		}
-		
-		$scope.doUpdate= function(x){
-			adminFactory.updateTeacher(x)
+
+		$scope.doUpdate= function(teacher){
+			adminFactory.updateTeacher(teacher)
 			.then(function(response){
-				alert("Course details are successfully updated");
-				$state.go('admin.home');
+				alert("Teacher details are successfully updated");
+			//	$state.go('admin.home');
 			},function(error){
 				console.log(error);
 			});
 		}
-		
-	}]);		
+
+	}]);
