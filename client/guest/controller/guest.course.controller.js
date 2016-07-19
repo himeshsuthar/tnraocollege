@@ -8,13 +8,13 @@ angular.module('collegeApp')
 		guestFactory.getCourseDetails(course)
 		.then(function(response){
 			$scope.course = response.data;
+			$scope.contenthtml=function(){
+				return $sce.trustAsHtml($scope.course.content);
+			};
 		},function(error){
 			console.error(error);
 		});
 
-		$scope.contenthtml=function(){
-			return $sce.trustAsHtml($scope.course.content);
-		};
 
 		guestFactory.getTeachersByCourse(course)
 		.then(function(response){

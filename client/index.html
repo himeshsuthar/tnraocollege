@@ -61,25 +61,18 @@
 	<script src="admin/controller/admin.editTeacher.controller.js"></script>
 	<script src="admin/controller/admin.addCourse.controller.js"></script>
 	<script src="admin/controller/admin.addNews.controller.js"></script>
-	<script>
-	$(document).ready(function(){
-		var status = 0;
-		$("#openMenu").click(function(){
-			$("#myMenu").animate({
-				height: [ "toggle", "swing" ],
-			});
-		});
-	});
-
-	</script>
 </head>
 <body ng-app="collegeApp">
-	<div ui-view="top"></div>
-	<div class="main-container">
-		<div ui-view="bottom">
+	<div class="main-wrapper">
+		<div ui-view="top">
+		</div>
+		<div class="main-container">
+			<div ui-view="bottom">
 
+			</div>
 		</div>
 	</div>
+
 		<div  class=" myFooter w3-dark-grey  col-md-12 col-xs-12 no-padding no-margin w3-center" style="z-index:10;bottom:0;">
 			<div class="row" style="right:0">
 				<div class="col-sm-2 col-sm-offset-1 margin-top-10 hidden-xs" >
@@ -89,7 +82,7 @@
 					<div class="monospace margin-top-5"><a ui-sref="events">Events and Activities</a><br></div>
 					<div class="monospace margin-top-5"><a ui-sref="about">About College</a><br></div>
 
-					<div class="monospace margin-top-5"><a ui-sref="achievements">Achievements</a><br></div>
+					<div class="monospace margin-top-5"><a ui-sref="achievement">Achievements</a><br></div>
 					<div class="monospace margin-top-5"><a ui-sref="infrastructure">Library</a><br></div>
 					<div class="monospace margin-top-5"><a ui-sref="infrastructure">Laboratories</a><br></div>
 

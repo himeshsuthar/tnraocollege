@@ -90,6 +90,29 @@ angular.module('collegeApp')
 				}
 			}
 		})
+		.state('about',{
+			url:'/about',
+			views :{
+				'top':{
+							templateUrl:'guest/view/menu.html',
+					},
+				'bottom' :{
+							templateUrl:'guest/view/about.html'
+				}
+			}
+		})
+
+		.state('achievement',{
+			url:'/achievement',
+			views :{
+				'top':{
+							templateUrl:'guest/view/menu.html',
+					},
+				'bottom' :{
+							templateUrl:'guest/view/acheivement.html'
+				}
+			}
+		})
 
 
 		.state('admin',{

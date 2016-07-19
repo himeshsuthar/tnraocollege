@@ -1,75 +1,53 @@
 <div class="row course-container">
 	<div class="col-md-12 col-xs-12">
-		<h1 class="page-header">{{course.name}}</h1>
-			<div class="row row-eq-height">
-
-								<div class="col-md-3 col-md-offset-1 vertical-middle col-xs-12 w3-center">
-										<div class=" w3-light-grey" style="padding-top:4px">
-											<img src="{{hod.photo}}" class="img-responsive margin-auto">
-											<div class="w3-container w3-dark-grey">
-												{{hod.name}}<br>
-												{{hod.qualification}}
-											</div>
-										</div>
-									</div>
-
-				<div class="col-md-offset-0 col-md-7 col-xs-12">
-					<h3>
-						<i class="fa fa-hand-o-right" aria-hidden="true"> About department</i>
-					</h3>
-					<div>
-						<div class="well well-lg">
-							<ul class="content" type="">
-								<li class="margin-top-5"><div  ng-bind-html="contenthtml()"></div></li>
-								<li class="margin-top-5"><b>Eligibility:</b>  {{course.eligibility}}</li>
-								<li class="margin-top-5"><b>Duration:</b>   {{course.duration}} </li>
-								<li class="margin-top-5"><b>Fees:</b>  {{course.fees}}</li>
-								</ul>
+		<h1 class="page-header w3-text-theme"><i class="fa fa-graduation-cap"></i> {{course.name}}</h1>
+			<div class="row">
+				<div class="col-md-12 well-lg w3-light-grey w3-border">
+					<div class="col-md-3 col-md-offset-1 vertical-middle col-xs-12 w3-center">
+							<div class=" w3-grey w3-rounded" >
+								<img src="{{hod.photo}}" class="img-responsive margin-auto">
+								<div class="w3-container w3-theme">
+									{{hod.name}}<br>
+									{{hod.qualification}}
+								</div>
 							</div>
 						</div>
+
+					<div class="col-md-offset-0 col-md-7 col-xs-12">
+						<h3 class="w3-text-theme">
+							<i class="fa fa-hand-o-right" aria-hidden="true"> About department</i>
+						</h3>
+						<div>
+							<div class="well-lg">
+								<ul class="content" type="">
+									<li class="margin-top-5"><div  ng-bind-html="contenthtml(course)"></div></li>
+									<li class="margin-top-5"><b>Eligibility:</b>  {{course.eligibility}}</li>
+									<li class="margin-top-5"><b>Duration:</b>   {{course.duration}} </li>
+									<li class="margin-top-5"><b>Fees:</b>  {{course.fees}}</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
 					</div>
-
-
 			</div>
 
 		<div class="row margin-top-20">
 			<div class="col-md-12 col-xs-12">
-				<div class="col-md-10 col-md-offset-1 col-xs-12 ">
-					<div>
-						<div class="well well-lg col-md-12 col-xs-12 hidden-xs">
-							<h3 class=""><i class="fa fa-hand-o-right" aria-hidden="true"> Faculty Profile</i></h3>
+				<div class="col-md-12 col-xs-12 "
+					<div class="row">
+						<div class="w3-light-grey  well-lg col-md-12 col-xs-12 hidden-xs">
+							<h3 class="w3-text-theme"><i class="fa fa-hand-o-right" aria-hidden="true"> Faculty Profile</i></h3>
 
-							<table class="table table-responsive" ng-repeat="x in teachers track by $index" >
-
-								<tr>
-									<td style="width:250px; padding-top:10px;" class="w3-center" rowspan="5">
-										<img class=" img-thumbnail" src="{{x.photo}}" alt="{{x.name}}" style="height:200px; width:auto">
-									</td>
-									<td width=200><b>Name </b></td>
-									<td><b>{{x.name}}</b></td>
-								</tr>
-
-								<tr>
-									<td><b>Qualification</b></td>
-									<td>{{x.qualification}}</td>
-								</tr>
-
-								<tr>
-									<td><b>Designation</b></td>
-									<td>{{x.post}}</td>
-								</tr>
-
-								<tr ng-show="x.phone">
-									<td><b>Contact no. </b></td>
-									<td>{{x.phone}}</td>
-								</tr>
-
-								<tr ng-show="x.email">
-									<td ><b>E-mail</b></td>
-									<td>{{x.email}}</td>
-								</tr>
-
-							</table>
+								<div class="col-md-3 no-padding col-xs-12 w3-center " ng-repeat="x in teachers track by $index" style="margin-top:20px;">
+									<div class="row">
+										<div class="col-md-8 col-md-offset-2 img-thumbnail no-padding w3-grey">
+												<img src="{{x.photo}}" alt="{{x.name}}" style="height:200px; width:auto" class="margin-auto img-responsive">
+												<div class="w3-padding w3-center w3-theme no-margin">{{x.post}} <br> {{x.name}}<br> ( {{x.qualification}} )<br>{{x.email}}</div>
+											</div>
+										</div>
+								</div>
+							</div>
 
 						</div>
 						<div class="well well-lg col-xs-12 visible-xs hidden-md w3-padding">
