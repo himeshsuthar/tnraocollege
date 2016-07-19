@@ -85,7 +85,7 @@ angular.module('collegeApp')
 					},
 				'bottom' :{
 							templateUrl:'guest/view/contactUs.html',
-							controller:'',
+							controller:'contactUsCtrl',
 
 				}
 			}

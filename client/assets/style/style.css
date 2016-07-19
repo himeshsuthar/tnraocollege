@@ -10,10 +10,18 @@
 .margin-bottom-20{
 	margin-bottom: 20px;
 }
-
+body{
+	right: 0
+}
+.font-bold{
+	font-weight: bold;
+}
 .my_container{
 	margin-top: 50px;
 	margin-bottom: 30px;
+}
+.georgia{
+	font-family: Georgia, Times, "Times New Roman", serif;
 }
 .headerElement{
 	margin-top: 2px;
@@ -39,7 +47,7 @@
 }
 
 .myFooter{
-	height:40px;
+
 
 	bottom: 0;
 	left: 0px;
@@ -266,6 +274,9 @@ i{
 	margin: 10px;
 	padding: 10px;
 
+}
+legend{
+	width: inherit;
 }
 
 .principal_message{

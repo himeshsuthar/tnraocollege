@@ -64,9 +64,9 @@
 
 	</div>
 
-	<div class="row container-fluid w3-indigo full-height ">
+	<div class="row container-fluid w3-indigo full-height">
 		<div class=" col-md-12 col-xs-12">
-			<div class="col-md-9 col-xs-12 course_container" style="display:block;">
+			<div class="col-md-9 col-xs-12 course_container" style="display:block">
 
 				<a ui-sref="course">
 
@@ -88,7 +88,7 @@
 						<i class="fa fa-image fa-5x padding-top-10"></i>
 					</div>
 					<h2>Events gallery</h2>
-					
+
 				</div>
 				</a>
 
@@ -120,7 +120,7 @@
 
 			</div>
 
-			<div class="col-md-3 w3-center" >
+			<div class="col-md-3 col-xs-12 w3-center"  >
 
 				<div class="news_container">
 
@@ -134,11 +134,13 @@
 					direction="up">
 
 					<div class="row" id="marqueInside"  style="margin-left:10px ">
+						<div class="col-xs-12">
 						<ul class="list-group" ng-repeat="x in feeds track by $index">
 							<li><b>{{x.name}}</b></li>
 
 							<li><div ng-bind-html="contenthtml(x.description)"></div></li>
 						</ul>
+					</div>
 
 					</div>
 				</marquee>
