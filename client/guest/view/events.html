@@ -17,7 +17,7 @@
 		</div>
 	</div>
 <div class="row">
-	<div class="col-md-10 col-md-offset-1 col-xs-12 margin-top-20" ng-repeat="x in events">
+	<div class="col-md-10 col-md-offset-1 col-xs-12 margin-top-20" ng-repeat="x in events track by $index">
 		<h2 class="text-uppercase w3-center text-danger">{{x.name}}</h2>
 		<div class="row row-eq-height" style="padding-top:15px">
 		<div class="col-md-3 col-xs-8 hidden-xs">

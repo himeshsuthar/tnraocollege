@@ -90,6 +90,29 @@ angular.module('collegeApp')
 				}
 			}
 		})
+		.state('about',{
+			url:'/about',
+			views :{
+				'top':{
+							templateUrl:'guest/view/menu.html',
+					},
+				'bottom' :{
+							templateUrl:'guest/view/about.html'
+				}
+			}
+		})
+
+		.state('acheivement',{
+			url:'/acheivement',
+			views :{
+				'top':{
+							templateUrl:'guest/view/menu.html',
+					},
+				'bottom' :{
+							templateUrl:'guest/view/acheivement.html'
+				}
+			}
+		})
 
 
 		.state('admin',{
@@ -112,7 +135,7 @@ angular.module('collegeApp')
 
 	}])
 	.run(['$rootScope',function($rootScope){
-		$rootScope.serverUrl = 'http://132.140.160.112/tnraocollege/server/guest/';
-		$rootScope.serverUrl1 = 'http://132.140.160.112/tnraocollege/server/admin/';
+		$rootScope.serverUrl = 'http://localhost/myCollege/tnraocollege/server/guest/';
+		$rootScope.serverUrl1 = 'http://localhost/myCollege/tnraocollege/server/admin/';
 
 	}]);

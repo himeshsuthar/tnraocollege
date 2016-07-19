@@ -20,7 +20,7 @@ echo json_encode($ara,true);
 
 //FUNCTION getHodWithPhoto()
 function getHodWithPhoto($id,$con){
-	$res = mysqli_query($con,"SELECT * FROM teachers where courseid = '$id' AND post = 'H.O.D.'") or die(mysqli_error($con));
+	$res = mysqli_query($con,"SELECT * FROM `teachers` where `courseid` = '$id' AND post = 'H.O.D.'") or die(mysqli_error($con));
 	return mysqli_fetch_assoc($res);
 }
 

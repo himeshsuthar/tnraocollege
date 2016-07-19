@@ -59,28 +59,20 @@
 	<script src="admin/controller/admin.editTeacher.controller.js"></script>
 	<script src="admin/controller/admin.addCourse.controller.js"></script>
 	<script src="admin/controller/admin.addNews.controller.js"></script>
-	<script>
-	$(document).ready(function(){
-		var status = 0;
-		$("#openMenu").click(function(){
-			$("#myMenu").animate({
-				height: [ "toggle", "swing" ],
-			});
-		});
-	});
-
-	</script>
 </head>
 <body ng-app="collegeApp">
-	<div ui-view="top"></div>
-	<div class="main-container">
-		<div ui-view="bottom">
-
+	<div class="main-wrapper">
+		<div ui-view="top">
 		</div>
-		<div  class=" myFooter w3-theme w3-card-6 col-md-12 col-xs-12" style="z-index:1000; height:6%">
-			<div  class=" w3-center col-md-8 col-md-offset-2 col-xs-8">
-				<span class="custom-form"n>Copyright © 2016 - All Rights Reserved - Rao Infotech</span>
+		<div class="main-container">
+			<div ui-view="bottom">
+
 			</div>
+		</div>
+	</div>
+	<div  class="row w3-theme myFooter" style="">
+		<div  class=" w3-center col-md-8  col-md-offset-2 col-xs-8">
+			<span class="custom-form"n>Copyright © 2016 - All Rights Reserved - Rao Infotech</span>
 		</div>
 	</div>
 </body>

@@ -14,7 +14,7 @@ error_reporting(1);
 
 $host = "localhost";
 $username = "root";
-$password = "";
+$password = "password";
 
 $con = mysqli_connect($host,$username,$password,"tnrao") or die ("<br/>Could not connect to MySQL server");
 
