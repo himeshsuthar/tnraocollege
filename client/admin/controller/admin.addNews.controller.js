@@ -1,12 +1,14 @@
 angular.module('collegeApp')
 	.controller('addNewsCtrl', ['$scope','$state','adminFactory',function($scope,$state,adminFactory){
-		
-		$scope.doAddNews=function(x){
-		x['date'] =x['fdate'].getFullYear() + "/"+
-						(x['fdate'].getMonth()+1) + "/"+
-						x['fdate'].getDate();			
+
+		$scope.doAddNews = function(x){
+
+		x['date'] =x['fdate'].getFullYear() + "/" +
+						(x['fdate'].getMonth()+1) + "/" +
+						x['fdate'].getDate();
 
 			adminFactory.addNews(x)
+
 			.then(function(response){
 
 				alert("news has been submitted");
@@ -16,12 +18,8 @@ angular.module('collegeApp')
 				console.error("Error");
 				console.error(error);
 				alert("Sorry, news couldn't be added.");
-			});	
+			});
 		}
-		$scope.action = $rootScope.serverUrl+'/server/admin/events/singleUpload.php?id='+$scope.eventId;
-	$scope.mimeTypes = '.jpeg,.jpg';
-	$scope.myCallBackMethod = function(reponse) {
-		alert(response);
-	}
 
-	}]);		
+
+	}]);

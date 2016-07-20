@@ -8,7 +8,7 @@ function activate(){
 	guestFactory.getEvent($scope.id)
 				.then(function (response) {
 					$scope.event = response.data[0];
-					console.log($scope.event);
+					// console.log($scope.event);
 				},function (error) {
 					  alert("There seems to be some error. Please try again later.");
 					  console.log(error);

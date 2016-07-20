@@ -5,30 +5,37 @@
 				<h2 class="margin-sides-10 text-center">Events Details</h2>
 
 
-				
+
 				<table  class="table sortable table-bordered myTable largeTable " ng-init="olfy = 'name'">
-					
+
 						<tr class = w3-grey>
 							<th>Seq. No</th>
-							
+
 							<th ng-click="olfy = 'name'">Name </th>
 							<th>Description</th>
-							<th>type</th>
+							<th>Date</th>
+							<th>Place</th>
+							<th>Edit/Delete</th>
 						</tr>
-					
+
 					<tbody>
 						<tr>
-							<td colspan="4" class="bg-primary" ng-hide="feeds">
+							<td colspan="5" class="bg-primary" ng-hide="events">
 								<h1 class="text-center"><i class="fa fa-refresh fa-spin"></i></h1>
 							</td>
 						</tr>
-						<tr ng-repeat='x in feeds | orderBy : olfy' ng-show="feeds" ng-click="stateChange(x)">
+						<tr ng-repeat='x in events | orderBy : olfy' ng-show="events" ng-click="stateChange(x)">
 							<td>{{$index+1}} </td>
-							
+
 							<td>{{x.name}} </td>
-							<th>{{x.description}}</th>
-							<th>{{x.type}}</th>
+							<td>{{x.description}}</td>
+							<td>{{x.date}}</td>
+							<td>{{x.place}}</td>
+							<td>
+								<button class="btn btn-default w3-white" ng-click = "editEvent(x.id)" ><i class="fa fa-pencil-square-o fa-2x w3-success" aria-hidden="true" style="float:left;"></i></button>
+								<button class="btn btn-default w3-white" ng-click = "deleteEvent(x.id)" ><i class="fa fa-trash fa-2x" aria-hidden="true" style="float:right;"></i></button>
+
+							</td>
 						</tr>
 					</tbody>
 				</table>
-				

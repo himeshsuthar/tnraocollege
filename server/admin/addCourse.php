@@ -5,7 +5,7 @@ include("config.php");
 $data = file_get_contents("php://input");
 $data = json_decode($data,true);
 print_r($data);
-$course = $data['course'];
+$id = $data['course'];
 $name = $data['name'];
 $content = $data['content'];
 $eligibility = $data['eligibility'];
@@ -16,17 +16,17 @@ $hodphoto = $data['hodphoto'];
 
 
 
-	mysqli_query($con,"INSERT INTO coursedetails(
+	mysqli_query($con,"INSERT INTO course(
 		`name`,
-		`course`,
+		`id`,
 		`content`,
 		`eligibility`,
 		`duration`,
 		`fees`,
 		`hod`,
-		`hodphoto`) VALUES 
+		`hodphoto`) VALUES
 		('".$name."',
-		'".$course."',
+		'".$id."',
 		'".$content."'
 		'".$eligibility."',
 		'".$duration."',
@@ -34,4 +34,3 @@ $hodphoto = $data['hodphoto'];
 		'".$hod."',
 		'".$hodphoto."')")
 		or die(mysql_error($con));
-	

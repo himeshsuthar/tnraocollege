@@ -7,7 +7,7 @@ angular.module('collegeApp')
 			adminFactory.getTeacher(id)
 			.then(function(response){
 				$scope.teacher=response.data;
-				console.log($scope.teacher);
+				// console.log($scope.teacher);
 
 			},function(error){
 				console.log(error);

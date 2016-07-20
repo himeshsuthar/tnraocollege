@@ -9,7 +9,7 @@ angular.module('collegeApp')
 			guestFactory.getAllCourses()
 			.then(function(response){
 				$scope.courses = response.data;
-				console.log($scope.courses);
+				// console.log($scope.courses);
 				$scope.contenthtml=function(x) {
 
 					x = x.substr(0,200);

@@ -13,9 +13,8 @@ $date = $data['date'];
 	mysqli_query($con,"INSERT INTO feeds(
 		`name`,
 		`description`,
-		`date`) VALUES 
+		`date`) VALUES
 		('".$name."',
 		'".$description."',
 		'".$date."')")
 		or die(mysql_error($con));
-	

@@ -12,6 +12,7 @@ angular.module('collegeApp')
 		return defer.promise;
 	}
 	obj.addNews =function(x){
+
 		var defer = $q.defer();
 		$http.post($rootScope.serverUrl1+"addNews.php",x)
 		.then(function(response){
@@ -51,9 +52,9 @@ angular.module('collegeApp')
 		});
 		return defer.promise;
 	}
-	obj.deleteNews =function(name){
+	obj.deleteNews =function(id){
 		var defer = $q.defer();
-		$http.post($rootScope.serverUrl1+"deleteNews.php?name="+name)
+		$http.post($rootScope.serverUrl1+"deleteNews.php?id="+id)
 		.then(function(response){
 			defer.resolve(response);
 		},function(error){
@@ -112,9 +113,9 @@ angular.module('collegeApp')
 		});
 		return defer.promise;
 	}
-	obj.deleteEvent =function(name){
+	obj.deleteEvent =function(id){
 		var defer = $q.defer();
-		$http.post($rootScope.serverUrl1+"deleteEvent.php?name="+name)
+		$http.post($rootScope.serverUrl1+"deleteEvent.php?id="+id)
 		.then(function(response){
 			defer.resolve(response);
 		},function(error){
@@ -206,7 +207,7 @@ angular.module('collegeApp')
 		return defer.promise;
 	}
 	obj.updateTeacher =function(x){
-		
+
 		var defer = $q.defer();
 		$http.post($rootScope.serverUrl1+"updateTeacher.php",x)
 		.then(function(response){
@@ -216,9 +217,9 @@ angular.module('collegeApp')
 		});
 		return defer.promise;
 	}
-	obj.deleteTeacher =function(name){
+	obj.deleteTeacher =function(id){
 		var defer = $q.defer();
-		$http.post($rootScope.serverUrl1+"deleteTeacher.php?name="+name)
+		$http.post($rootScope.serverUrl1+"deleteTeacher.php?id="+id)
 		.then(function(response){
 			defer.resolve(response);
 		},function(error){

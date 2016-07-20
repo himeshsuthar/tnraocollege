@@ -16,12 +16,12 @@ angular.module('collegeApp')
 			guestFactory.getEvents()
 				.then(function(response){
 					$scope.events=response.data;
-					console.log($scope.events);
+					// console.log($scope.events);
 
 				},function(err){
 					alert("There seems to be some error. Please try again later.");
 				});
-				
+
 
 		}
 

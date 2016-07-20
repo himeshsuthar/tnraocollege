@@ -12,11 +12,11 @@ angular.module('collegeApp')
 		adminFactory.getCoursesDetails()
 		.then(function(response){
 			$scope.coursesDetails = response.data;
-			console.log($scope.coursesDetails);
+			// console.log($scope.coursesDetails);
 		},function(error){
 			console.error(error);
 		});
 	}
 
 
-}]);		
+}]);

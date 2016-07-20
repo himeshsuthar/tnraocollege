@@ -1,6 +1,6 @@
 angular.module('collegeApp')
 	.controller('newsCtrl', ['$scope','$state','adminFactory',function($scope,$state,adminFactory){
-		
+
 	$scope.editNews = function(x){
 		$state.go('admin.editNews',{ 'id' : x });
 		console.log(x);
@@ -12,11 +12,22 @@ function activate(){
 
 	adminFactory.getNews()
 	.then(function(response){
-		$scope.news = response.data;
-		console.log($scope.news);
+		 $scope.news = response.data;
+		// console.log($scope.news);
 	},function(error){
 		console.error(error);
 	});
 }
+$scope.deleteNews = function(x){
+		adminFactory.deleteNews(x)
+		.then(function(response){
+			alert("News successfully deleted");
+			activate();
+		},function(error){
+			console.log(error);
 
-	}]);		
+		})
+	}
+
+
+	}]);
