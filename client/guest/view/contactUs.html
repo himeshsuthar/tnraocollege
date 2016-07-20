@@ -1,21 +1,21 @@
 <script src="assets/scripts/map.js?key=AIzaSyDyfdX3cNj1brpQ7-EtcxDyjtZxOUk_Rx0"></script>
 
 <div class="row">
-	<div class="my_container">
+	<div class="">
 		<div class="col-md-12 col-xs-12 well well-lg no-padding no-margin">
-			<h1 class="w3-center"><i>Contact Us</i></h1>
+			<h1 class="w3-center w3-text-theme">Contact Us</h1>
 		</div>
 		<div class="col-md-12 col-xs-12  margin-bottom-20 no-padding no-margin ">
 			<div class="col-md-8 col-xs-12 well well-lg">
-				<form ng-submit = "addCourse(x)" ng-init = "x = {}">
+				<form ng-submit = "addInquiry(x)" ng-init = "x = {}">
 					<fieldset>
-						<legend><i class="fa fa-wpforms"></i>   Inquiry Form</legend>
+						<legend class="w3-text-theme"><i class="fa fa-wpforms"></i>  Inquiry Form</legend>
 						<input type="text" ng-model="x['name']" class="form-control margin-top-10" required placeholder="Enter your name">
 						<input type="number" ng-model="x['phone']" class="form-control margin-top-10" required placeholder="Phone Number">
-						<input type="email" ng-model="x['email']" required class="form-control margin-top-10" placeholder="Email Address">
+						<input type="email" ng-model="x['email']"  class="form-control margin-top-10" placeholder="Email Address">
 						<input type="text" class="form-control margin-top-10" required placeholder="city">
 						<select class="form-control margin-top-10 " ng-model="x['course']"required>
-							<option selected disabled>Interested Course</option>
+							<option selected="true" disabled="disabled">Interested Course</option>
 							<option value="bed">B.Ed</option>
 							<option value="bca">B.C.A</option>
 							<option value="bba">B.B.A</option>
@@ -28,14 +28,14 @@
 						</select>
 						<textarea rows="4" ng-model="x['query']" class="form-control margin-top-10" required placeholder="your query?"></textarea>
 						<div class="w3-center">
-							<button class="btn btn-info margin-top-10 " type="submit"><i class="fa fa-envelope-o"></i>  Submit</button>
+							<button class="btn btn-success margin-top-10 " type="submit"><i class="fa fa-envelope-o"></i>  Submit Inquiry</button>
 						</div>
 					</fieldset>
 				</form>
 			</div>
 			<div class="col-md-4 col-xs-12">
-				<h3><i class="fa fa-road">  <b>Direction:</b></i></h3>
-				<address class="margin-left-20 "><b>T.N.Rao College</b> <br>
+				<h3 class="w3-text-theme "><i class="fa fa-road"> <b> Direction:</b></i></h3>
+				<address class="margin-left-20 "><b class="w3-text-theme">T.N.Rao College</b> <br>
 					<i>B/h. MCA Department <br>
 						Near Saurashtra University Campus<br>
 						Rajkot<br>
@@ -51,7 +51,7 @@
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 			function initialize() {
 			var mapProp = {
 				center:new google.maps.LatLng(22.2939629,70.7435525),
@@ -62,4 +62,4 @@
 		}
 		google.maps.event.addDomListener(window, 'load', initialize);
 
-	</script>
+	</script> -->

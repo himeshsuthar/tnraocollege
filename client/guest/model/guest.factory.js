@@ -94,5 +94,16 @@ angular.module('collegeApp')
 				});
 				return defer.promise;
 			}
+			obj.addInquiry = function(x){
+
+				var defer = $q.defer();
+				$http.get($rootScope.serverUrl+"addInquiry.php",x)
+				.then(function(response){
+					defer.resolve(response);
+				},function(error){
+					defer.reject(error);
+				});
+				return defer.promise;
+			}
 			return obj;
 	}])

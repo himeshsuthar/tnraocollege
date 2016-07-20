@@ -16,10 +16,18 @@ html,body{
 .margin-bottom-20{
 	margin-bottom: 20px;
 }
-
+body{
+	right: 0
+}
+.font-bold{
+	font-weight: bold;
+}
 .my_container{
 	margin-top: 50px;
 	margin-bottom: 30px;
+}
+.georgia{
+	font-family: Georgia, Times, "Times New Roman", serif;
 }
 .headerElement{
 	margin-top: 2px;
@@ -51,9 +59,13 @@ html,body{
 	min-height: calc(100% - 100px);
 }
 .myFooter{
-	position: relative;
-	height:100px;
-	clear:both;
+
+
+
+	bottom: 0;
+	left: 0px;
+	right: 0px;
+	width: 100%;
 }
 
 #changeBg{
@@ -307,6 +319,9 @@ i{
 .news_container{
 	padding: 10px;
 	border-radius: 20px;
+}
+legend{
+	width: inherit;
 }
 
 .principal_message{

@@ -15,5 +15,4 @@ $host = "localhost";
 $username = "root";
 $password = "password";
 $con = mysqli_connect($host,$username,$password,"tnrao") or die ("Could not connect");
-
 mysqli_set_charset($con,"utf8");

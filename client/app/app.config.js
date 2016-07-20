@@ -85,7 +85,7 @@ angular.module('collegeApp')
 					},
 				'bottom' :{
 							templateUrl:'guest/view/contactUs.html',
-							controller:'',
+							controller:'contactUsCtrl',
 
 				}
 			}
@@ -102,8 +102,8 @@ angular.module('collegeApp')
 			}
 		})
 
-		.state('acheivement',{
-			url:'/acheivement',
+		.state('achievement',{
+			url:'/achievement',
 			views :{
 				'top':{
 							templateUrl:'guest/view/menu.html',
@@ -135,7 +135,7 @@ angular.module('collegeApp')
 
 	}])
 	.run(['$rootScope',function($rootScope){
-		$rootScope.serverUrl = 'http://localhost/myCollege/tnraocollege/server/guest/';
-		$rootScope.serverUrl1 = 'http://localhost/myCollege/tnraocollege/server/admin/';
+		$rootScope.serverUrl = 'http://132.140.160.112/tnraocollege/server/guest/';
+		$rootScope.serverUrl1 = 'http://132.140.160.112/tnraocollege/server/admin/';
 
 	}]);
