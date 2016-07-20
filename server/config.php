@@ -11,11 +11,9 @@ header("Content-Type : text/plain");
 ini_set('display_errors', 'On');
 error_reporting(1);
 
-
 $host = "localhost";
 $username = "root";
 $password = "password";
-
-$con = mysqli_connect($host,$username,$password,"tnrao") or die ("<br/>Could not connect to MySQL server");
+$con = mysqli_connect($host,$username,$password,"tnrao") or die ("Could not connect");
 
 mysqli_set_charset($con,"utf8");

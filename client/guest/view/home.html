@@ -97,54 +97,54 @@ $(document).ready(function(){
 
 		</div>
 
-		<div class="row container-fluid w3-theme-d1 full-height ">
-				<div class="col-md-9 col-xs-12 course_container" style="display:block;">
+		<div class="row  container-fluid w3-theme-d1 full-height ">
+				<div class="col-md-9 col-sm-6 col-xs-12 w3-center course_container" style="display:table-row">
 
-					<a ui-sref="course">
-						<div class="w3-theme-l1 square-200 col-sm-2 col-md-3 col-xs-6"  id="square">
+					<a ui-sref="course" class="w3-theme-l1 square-200">
+						<div >
 							<div class=" w3-center">
-								<i class="fa fa-list fa-5x padding-top-10"></i>
+								<i class="fa fa-list fa-5x "></i>
 							</div>
-							<h2>Courses</h2>
+							<p class="lead"> Events gallery</p>
 						</div>
 					</a>
 
-					<a ui-sref="events">
-						<div class="w3-theme-l1 square-200 col-sm-2 col-md-3 col-xs-6" id="square">
+					<a ui-sref="events" class="w3-theme-l1 square-200">
+						<div >
 							<div class=" w3-center">
-								<i class="fa fa-image fa-5x padding-top-10"></i>
+								<i class="fa fa-image fa-5x "></i>
 							</div>
-							<h2>Events gallery</h2>
+							<p class="lead"> Courses </p>
 						</div>
 					</a>
-					<a ui-sref="acheivement">
-						<div class="w3-theme-l1 square-200 col-sm-2 col-md-3 col-xs-6" id="square">
+					<a ui-sref="acheivement" class="w3-theme-l1 square-200">
+						<div >
 							<div class="w3-center">
-								<i class="fa fa-trophy fa-5x padding-top-10"></i>
+								<i class="fa fa-trophy fa-5x "></i>
 							</div>
-							<h2>Achievements</h2>
+							<p class="lead"> Achievements</p>
 						</div>
 					</a>
-					<a ui-sref="infrastructure">
-						<div class="w3-theme-l1 square-200 col-sm-2 col-md-3 col-xs-6" id="square">
+					<a ui-sref="infrastructure" class="w3-theme-l1 square-200">
+						<div >
 							<div class=" w3-center">
-								<i class="fa fa-university fa-5x padding-top-10"></i>
+								<i class="fa fa-building fa-5x "></i>
 							</div>
-							<h2>Infrastructure</h2>
+							<p class="lead"> Infrastructure</p>
 						</div>
 					</a>
-					<a ui-sref="about">
-						<div class="w3-theme-l1 square-200 col-sm-2 col-md-3 col-xs-6" id="square">
+					<a ui-sref="about" class="w3-theme-l1 square-200">
+						<div >
 							<div class=" w3-center">
-								<i class="fa fa-university fa-5x padding-top-10"></i>
+								<i class="fa fa-search fa-5x "></i>
 							</div>
-							<h2>About College</h2>
+							<p class="lead"> About College</p>
 						</div>
 					</a>
 
 				</div>
 
-				<div class="col-md-3 col-xs-12 w3-center" >
+				<div class="col-md-3 col-sm-6 col-xs-12 w3-center no-padding" >
 
 					<div class="news_container">
 
@@ -179,8 +179,8 @@ $(document).ready(function(){
 			$(this).height($(this).width());
 		});
 	}
-	customResize();
+	// customResize();
 
 
-	$(window).resize(function(){customResize()});
+	// $(window).resize(function(){customResize()});
 	</script>

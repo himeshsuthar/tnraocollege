@@ -10,7 +10,6 @@ angular.module('collegeApp')
 			.then(function(response){
 				$scope.courses = response.data;
 				$scope.contenthtml=function(x) {
-
 					x = x.substr(0,200);
 					x+='...';
 					return $sce.trustAsHtml(x);
