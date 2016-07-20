@@ -11,7 +11,6 @@ angular.module('collegeApp')
 				$scope.courses = response.data;
 				// console.log($scope.courses);
 				$scope.contenthtml=function(x) {
-
 					x = x.substr(0,200);
 					x+='...';
 					return $sce.trustAsHtml(x);
