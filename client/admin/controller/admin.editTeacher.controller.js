@@ -15,6 +15,7 @@ angular.module('collegeApp')
 		}
 
 		$scope.doUpdate= function(teacher){
+			console.log(teacher);
 			adminFactory.updateTeacher(teacher)
 			.then(function(response){
 				alert("Teacher details are successfully updated");

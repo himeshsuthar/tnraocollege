@@ -207,7 +207,6 @@ angular.module('collegeApp')
 		return defer.promise;
 	}
 	obj.updateTeacher =function(x){
-
 		var defer = $q.defer();
 		$http.post($rootScope.serverUrl1+"updateTeacher.php",x)
 		.then(function(response){

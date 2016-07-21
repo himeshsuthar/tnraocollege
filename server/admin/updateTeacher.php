@@ -7,7 +7,6 @@ $name=$data['name'];
 $courseid = $data['courseid'];
 $qualification=$data['qualification'];
 $post=$data['post'];
-
 $id=$data['id'];
 
 if(isset($id)){
@@ -18,6 +17,7 @@ if(isset($id)){
 		`courseid` 				=		'".$courseid."',
 		`qualification` =  '".$qualification."',
 		`post` = '".$post."',
-		where id = '".$id."'") or die(mysqli_error($con));
+		where id = '$id' ") or die(mysqli_error($con));
 
 }
+?>

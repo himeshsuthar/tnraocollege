@@ -8,7 +8,8 @@ html,body{
 .row-eq-height{display: flex;}
 .margin-auto{margin:auto;}
 .main-container{
-	margin-bottom: 20px;
+left: 0;
+right: 0;
 }
 .text-underline{text-decoration: underline}
 .text-bold{font-weight: bold}
@@ -109,13 +110,13 @@ i{
 	width: 100%;
 	top:0;
 	right: 0;
-	background-color: red;
+
 	background-image: url('../images/4.jpg');
 	background-size: cover;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
-	transition: background-image 1s;
-	-webkit-transition: background-image 1s;
+	transition: background-image 2s;
+	-webkit-transition: background-image 2s;
 }
 
 .wrapper{
@@ -160,6 +161,9 @@ i{
 	font-size: 17px;
 	width: 100%;
 }
+font-palatino{
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
 
 .margin-top-10{
 	margin-top: 10px;
@@ -168,13 +172,23 @@ i{
 .padding-top-10{
 	padding-top:20%;
 }
-
+.event-item{
+	transition: all 1.5s;
+}
+.event-item:hover{
+	background-color: #f0f5f5 ;
+	border-radius: 20px;
+}
+legend{
+	width: inherit;
+}
 .square-200{
 			float:left;
+
 	    position: relative;
 	    width: 20vw;
 			display: inline-block;
-	    padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
+	    padding-bottom : 30%;
 	    margin:1.0%;
 			text-align: center;
 			height: 20vw;
@@ -309,6 +323,7 @@ i{
 .news_container{
 	padding: 10px;
 	border-radius: 20px;
+
 }
 
 .principal_message{

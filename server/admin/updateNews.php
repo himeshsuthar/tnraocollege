@@ -9,9 +9,9 @@ $id=$data['id'];
 
 if(isset($id)){
 
-	mysqli_query($con,"UPDATE `feeds` 
-		SET 
-		`name` 				=		'".$name."', 
+	mysqli_query($con,"UPDATE `feeds`
+		SET
+		`name` 				=		'".$name."',
 		`description` 				=		'".$description."',
 		where id = '$id'") or die(mysqli_error($con));
 
