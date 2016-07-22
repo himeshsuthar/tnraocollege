@@ -77,13 +77,6 @@
     color: #f1f1f1;
 }
 
-.closebtn {
-    position: absolute;
-    top: 14%;
-    right: 18px;
-    font-size: 36px !important;
-    margin-left: 50px;
-}
 
 #main {
 /*    transition: margin-left .5s;*/
@@ -136,10 +129,15 @@
         </div>
     </div>
     <div id="mySidenav" class="sidenav hidden-xs w3-light-grey col-md-0">
-        <div style="margin-top:55px">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i id="closebtn" class="fa fa-close "></i></a>
-            <h2 class=" w3-center text-primary" ><b>{{event.name | uppercase}}</b></h2>
-            <p class="text-capitalize" style=" padding: 15px"><i class="fa fa-hand-o-right fa-2x" aria-hidden="true"></i>{{event.description}}</p>
+        <br><br><br><br><br>
+        <div>
+            <div class="row">
+                <div class="col-md-12">
+                    <button href="javascript:void(0)" id="closebtn" onclick="closeNav()" class="btn btn-danger "><i class="fa fa-close fa-2x"></i></button>
+                </div>
+            </div>
+            <h2 class=" w3-center text-primary text-underline" >{{event.name | uppercase}}</h2>
+            <p class="text-capitalize w3-padding"><i class="fa fa-hand-o-right fa-2x" aria-hidden="true"></i>{{event.description}}</p>
             <h4 class="text-danger" style="padding-left:10px"><i class="fa fa-globe" aria-hidden="true"></i> Place:  {{event.place}}</h4>
             <h4 class="text-danger" style="padding-left:10px"><i class="fa fa-calendar-o" aria-hidden="true"></i> Date : {{event.date}}</h4>
         </div>
