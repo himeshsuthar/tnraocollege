@@ -1,0 +1,240 @@
+
+<style>
+.grid-item
+{
+    padding: 3px;
+    background-color:#222;
+    border-radius: 10px;
+    margin: 3px;
+    min-width: 300px;
+}
+.modalOpenImg
+{
+    width: 300px;
+    height:auto;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #333;
+    margin: auto;
+}
+#modalFoto{
+    max-width: 100%;
+    max-height: 100%;
+}
+.modal-body
+{
+    text-align: center;
+}
+.modal-dialog
+{
+  width: 80%;
+  height: auto;
+  margin: auto;
+  padding: 5;
+}
+.modal-header{
+    background-color: rgba(255,255,255,0.8)
+}
+.modal-content {
+  background-color: transparent;
+  height: auto;
+  min-height: 100%;
+  border-radius: 10px;
+}
+
+#modalFoto{
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 50vh;
+    min-height: 50vh;
+}
+.sidenav {
+    display: none;
+    position: fixed;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    text-align:justify;
+    font-size:17px;
+    overflow-x: hidden;
+    transition:  display 0.5s ease-in-out;
+    -moz-transition:  display 0.5s ease-in-out;
+    -webkit-transition: display 0.5s ease-in-out;
+    -o-transition:  display 0.5s ease-in-out;
+
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.closebtn {
+    position: absolute;
+    top: 14%;
+    right: 18px;
+    font-size: 36px !important;
+    margin-left: 50px;
+}
+
+#main {
+/*    transition: margin-left .5s;*/
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+<div class="well w3-padding">
+<div class="row">
+  <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12 well-lg bg-primary text-center" ng-hide="eventPhotos">
+    <h1 class="text-center"><i class="fa fa-refresh fa-spin"></i></h1>
+  </div>
+  <div class="col-xs-12 visible-xs" style="margin-10">
+      <h2 class=" w3-center text-primary" ><b>{{event.name | uppercase}}</b></h2>
+      <p class="text-capitalize" >
+          <i class="fa fa-hand-o-right fa-2x" aria-hidden="true"></i>
+          {{event.description}}
+      </p>
+      <h4 class="text-danger" >
+          <i class="fa fa-globe" aria-hidden="true"></i>
+          Place:  {{event.place}}
+      </h4>
+      <h4 class="text-danger" >
+          <i class="fa fa-calendar-o" aria-hidden="true"></i>
+          Date : {{event.date}}
+      </h4>
+  </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="page-header">
+            <i class="fa fa-flag fa-2x w3-text-theme" style="display:inline-block"></i>
+            <h1 class=" w3-text-theme" style="display:inline-block">
+                {{event.name}}
+            </h1>
+        </div>
+    </div>
+    <div class="wrapper-gallery col-md-12 hidden-xs" id="wrapper-gal" style="height:auto; text-align:center">
+        <div masonry  class="grid w3-container container-fluid w3-center" id="main">
+          <div class="masonry-brick " ng-repeat="x in eventPhotos" style="padding:10px">
+            <div class="grid-item " >
+                <img src="../server/{{x.path}}"  class="modalOpenImg img-responsive" >
+            </div>
+          </div>
+        </div>
+    </div>
+    <div id="mySidenav" class="sidenav hidden-xs w3-light-grey col-md-0">
+        <div style="margin-top:55px">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i id="closebtn" class="fa fa-close "></i></a>
+            <h2 class=" w3-center text-primary" ><b>{{event.name | uppercase}}</b></h2>
+            <p class="text-capitalize" style=" padding: 15px"><i class="fa fa-hand-o-right fa-2x" aria-hidden="true"></i>{{event.description}}</p>
+            <h4 class="text-danger" style="padding-left:10px"><i class="fa fa-globe" aria-hidden="true"></i> Place:  {{event.place}}</h4>
+            <h4 class="text-danger" style="padding-left:10px"><i class="fa fa-calendar-o" aria-hidden="true"></i> Date : {{event.date}}</h4>
+        </div>
+    </div>
+</div>
+<div class="row">
+  <div class="visible-xs">
+      <div class="w3-container w3-center col-xs-12" ng-repeat="x in eventPhotos">
+        <img src="../server/{{x.path}}" class="img-responsive margin-top-10 img-thumbnail margin-auto">
+      </div>
+  </div>
+</div>
+
+
+
+
+    <div class="hidden-xs" style="position:fixed; top:15%; right:0;">
+        <span id="openbtn" style="font-size:25px;cursor:pointer;" onclick="openNav()"><i class="fa fa-toggle-left fa-2x"></i></span>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<script>
+$(document).ready(function() {
+    var $gutter;
+
+    if (window.matchMedia("(min-width: 480px)").matches) {
+        $gutter = 5;
+    } else if (window.matchMedia("(min-width: 768px)").matches) {
+        $gutter = 40;
+    } else {}
+
+    activateMas($gutter);
+
+    setInterval(function(){activateMas($gutter)},100);
+
+    $("body").on('click','.modalOpenImg',function(){
+        if($(window).width() > 768)
+        {
+            $("#modalFoto").attr('src',$(this).attr('src'));
+            $("#modalPicture").modal();
+        }
+        else{
+            console.log($(window).width())
+        }
+    });
+
+});
+
+function activateMas(x){
+
+    $('.grid').masonry({
+        itemSelector: '.grid-item',
+        gutter: x,
+        columnWidth: 1
+    });
+}
+
+function openNav() {
+    $("#wrapper-gal").addClass("col-md-9").removeClass("col-md-12");
+    $("#mySidenav").removeClass("col-md-0").addClass("col-md-3");
+    $("#mySidenav").css({'display':'block'});
+
+    document.getElementById("openbtn").style.display="none";
+    $("#openbtn").hide();
+}
+
+function closeNav() {
+    $("#wrapper-gal").removeClass("col-md-9").addClass("col-md-12");
+    $("#mySidenav").removeClass("col-md-3").addClass("col-md-0");
+    $("#mySidenav").css({'display':'none'});
+
+    document.getElementById("openbtn").style.display="block";
+}
+</script>
+
+<div id="modalPicture" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalPictureLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" style="display:block; padding:4px; background-color:rgb(200,10,10); opacity:1; color:white" data-dismiss="modal" aria-label="Close">
+                            <span class="fa fa-times" aria-hidden="true"></span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        <img class="js-modal-image w3-image" id='modalFoto' src="">
+                    </div>
+                </div>
+            </div>
+        </div>
