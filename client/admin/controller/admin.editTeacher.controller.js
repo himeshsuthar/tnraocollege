@@ -7,6 +7,7 @@ angular.module('collegeApp')
 			adminFactory.getTeacher(id)
 			.then(function(response){
 				$scope.teacher=response.data;
+				$scope.teacher['phone'] = parseInt($scope.teacher['phone']);
 				// console.log($scope.teacher);
 
 			},function(error){
@@ -15,6 +16,7 @@ angular.module('collegeApp')
 		}
 
 		$scope.doUpdate= function(teacher){
+			teacher['phone']=parseInt(teacher['phone']);
 			console.log(teacher);
 			adminFactory.updateTeacher(teacher)
 			.then(function(response){

@@ -5,36 +5,40 @@
 				<h2 class="margin-sides-10 text-center">News feed Details</h2>
 
 
-				
+
 				<table  class="table sortable table-bordered myTable largeTable " ng-init="olfy = 'name'">
-					
+
 						<tr class = w3-grey>
 							<th>Seq. No</th>
-							
+
 							<th ng-click="olfy = 'name'">Name </th>
 							<th>content</th>
 							<th>eligibility</th>
 							<th>duration</th>
 							<th>fees</th>
-							<th>Head of DepartMent</th>
+							<th>Edit/Delete</th>
+
 						</tr>
-					
+
 					<tbody>
 						<tr>
-							<td colspan="4" class="bg-primary" ng-hide="feeds">
-								<h1 class="text-center"><i class="fa fa-refresh fa-spin"></i></h1>
+							<td colspan="6" class="bg-primary" ng-hide="courses">
+								<h1 class="text-center"><i class="fa fa-spinner fa-spin"></i></h1>
 							</td>
 						</tr>
-						<tr ng-repeat='x in feeds | orderBy : olfy' ng-show="feeds" ng-click="stateChange(x)">
+						<tr ng-repeat='x in courses | orderBy : olfy' ng-show="courses">
 							<td>{{$index+1}} </td>
-							
+
 							<td>{{x.name}} </td>
-							<th>{{x.content}}</th>
-							<th>{{x.eligibility}}</th>
-							<th>{{x.duration}}</th>
-							<th>{{x.fees}}</th>
-							<th>{{x.hod}}</th>
+							<td>{{x.content}}</td>
+							<td>{{x.eligibility}}</td>
+							<td>{{x.duration}}</td>
+							<td>{{x.fees}}</td>
+							<td>
+								<button class="btn btn-default w3-white" ng-click = "editcourse(x.id)" ><i class="fa fa-pencil-square-o fa-2x w3-success" aria-hidden="true" style="float:left;"></i></button>
+								<button class="btn btn-default w3-white" ng-click = "deletecourse(x.id)" ><i class="fa fa-trash fa-2x" aria-hidden="true" style="float:right;"></i></button>
+							</td>
+
 						</tr>
 					</tbody>
 				</table>
-				

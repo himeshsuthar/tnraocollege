@@ -10,11 +10,11 @@ $id=$data['id'];
 
 if(isset($id)){
 
-	mysqli_query($con,"UPDATE `events` 
-		SET 
+	mysqli_query($con,"UPDATE `events`
+		SET
 		`name` 				=		'".$name."',
 		`description` 				=		'".$description."',
-		`place` 				=		'".$place."',
+		`place` 				=		'".$place."'
 		where id = '$id'") or die(mysqli_error($con));
 
 }

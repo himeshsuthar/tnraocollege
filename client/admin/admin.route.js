@@ -83,7 +83,7 @@ angular.module('collegeApp')
 
 			})
 		.state('admin.editCourse',{
-				url : '/editCourse/:course',
+				url : '/editCourse/:id',
 				templateUrl : 'admin/view/editCourse.html',
 				controller : 'editCourseCtrl'
 

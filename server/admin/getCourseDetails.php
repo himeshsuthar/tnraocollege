@@ -1,15 +1,15 @@
 <?php
+include("config.php");
+mysqli_set_charset($con,"utf8");
 
-	include("config.php");
-	$course = $_GET['course'];
-/*
-	if(!isset($course)){
-		echo $course;
-		header("HTTP/1.0 500 Inappropriate Arguments.");
-	}*/
+error_reporting(1);
 
-	$result = mysqli_query($con,"SELECT * FROM coursedetails where course like '".$course."'") or die(mysqli_error($con));
-	while($x = mysqli_fetch_assoc($result)){
-		echo json_encode($x);
-		return;
-	}
+$course = $_GET['course'];
+
+$result = mysqli_query($con,"SELECT * FROM course where `id` like '$course' ") or die(mysqli_error($con));
+
+while($x = mysqli_fetch_assoc($result))
+	echo json_encode($x,true);
+
+
+?>

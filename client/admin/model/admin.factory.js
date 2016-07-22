@@ -176,9 +176,9 @@ angular.module('collegeApp')
 		});
 		return defer.promise;
 	}
-	obj.deleteCourseDetails = function(course){
+	obj.deleteCourse = function(x){
 		var defer = $q.defer();
-		$http.post($rootScope.serverUrl1+"deleteCourseDetails.php?course="+course)
+		$http.post($rootScope.serverUrl1+"deleteCourseDetails.php?x="+x)
 		.then(function(response){
 			defer.resolve(response);
 		},function(error){
@@ -206,9 +206,10 @@ angular.module('collegeApp')
 		});
 		return defer.promise;
 	}
+
 	obj.updateTeacher =function(x){
-		var defer = $q.defer();
-		$http.post($rootScope.serverUrl1+"updateTeacher.php",x)
+		  var defer = $q.defer();
+			$http.post($rootScope.serverUrl1+"updateTeacher.php",x)
 		.then(function(response){
 			defer.resolve(response);
 		},function(error){

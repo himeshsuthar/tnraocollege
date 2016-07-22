@@ -14,15 +14,15 @@ $id=$data['id'];
 
 if(isset($id)){
 
-	mysqli_query($con,"UPDATE `coursedetails` 
-		SET 
-		`name` 				=		'".$name."', 
+	mysqli_query($con,"UPDATE `coursedetails`
+		SET
+		`name` 				=		'".$name."',
 		`course` 				=		'".$course."',
 		`content` =  '".$content."',
 		`eligibility` = '".$eligibility."',
 		`duration` =  '".$duration."',
 		`fees` =  '".$fees."',
-		`hod` =  '".$hod."',
+		`hod` =  '".$hod."'
 
 		where id = '$id'") or die(mysqli_error($con));
 

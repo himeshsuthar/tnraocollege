@@ -11,12 +11,23 @@ angular.module('collegeApp')
 
 		adminFactory.getCoursesDetails()
 		.then(function(response){
-			$scope.coursesDetails = response.data;
-			// console.log($scope.coursesDetails);
+			$scope.courses = response.data;
+			 console.log($scope.courses);
 		},function(error){
 			console.error(error);
 		});
 	}
+	$scope.deleteCourse = function(x){
+			adminFactory.deleteCourse(x)
+			.then(function(response){
+				alert("Course successfully deleted");
+				activate();
+			},function(error){
+				console.log(error);
+
+			})
+		}
+
 
 
 }]);

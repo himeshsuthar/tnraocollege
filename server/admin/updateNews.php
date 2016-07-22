@@ -12,7 +12,7 @@ if(isset($id)){
 	mysqli_query($con,"UPDATE `feeds`
 		SET
 		`name` 				=		'".$name."',
-		`description` 				=		'".$description."',
+		`description` 				=		'".$description."'
 		where id = '$id'") or die(mysqli_error($con));
 
 }
