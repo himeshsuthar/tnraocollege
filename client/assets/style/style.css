@@ -275,7 +275,16 @@ legend{
 #marqueInside{
 	margin-top:-100%;
 }
-
+.footer-link{
+	color:white;
+	-webkit-transition: all 2s;
+}
+.footer-link:hover{
+	text-decoration: none;
+	color:white;
+	border-bottom-style:solid;
+	border-bottom-color: white;
+}
 .msg-header{
 	font-style: italic;
 	font-size: 26px;
