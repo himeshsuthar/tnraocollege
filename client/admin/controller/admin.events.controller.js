@@ -1,8 +1,8 @@
 angular.module('collegeApp')
 	.controller('eventsCtrl', ['$scope','$state','adminFactory',function($scope,$state,adminFactory){
 
-		$scope.editCourse = function(x){
-		$state.go('admin.editCourse',{ 'id' : x });
+		$scope.editEvent = function(x){
+		$state.go('admin.editEvent',{ 'id' : x });
 		console.log(x);
 	}
 

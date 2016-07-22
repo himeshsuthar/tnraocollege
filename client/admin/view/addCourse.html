@@ -5,7 +5,7 @@
  back</button></a>
 </div>
 <div class="col-md-8">
-	
+
 	<h2 class="text-center no-margin no-padding" >Add Course</h2>
 </div>
 
@@ -13,32 +13,22 @@
 
 	<div class = "col-md-2"></div>
 	<div class = "col-md-8 col-xs-12 well well-lg">
-	
-		
+
+
 			<form ng-submit = "addCourse(x)" ng-init = "x = {}">
-				<input required type = "text" class = " form-control custom-form" ng-model = "x['course']" placeholder="Event course Name in short" data-toggle="tooltip" data-placement="right" >
-				<input required type = "text" class = " form-control custom-form" ng-model = "x['name']" placeholder="Event course Full Name" data-toggle="tooltip" data-placement="right" >
-				
+				<input required type = "text" class = " form-control custom-form" ng-model = "x['id']" placeholder="Course Name in short without space" data-toggle="tooltip" data-placement="right" >
+				<input required type = "text" class = " form-control custom-form" ng-model = "x['name']" placeholder=" Course Full Name" data-toggle="tooltip" data-placement="right" >
+
 				<textarea rows="6" class = "form-control custom-form" placeholder="course Description" ng-model = "x['content']" data-toggle="tooltip" data-placement="right" title="Description"></textarea>
 				<input required type = "text" class = " form-control custom-form" ng-model = "x['eligibility']" placeholder="eligibility for admission" data-toggle="tooltip" data-placement="right" >
 
 				<input required type = "text" class = " form-control custom-form" ng-model = "x['duration']" placeholder="duration of course" data-toggle="tooltip" data-placement="right" >
 				<input required type = "text" class = " form-control custom-form" ng-model = "x['fees']" placeholder="fees for course" data-toggle="tooltip" data-placement="right" >
-					<div class="col-md-4 col-xs-12 col-sm-12 no-padding">
-						<input class="form-control custom-form" ng-model ="x['fname']" required type="text" placeholder="Enter H.O.D's First Name"> 
-					</div>
-					<div class="col-md-4 col-sm-12 col-xs-12 no-padding">
-						<input class="form-control custom-form" required ng-model ="x['mname']" type="text" placeholder="Enter H.O.D's Middle Name"> 
-					</div>
-					<div class="col-md-4 col-sm-12 col-xs-12 no-padding">
-						<input class="form-control custom-form" required ng-model ="x['lname']" type="text" placeholder="Enter H.O.D's Last Name"> 
-					</div>
-					<input class="form-control custom-form margin-top-10" required ng-model ="x['qualification']" type="text" placeholder="Enter qualification of H.O.D"> 
-				
+
 
 				<button class = "pull-right btn btn-success" type="submit" >Add course</button>
 			</form>
-			
-		
+
+
 	</div>
 </div>

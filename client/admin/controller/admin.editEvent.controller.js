@@ -4,9 +4,9 @@ angular.module('collegeApp')
 		var id=$stateParams.id;
 		activate();
 		function activate(){
-			adminFactory.getSingleNews(id)
+			adminFactory.getSingleEvent(id)
 			.then(function(response){
-				$scope.singleEvent=response.data;
+				$scope.event=response.data;
 				// console.log($scope.singleEvent);
 
 			},function(error){
@@ -17,8 +17,8 @@ angular.module('collegeApp')
 		$scope.doUpdate= function(x){
 			adminFactory.updateEvent(x)
 			.then(function(response){
-				alert("Course details are successfully updated");
-				$state.go('admin.home');
+				alert("event details are successfully updated");
+				// $state.go('admin.home');
 			},function(error){
 				console.log(error);
 			});

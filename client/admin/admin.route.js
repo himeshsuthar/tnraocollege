@@ -55,7 +55,7 @@ angular.module('collegeApp')
 		.state('admin.addCourse',{
 				url : '/addCourse',
 				templateUrl : 'admin/view/addCourse.html',
-				controller : 'addEventCtrl'
+				controller : 'addCourseCtrl'
 
 			})
 		.state('admin.news',{

@@ -10,6 +10,7 @@ $qualification = $data['qualification'];
 $post = $data['post'];
 $photo = $data['photo'];
 $courseid = $data['course'];
+$email = $data['email'];
 
 
 
@@ -18,10 +19,12 @@ $courseid = $data['course'];
 		`qualification`,
 		`post`,
 		`photo`,
-		`courseid`) VALUES
+		`courseid`,
+	`email`) VALUES
 		('".$name."',
 		'".$qualification."',
 		'".$post."',
 		'".$photo."',
-		'".$courseid."')")
+		'".$courseid."',
+		'".$email."')")
 		or die(mysql_error($con));

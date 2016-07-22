@@ -5,14 +5,13 @@ include("config.php");
 $data = file_get_contents("php://input");
 $data = json_decode($data,true);
 print_r($data);
-$id = $data['course'];
+$id = $data['id'];
 $name = $data['name'];
 $content = $data['content'];
 $eligibility = $data['eligibility'];
 $duration = $data['duration'];
 $fees = $data['fees'];
-$hod = $data['hod'];
-$hodphoto = $data['hodphoto'];
+
 
 
 
@@ -22,15 +21,11 @@ $hodphoto = $data['hodphoto'];
 		`content`,
 		`eligibility`,
 		`duration`,
-		`fees`,
-		`hod`,
-		`hodphoto`) VALUES
+		`fees`) VALUES
 		('".$name."',
 		'".$id."',
-		'".$content."'
+		'".$content."',
 		'".$eligibility."',
 		'".$duration."',
-		'".$fees."',
-		'".$hod."',
-		'".$hodphoto."')")
+		'".$fees."')")
 		or die(mysql_error($con));

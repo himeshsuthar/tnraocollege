@@ -22,8 +22,8 @@
 
 					<tbody>
 						<tr>
-							<td colspan="6" class="bg-primary" ng-hide="courses">
-								<h1 class="text-center"><i class="fa fa-spinner fa-spin"></i></h1>
+							<td colspan="8" class="bg-primary" ng-hide="courses">
+								<h1 class="text-center"><i class="fa fa-refresh fa-spin"></i></h1>
 							</td>
 						</tr>
 						<tr ng-repeat='x in courses | orderBy : olfy' ng-show="courses">
@@ -35,8 +35,8 @@
 							<td>{{x.duration}}</td>
 							<td>{{x.fees}}</td>
 							<td>
-								<button class="btn btn-default w3-white" ng-click = "editcourse(x.id)" ><i class="fa fa-pencil-square-o fa-2x w3-success" aria-hidden="true" style="float:left;"></i></button>
-								<button class="btn btn-default w3-white" ng-click = "deletecourse(x.id)" ><i class="fa fa-trash fa-2x" aria-hidden="true" style="float:right;"></i></button>
+								<button class="btn btn-default w3-white" ng-click = "editCourse(x.id)" ><i class="fa fa-pencil-square-o fa-2x w3-success" aria-hidden="true" style="float:left;"></i></button>
+								<button class="btn btn-default w3-white" ng-click = "deleteCourse(x.id)" ><i class="fa fa-trash fa-2x" aria-hidden="true" style="float:right;"></i></button>
 							</td>
 
 						</tr>

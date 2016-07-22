@@ -1,8 +1,8 @@
 <?php
 
 	include("config.php");
-	$id = $_GET["x"];
-if(isset($course)){
+	$id = $_GET["id"];
+if(isset($id)){
 	mysqli_query($con,"DELETE from course where `id` = '".$id."'") or die(mysqli_error($con));
 }
 else{

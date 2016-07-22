@@ -20,7 +20,7 @@
 	<div class="col-md-10 col-md-offset-1 col-xs-12 margin-top-20 event-item"  ng-repeat="x in events track by $index">
 
 		<fieldset >
-		<legend><h2 class="text-uppercase text-danger">{{x.name}}</h2></legend>
+		<legend><h2 class="text-uppercase text-danger"><a  ng-click="stateChange(x.id)" >{{x.name}}</a></h2></legend>
 		<div class= "col-xs-12 visible-xs" >
 			<img src="../server/{{x.image.path}}" class="img-responsive w3-center grid-item visible-xs">
 		</div>
@@ -36,11 +36,11 @@
 		<div class="col-md-9 col-md-offset-0 col-xs-12  event-message" >
 			<p style="text-indent:30px;" class='text-justify text-capitalize tahoma'>	{{x.description  | cut:true:350:'.....'}}
 				<a class = "btn btn-link" ng-click="stateChange(x.id)" style="font-size:14">See more</a>
-				<a class = "btn btn-link" ng-click="stateChange(x.id)" style="font-size:18">
-					<div class="text-info" >
+
+					<div class="text-info" style="font-size:18" >
 					<i class="fa fa-globe" aria-hidden="true"></i>  place: {{x.place}}
 				</div>
-				</a>
+
 				</p>
 		</div>
 	</div>
