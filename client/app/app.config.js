@@ -1,5 +1,6 @@
 angular.module('collegeApp')
 	.config(['$urlRouterProvider','$stateProvider','$httpProvider','$animateProvider',function($urlRouterProvider,$stateProvider,$httpProvider,$animateProvider){
+		$animateProvider.classNameFilter(/^(?:(?!ng-animate-disabled).)*$/);
 	$httpProvider.defaults.headers.post["Content-Type"] = 'text/plain';
 	$stateProvider
 		.state('home',{
@@ -135,7 +136,7 @@ angular.module('collegeApp')
 
 	}])
 	.run(['$rootScope',function($rootScope){
-		$rootScope.serverUrl = 'http://132.140.160.112/tnraocollege/server/guest/';
-		$rootScope.serverUrl1 = 'http://132.140.160.112/tnraocollege/server/admin/';
+		$rootScope.serverUrl = 'http://localhost/tnraocollege/server/guest/';
+		$rootScope.serverUrl1 = 'http://localhost/tnraocollege/server/admin/';
 
 	}]);

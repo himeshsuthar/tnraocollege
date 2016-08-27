@@ -1,10 +1,6 @@
 <div class="row">
 <div class="col-md-12 well" >
-<div class="col-md-2">
-<a ui-sref="admin.course"><button type="button" class="btn btn-large btn-success"><i class="fa fa-arrow-left" aria-hidden="true"></i>
- back</button></a>
-</div>
-<div class="col-md-8">
+
 
 	<h2 class="text-center no-margin no-padding" >Edit Course</h2>
 </div>
@@ -15,18 +11,18 @@
 	<div class = "col-md-8 col-xs-12 well well-lg">
 
 
-			<form ng-submit = "update(x)" >
-				<input required type = "text" class = " form-control custom-form" ng-model = "x.course" placeholder="Event course Name in short" data-toggle="tooltip" data-placement="right" >
-				<input required type = "text" class = " form-control custom-form" ng-model = "x.name" placeholder="Event course Full Name" data-toggle="tooltip" data-placement="right" >
+			<form ng-submit = "doUpdate(course)" >
+				<input required type = "text" class = " form-control custom-form" ng-model = "course.id" placeholder="Event course Name in short" data-toggle="tooltip" data-placement="right" >
+				<input required type = "text" class = " form-control custom-form" ng-model = "course.name" placeholder="Event course Full Name" data-toggle="tooltip" data-placement="right" >
 
-				<textarea rows="6" class = "form-control custom-form" placeholder="course Description" ng-model = "x.content" data-toggle="tooltip" data-placement="right" title="Description"></textarea>
-				<input required type = "text" class = " form-control custom-form" ng-model = "x.eligibility" placeholder="eligibility for admission" data-toggle="tooltip" data-placement="right" >
+				<textarea rows="6" class = "form-control custom-form" placeholder="course Description" ng-model = "course.content" data-toggle="tooltip" data-placement="right" title="Description"></textarea>
+				<input required type = "text" class = " form-control custom-form" ng-model = "course.eligibility" placeholder="eligibility for admission" data-toggle="tooltip" data-placement="right" >
 
-				<input required type = "text" class = " form-control custom-form" ng-model = "x.duration" placeholder="duration of course" data-toggle="tooltip" data-placement="right" >
-				<input required type = "text" class = " form-control custom-form" ng-model = "x.fees" placeholder="fees for course" data-toggle="tooltip" data-placement="right" >
+				<input required type = "text" class = " form-control custom-form" ng-model = "course.duration" placeholder="duration of course" data-toggle="tooltip" data-placement="right" >
+				<input required type = "text" class = " form-control custom-form" ng-model = "course.fees" placeholder="fees for course" data-toggle="tooltip" data-placement="right" >
 
 				<button class = "pull-right btn btn-success"><i class="fa fa-wrench" aria-hidden="true"></i> Update Course</button>
-				<button class =" btn btn-danger" ng-click="deleteEvent(x.course)"><i class="fa fa-trash-o" aria-hidden="true"></i> delete Course</button>
+
 			</form>
 
 

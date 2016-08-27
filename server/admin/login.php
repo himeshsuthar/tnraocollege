@@ -19,4 +19,16 @@ if(mysqli_num_rows($result)==1){
 else{
 	header("HTTP/1.0 401 Unauthorized Access");
 }
+function checkUserName($username,$con){
+	$user= mysqli_query($con,"SELECT * FROM admin where `username` = '$username'") or die(mysqli_error($con));
+	$row = mysql_fetch_row($user);
+	$user_count=$row[0];
+	if($user_count>0){
+		echo "username '.$username.' not available";
+	}
+	else {
+		echo "username '.$username.' is available";
+	}
+}
+
 ?>

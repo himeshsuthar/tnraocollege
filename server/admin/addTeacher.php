@@ -28,3 +28,7 @@ $email = $data['email'];
 		'".$courseid."',
 		'".$email."')")
 		or die(mysql_error($con));
+
+
+
+?>

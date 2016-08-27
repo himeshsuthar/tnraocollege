@@ -177,7 +177,7 @@ angular.module('collegeApp')
 		return defer.promise;
 	}
 	obj.deleteCourse = function(id){
-		
+
 		var defer = $q.defer();
 		$http.post($rootScope.serverUrl1+"deleteCourse.php?id="+id)
 		.then(function(response){

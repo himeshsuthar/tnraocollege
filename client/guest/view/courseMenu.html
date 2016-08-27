@@ -1,13 +1,13 @@
-<div class="row">
-	<div class="col-md-12 well well-lg">
+<div class="row ">
+	<div class="col-md-12 well well-lg ">
 			<h1 class="w3-text-theme page-header"><i class="fa fa-university"></i> Courses</h1>
 			<div class="row">
-				<div class="col-md-12 col-xs-12 " ng-hide="courses">
+				<div class="col-md-12 col-xs-12 ng-leave" ng-hide="courses">
 					<h1 class="bg-primary well-sm text-center"><i class="fa fa-spinner fa-spin"></i></h1>
 				</div>
 				<div class="col-md-12 col-xs-12" ng-show="courses">
 					<ul class="list-group">
-						<li class="list-group-item w3-hover row-eq-height col-md-10 col-md-offset-1" ng-repeat="x in courses | orderBy: x.hod.name  track by $index ">
+						<li class="list-group-item w3-hover row-eq-height col-md-10 col-md-offset-1  nga-default nga-stagger-fast nga-rotate-right " ng-repeat="x in courses | orderBy: x.hod.name  track by $index ">
 							<div class="row text-center ">
 								<div class="col-md-3 w3-text-theme ">
 								<h4>	<b>{{x.name}}</b></h4>

@@ -1,5 +1,5 @@
 angular.module('collegeApp')
-	.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
+	.config(['$stateProvider','$urlRouterProvider','$animateProvider',function($stateProvider,$urlRouterProvider,$animateProvider){
 
 		$stateProvider
 			.state('admin.login',{
@@ -83,7 +83,7 @@ angular.module('collegeApp')
 
 			})
 		.state('admin.editCourse',{
-				url : '/editCourse/:id',
+				url : '/editCourse/:course',
 				templateUrl : 'admin/view/editCourse.html',
 				controller : 'editCourseCtrl'
 

@@ -17,10 +17,10 @@
 		</div>
 	</div>
 <div class="row">
-	<div class="col-md-10 col-md-offset-1 col-xs-12 margin-top-20 event-item"  ng-repeat="x in events track by $index">
+	<div class="col-md-10 col-md-offset-1 col-xs-12 margin-top-20 event-item  nga-default nga-stagger-fast nga-rotate-right"  ng-repeat="x in events track by $index">
 
 		<fieldset >
-		<legend><h2 class="text-uppercase text-danger"><a  ng-click="stateChange(x.id)" >{{x.name}}</a></h2></legend>
+		<legend><h2 class="text-uppercase text-danger"><a  ng-click="stateChange(x.id)" style="cursor:pointer">{{x.name}}</a></h2></legend>
 		<div class= "col-xs-12 visible-xs" >
 			<img src="../server/{{x.image.path}}" class="img-responsive w3-center grid-item visible-xs">
 		</div>

@@ -6,8 +6,8 @@ angular.module('collegeApp')
 		function activate(){
 			adminFactory.getCourseDetails(course)
 			.then(function(response){
-				$scope.courseDetails=response.data;
-				// console.log($scope.courseDetails);
+				$scope.course=response.data;
+				console.log($scope.course);
 
 			},function(error){
 				console.log(error);
@@ -18,7 +18,7 @@ angular.module('collegeApp')
 			adminFactory.updateCourseDetails(x)
 			.then(function(response){
 				alert("Course details are successfully updated");
-				$state.go('admin.home');
+				// $state.go('admin.home');
 			},function(error){
 				console.log(error);
 			});

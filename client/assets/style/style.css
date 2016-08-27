@@ -174,13 +174,15 @@ font-palatino{
 }
 .event-item{
 	transition: all 1.5s;
+
 }
 .event-item:hover{
-	background-color: #f0f5f5 ;
+	background-color: 	rgb(252, 252, 252) ;
 	border-radius: 20px;
 }
 legend{
 	width: inherit;
+
 }
 .square-200{
 			float:left;
@@ -394,6 +396,11 @@ legend{
 	        animation: none 0s !important; /* disable keyframe animations */
 	}
 	/* ANIMATIONS (FROM ANIMATE.CSS) ======================== */
+	.flipInx{
+		display: block;
+		animation: flipInX 0.50s ease;
+		-webkit-animation: flipInX 0.50s ease;
+	}
 	/* flip in */
 	@keyframes flipInX {
 	  0% {

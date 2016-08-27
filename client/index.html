@@ -3,6 +3,7 @@
 <head>
 
 	<title>T.N.Rao College</title>
+	<link rel="icon" href="assets/images/logo-favicon.png" type="image/png" sizes="20x20">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3">
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -11,6 +12,7 @@
 <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css">
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="assets/style/w3.css">
+	<link rel="stylesheet" href ="assets/style/nga.min.css">
 <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css"></link>
 	<script src="bower_components/angular/angular.js"></script>
 	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
@@ -64,16 +66,18 @@
 </head>
 <body ng-app="collegeApp">
 	<div class="main-wrapper">
-		<div ui-view="top">
+		<div ui-view="top" class="">
 		</div>
-		<div class="main-container">
-			<div ui-view="bottom">
+		<div class="main-container" >
+			<div ui-view="bottom" style="z-index:120; overflow:visible; position:relative" class="nga-default nga-stagger nga-rotate-right-all nga-rotate-down-add">
 
 			</div>
+
 		</div>
+
 	</div>
 
-		<div  class=" myFooter w3-dark-grey  col-md-12 col-xs-12 no-padding no-margin w3-center" style="z-index:10;bottom:0;">
+	<div  class="myFooter w3-dark-grey  col-md-12 col-xs-12 no-padding no-margin w3-center" style="position:relative; z-index:0;">
 			<div class="row" style="right:0">
 				<div class="col-sm-2 col-sm-offset-1 margin-top-10 hidden-xs" >
 					<h2 class="georgia">
@@ -87,11 +91,7 @@
 					<div class="font-palatino margin-top-5"><a ui-sref="achievement">Achievements</a><br></div>
 					<div class="font-palatino margin-top-5"><a ui-sref="infrastructure">Library</a><br></div>
 					<div class="font-palatino margin-top-5"><a ui-sref="infrastructure">Laboratories</a><br></div>
-
-
 				</div>
-
-
 				</div>
 				<div class=" col-sm-4 col-sm-offset-1 hidden-xs margin-top-10 w3-center">
 			<h2 class="georgia">Courses</<br></h2>
@@ -104,6 +104,10 @@
 					<div class="font-palatino margin-top-5"><a class="footer-link" href="http://tnraocollege.org/mywebsite/tnraocollege/client/#/course/llb"> Bachelor of Laws </a></br></div>
 					<div class="font-palatino margin-top-5"><a class="footer-link" href="http://tnraocollege.org/mywebsite/tnraocollege/client/#/course/med"> Master of Education </a></br></div>
 					<div class="font-palatino margin-top-5"><a class="footer-link" href="http://tnraocollege.org/mywebsite/tnraocollege/client/#/course/mscit"> Master of Science in IT </a></br></div>
+					<div class="font-palatino margin-top-5"><a class="footer-link" href="http://tnraocollege.org/mywebsite/tnraocollege/client/#/course/M.Sc."> M.Sc in Organic Chemistry </a></br></div>
+
+
+
 
 
 					</div>

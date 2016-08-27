@@ -2,7 +2,7 @@ angular.module('collegeApp')
 .controller('courseCtrl',['$scope','$sce','$state','$stateParams','guestFactory',function($scope,$sce,$state,$stateParams,guestFactory){
 
 	var course = $stateParams.course;
-	console.log(course);
+
 	activate();
 	function activate(){
 		guestFactory.getCourseDetails(course)

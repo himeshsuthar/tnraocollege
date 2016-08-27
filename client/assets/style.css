@@ -51,7 +51,6 @@ html,body{
 	min-height: calc(100% - 100px);
 }
 .myFooter{
-
 	bottom: 0;
 	left: 0px;
 	right: 0px;
@@ -114,8 +113,8 @@ i{
 	background-size: cover;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
-	transition: background-image 1s;
-	-webkit-transition: background-image 1s;
+	transition: background-image 3s;
+	-webkit-transition: background-image 3s;
 }
 
 .wrapper{
@@ -541,14 +540,7 @@ i{
 /* when showing the picture */
 .ng-hide-remove      { animation:0.5s flipInX ease; }
 
-.no-animate.ng-enter,
-.no-animate.ng-leave,
-.no-animate.ng-animate {
-        transition: none !important; /* disable transitions */
-        animation: none 0s !important; /* disable keyframe animations */
-}
-/* ANIMATIONS (FROM ANIMATE.CSS) ======================== */
-/* flip in */
+./* flip in */
 @keyframes flipInX {
   0% {
     transform: perspective(3000px) rotate3d(1, 0, 0, 90deg);
